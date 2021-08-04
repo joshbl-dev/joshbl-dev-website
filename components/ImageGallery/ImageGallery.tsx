@@ -4,7 +4,6 @@ import { Component } from "react";
 import { ImageCategory } from "../../types/ImageCategory";
 import Image from "./Image";
 import { ImageInfo } from "../../types/ImageInfo";
-import styles from "./ImageGallery.module.css";
 import { ImageList } from "@material-ui/core";
 
 type ImageGalleryState = {
@@ -57,10 +56,10 @@ export default class ImageGallery extends Component<{}, ImageGalleryState> {
 	}
 
 	render() {
-		return <ImageList variant="masonry" cols={Math.floor(this.state.width/350)}>
+		return <ImageList variant="masonry"
+						  cols={Math.floor(this.state.width / 350)} gap={12}>
 			{this.images.map((imageInfo) => {
-				return <Image key={imageInfo.id} src={imageInfo.url}
-							  style={styles.galleryItem} />;
+				return <Image key={imageInfo.id} src={imageInfo.url} />;
 			})}
 		</ImageList>;
 	}

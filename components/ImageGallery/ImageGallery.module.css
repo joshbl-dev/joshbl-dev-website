@@ -1,12 +1,12 @@
 .galleryItem {
     max-width: 100%;
     border-radius: 8px;
-    box-shadow: 0 0 16px #333;
+    box-shadow: 0 0 5px #333;
     transition: all 1.5s ease;
 }
 
 .galleryItem:hover {
-    box-shadow: 0 0 32px #333;
+    box-shadow: 0 0 4px #333;
 }
 
 .galleryItem {
