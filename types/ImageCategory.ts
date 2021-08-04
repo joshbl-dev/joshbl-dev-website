@@ -1,3 +1,3 @@
 export enum ImageCategory {
-	MEMORY
+	MEMORY= "MEMORY"
 }

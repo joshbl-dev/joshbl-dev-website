@@ -1,6 +1,6 @@
 import { ImageCategory } from "./ImageCategory";
 
-export class Image {
+export class ImageInfo {
 	id: string;
 	category: ImageCategory;
 	url: string;

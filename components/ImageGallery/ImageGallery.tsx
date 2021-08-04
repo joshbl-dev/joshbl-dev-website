@@ -1,26 +1,68 @@
-import { useAppStore } from "../../zustand/appStore";
-import { Image } from "../../types/Image";
-import { axiox } from "../../types/constants";
+import { AXIOS_INSTANCE } from "../../types/constants";
 import { AxiosResponse } from "axios";
-import styles from "./ImageGallery.module.css"
+import { Component } from "react";
+import { ImageCategory } from "../../types/ImageCategory";
+import Image from "./Image";
+import { ImageInfo } from "../../types/ImageInfo";
+import styles from "./ImageGallery.module.css";
+import { ImageList } from "@material-ui/core";
 
-
-export async function getImages() {
-	const res: AxiosResponse = await axiox.get("assets/images", {
-		params: {
-			offset: 35,
-			amount: 1
-		}
-	});
-	const images: Image[] = res.data;
-	const addImages = useAppStore(state => state.addImages);
-	addImages(images);
-	console.log(images);
+type ImageGalleryState = {
+	ready: boolean;
+	width: number;
+	height: number;
 }
 
-export function ImageGallery() {
-	getImages()
-	const image = useAppStore(state => state.images)[0];
-	return <img src={image.url} alt={"Image"} />;
+export default class ImageGallery extends Component<{}, ImageGalleryState> {
+	private images: ImageInfo[] = [];
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			ready: false, width: 0, height: 0
+		};
+		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener("resize", this.updateWindowDimensions);
+	}
+
+	updateWindowDimensions() {
+		this.setState({ width: window.innerWidth, height: window.innerHeight });
+	}
+
+	async getImages(category: ImageCategory): Promise<ImageInfo[]> {
+		try {
+			const res: AxiosResponse = await AXIOS_INSTANCE.get("http://localhost:3001/api/assets/images", {
+				params: {
+					category: category
+				}
+			});
+			return res.data;
+		} catch (e) {
+			console.log(e);
+			return this.images;
+		}
+	}
+
+	async componentDidMount() {
+		this.images = await this.getImages(ImageCategory.MEMORY);
+		this.setState({
+			ready: true
+		});
+
+		this.updateWindowDimensions();
+		window.addEventListener("resize", this.updateWindowDimensions);
+	}
+
+	render() {
+		return <ImageList variant="masonry" cols={Math.floor(this.state.width/350)}>
+			{this.images.map((imageInfo) => {
+				return <Image key={imageInfo.id} src={imageInfo.url}
+							  style={styles.galleryItem} />;
+			})}
+		</ImageList>;
+	}
 
 }

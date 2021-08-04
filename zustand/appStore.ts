@@ -1,15 +1,15 @@
 import create from "zustand";
-import { Image } from "../types/Image";
+import { ImageInfo } from "../types/ImageInfo";
+import { ImageCategory } from "../types/ImageCategory";
 
 type AppStore = {
-	images: Image[],
-	addImages: (images: Image[]) => void
+	images: Map<ImageCategory, ImageInfo[]>,
+	addImages: (category: ImageCategory, images: ImageInfo[]) => void
 }
 
 export const useAppStore = create<AppStore>(set => ({
-	images: null,
-	addImages: (images: Image[]) => set( state => ({
-			images: [...state.images, ...images]
-		})
-	)
-}))
+	images: new Map<ImageCategory, ImageInfo[]>(),
+	addImages: (category: ImageCategory, images: ImageInfo[]) => set(state => ({
+		images: state.images.set(category, images)
+	}))
+}));
