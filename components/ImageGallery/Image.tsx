@@ -1,54 +1,55 @@
-import { Component } from "react";
 import { CircularProgress } from "@material-ui/core";
 import styles from "./ImageGallery.module.css";
+import { useState } from "react";
+import create from "zustand";
 
-type ImageState = {
-	src: string;
-	classList: string[]
-}
+export const useImageStore = create(() => ({
+	focused: false
+}));
 
 
-export default class Image extends Component<{ src: string }, ImageState> {
-	constructor(props) {
-		super(props);
+export default function Image(props) {
+	const [classList, setClassList] = useState([styles.galleryItem, styles.transformable]);
+	const focused = useImageStore(state => state.focused);
 
-		this.state = {
-			src: this.props.src,
-			classList: [styles.galleryItem, styles.minimize]
-		};
-
-		this.handleClick = this.handleClick.bind(this);
-		this.handleLoad = this.handleLoad.bind(this);
+	if (!focused) {
+		removeFocus();
 	}
 
-	handleClick() {
-		const classList = [...this.state.classList];
+	function handleClick() {
 		if (classList.includes(styles.full)) {
-			classList.splice(classList.indexOf(styles.full), 1);
+			removeFocus();
 		} else {
-			classList.push(styles.full)
+			console.log(focused);
+			useImageStore.setState({ focused: true });
+			classList.push(styles.full);
+			classList.splice(classList.indexOf(styles.transformable), 1);
 		}
-		this.setState({
-			classList: classList
-		});
+		setClassList([...classList]);
 	}
 
-	handleLoad() {
-		this.setState({
-			classList: [styles.galleryItem]
-		});
+	function handleLoad() {
+		setClassList([styles.galleryItem, styles.transformable]);
 	}
 
-	render() {
-		console.log(this.state.classList);
-		return (
-			this.state.src ? <img
-				onClick={this.handleClick}
-				onLoad={this.handleLoad}
-				className={this.state.classList.join(" ")}
-				src={this.state.src}
-				alt={"Image"}
-				loading={"lazy"} /> : <CircularProgress />
-		);
+	function removeFocus() {
+		if (!classList.includes(styles.transformable)) {
+			classList.push(styles.transformable);
+		}
+		classList.splice(classList.indexOf(styles.full), 1);
 	}
+
+	return (
+		<div className={styles.galleryItem}>
+			<div className={styles.content}>
+				{props.src ? <img
+					onClick={handleClick}
+					onLoad={handleLoad}
+					className={classList.join(" ")}
+					src={props.src}
+					alt={"Image"}
+				/> : <CircularProgress />}
+			</div>
+		</div>
+	);
 }

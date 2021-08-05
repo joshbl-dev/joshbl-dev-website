@@ -1,67 +1,57 @@
 import { AXIOS_INSTANCE } from "../../types/constants";
 import { AxiosResponse } from "axios";
-import { Component } from "react";
+import { useEffect, useState } from "react";
 import { ImageCategory } from "../../types/ImageCategory";
-import Image from "./Image";
-import { ImageInfo } from "../../types/ImageInfo";
+import Image, { useImageStore } from "./Image";
+import styles from "../../components/ImageGallery/ImageGallery.module.css";
 import { ImageList } from "@material-ui/core";
 
-type ImageGalleryState = {
-	ready: boolean;
-	width: number;
-	height: number;
-}
+export default function ImageGallery(props) {
+	const [images, setImages] = useState([]);
 
-export default class ImageGallery extends Component<{}, ImageGalleryState> {
-	private images: ImageInfo[] = [];
+	const category: ImageCategory = ImageCategory.MEMORY;
+	// const [ready] = useState<boolean>(false);
+	const [width, setWidth] = useState<number>(0);
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			ready: false, width: 0, height: 0
-		};
-		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+	// const [height, setHeight] = useState<number>(0);
+
+	function updateWindowDimensions() {
+		setWidth(window.innerWidth);
+		// setHeight(window.innerHeight);
 	}
 
-	componentWillUnmount() {
-		window.removeEventListener("resize", this.updateWindowDimensions);
-	}
-
-	updateWindowDimensions() {
-		this.setState({ width: window.innerWidth, height: window.innerHeight });
-	}
-
-	async getImages(category: ImageCategory): Promise<ImageInfo[]> {
-		try {
-			const res: AxiosResponse = await AXIOS_INSTANCE.get("http://localhost:3001/api/assets/images", {
-				params: {
-					category: category
-				}
-			});
-			return res.data;
-		} catch (e) {
-			console.log(e);
-			return this.images;
+	useEffect(() => {
+		async function getImages() {
+			try {
+				const res: AxiosResponse = await AXIOS_INSTANCE.get("http://localhost:3001/api/assets/images", {
+					params: {
+						category: category
+					}
+				});
+				return res.data;
+			} catch (e) {
+				console.log(e);
+				return images;
+			}
 		}
+
+		getImages().then(images => setImages(images));
+
+		updateWindowDimensions();
+		window.addEventListener("resize", updateWindowDimensions);
+	}, []);
+
+	function handleClick() {
+		useImageStore.setState(state => ({ focused: !state.focused }));
 	}
 
-	async componentDidMount() {
-		this.images = await this.getImages(ImageCategory.MEMORY);
-		this.setState({
-			ready: true
-		});
-
-		this.updateWindowDimensions();
-		window.addEventListener("resize", this.updateWindowDimensions);
-	}
-
-	render() {
-		return <ImageList variant="masonry"
-						  cols={Math.floor(this.state.width / 350)} gap={12}>
-			{this.images.map((imageInfo) => {
-				return <Image key={imageInfo.id} src={imageInfo.url} />;
-			})}
-		</ImageList>;
-	}
-
+	return <ImageList variant="masonry"
+					  cols={Math.floor(width / 350)} gap={12}
+					  className={styles.imageGallery}
+					  onClick={handleClick}
+	>
+		{images.map((imageInfo) => {
+			return <Image key={imageInfo.id} src={imageInfo.url} />;
+		})}
+	</ImageList>;
 }
