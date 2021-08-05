@@ -37,6 +37,15 @@ yarn-error.log*
 .idea
 /.yarn/
 
+# .env
 .env.development
-
 .env.production
+
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
