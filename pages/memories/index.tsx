@@ -8,14 +8,16 @@ import ImageGallery from "../../components/ImageGallery/ImageGallery";
 
 export default function Memories() {
 	const [selectValue, setSelectValue] = useState("");
+
 	return <>
 		<div className={styles.container}>
 			<h1>Sarah and Josh Gallery</h1>
 			<CountdownCircleTimer isPlaying={true}
 								  duration={10}
 								  colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000", 0.33]]}
-								  onComplete={() => [true, 1000]} />
-			<FormControl variant="outlined">
+								  onComplete={() => [true, 1000]}
+			/>
+			<FormControl variant="outlined" className={styles.margin}>
 				<Select
 					value={selectValue}
 					displayEmpty={true}

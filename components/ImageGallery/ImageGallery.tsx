@@ -2,22 +2,19 @@ import { AXIOS_INSTANCE } from "../../types/constants";
 import { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { ImageCategory } from "../../types/ImageCategory";
-import Image, { useImageStore } from "./Image";
 import styles from "../../components/ImageGallery/ImageGallery.module.css";
 import { ImageList } from "@material-ui/core";
+import Image from "./Image";
 
 export default function ImageGallery(props) {
 	const [images, setImages] = useState([]);
 
 	const category: ImageCategory = ImageCategory.MEMORY;
-	// const [ready] = useState<boolean>(false);
 	const [width, setWidth] = useState<number>(0);
 
-	// const [height, setHeight] = useState<number>(0);
 
 	function updateWindowDimensions() {
 		setWidth(window.innerWidth);
-		// setHeight(window.innerHeight);
 	}
 
 	useEffect(() => {
@@ -41,14 +38,9 @@ export default function ImageGallery(props) {
 		window.addEventListener("resize", updateWindowDimensions);
 	}, []);
 
-	function handleClick() {
-		useImageStore.setState(state => ({ focused: !state.focused }));
-	}
-
 	return <ImageList variant="masonry"
 					  cols={Math.floor(width / 350)} gap={12}
 					  className={styles.imageGallery}
-					  onClick={handleClick}
 	>
 		{images.map((imageInfo) => {
 			return <Image key={imageInfo.id} src={imageInfo.url} />;
