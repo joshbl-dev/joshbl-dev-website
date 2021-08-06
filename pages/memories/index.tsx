@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { FormControl, MenuItem, Select } from "@material-ui/core";
 import { Month } from "../../types/Month";
-import Message from "../../components/Message/Message";
+import MemoryMessage from "../../components/MemoryMessage/MemoryMessage";
 import ImageGallery from "../../components/ImageGallery/ImageGallery";
 
 export default function Memories() {
@@ -36,7 +36,7 @@ export default function Memories() {
 					<MenuItem value={Month.AUG_2021}>4 Month</MenuItem>
 				</Select>
 			</FormControl>
-			<Message />
+			<MemoryMessage />
 			<ImageGallery />
 		</div>
 	</>;
