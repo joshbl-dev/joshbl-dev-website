@@ -5,6 +5,7 @@ import { ImageCategory } from "../../types/ImageCategory";
 import styles from "../../components/ImageGallery/ImageGallery.module.css";
 import { ImageList } from "@material-ui/core";
 import Image from "./Image";
+import { BaseUrl } from "../../types/BaseUrl";
 
 export default function ImageGallery(props) {
 	const [images, setImages] = useState([]);
@@ -20,7 +21,7 @@ export default function ImageGallery(props) {
 	useEffect(() => {
 		async function getImages() {
 			try {
-				const res: AxiosResponse = await AXIOS_INSTANCE.get("http://localhost:3001/api/assets/images", {
+				const res: AxiosResponse = await AXIOS_INSTANCE.get(BaseUrl.JOSHBL_API, {
 					params: {
 						category: category
 					}
