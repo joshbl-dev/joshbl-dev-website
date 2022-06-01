@@ -1,10 +1,10 @@
 .container {
-    background-color: rgb(194, 117, 117);
+    background: linear-gradient(to bottom, #10a9dc 0%, #1ab9bd 100%);
     min-height: 100vh;
     padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -13,11 +13,11 @@
 }
 
 .main {
-    padding: 5rem 0;
+    /*padding: 5rem 0;*/
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
 }
 
@@ -28,6 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 12px;
 }
 
 .footer img {
@@ -52,9 +53,13 @@
 }
 
 .title {
-    margin: 0;
+    margin-bottom: 50px;
     line-height: 1.15;
     font-size: 4rem;
+    border-radius: 10px;
+    background: white;
+    padding: 5px;
+    mix-blend-mode: lighten;
 }
 
 .title,
@@ -119,9 +124,22 @@
     height: 1em;
 }
 
+.pfp {
+    max-height: 250px;
+    max-width: 250px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
 @media (max-width: 600px) {
     .grid {
         width: 100%;
         flex-direction: column;
     }
+}
+
+.test {
+    background: #123e3f;
+    color: white;
+    mix-blend-mode: darken;
 }

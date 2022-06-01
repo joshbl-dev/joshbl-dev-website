@@ -1,36 +1,57 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import React from "react";
+import {AppBar, IconButton, Toolbar, Typography} from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Home() {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico"/>
+                <title>Home</title>
+                <link rel="icon" href="/icons/icon.ico"/>
             </Head>
 
             <main className={styles.main}>
                 <h1 className={styles.title}>
-                    Welcome to <a href="https://nextjs.org">Next.js!</a>
+                    Josh Landsman
                 </h1>
 
-                <p className={styles.description}>
-                    Get started by editing{' '}
-                    <code className={styles.code}>pages/index.js</code>
-                </p>
+                <img src={"/images/pfp.jpeg"} alt={"pfp"}
+                     className={styles.pfp}/>
+
+
+                <body className={styles.description}>Full Stack Developer <br/>
+                Studying at Georgia Institute of
+                Technology
+                </body>
+
+                <AppBar position={"static"} className={styles.test}>
+                    <Toolbar variant="dense" sx={{justifyContent: "center"}}>
+                        <IconButton color="default"
+                                    aria-label="menu" sx={{mr: 1}}
+                                    onClick={() => console.log("clicked")}>
+                            <MenuIcon/>
+                        </IconButton>
+                        <Typography variant="h6" color="inherit"
+                                    component="div">
+                            Photos
+                        </Typography>
+                        <IconButton color="default"
+                                    aria-label="menu" sx={{mr: 1}}>
+                            <MenuIcon/>
+                        </IconButton>
+                        <Typography variant="h6" color="inherit"
+                                    component="div">
+                            Photos
+                        </Typography>
+                    </Toolbar>
+                </AppBar>
             </main>
 
             <footer className={styles.footer}>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{' '}
-                    <img src="/vercel.svg" alt="Vercel Logo"
-                         className={styles.logo}/>
-                </a>
+                &copy; {new Date().getFullYear()} Josh Landsman. All rights
+                reserved.
             </footer>
         </div>
     )
