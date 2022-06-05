@@ -1,58 +1,40 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 import React from "react";
-import {AppBar, IconButton, Toolbar, Typography} from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
+import { NavBar } from "../components/NavBar";
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "../styles/theme";
+import { Grid, Typography } from "@mui/material";
 
 export default function Home() {
-    return (
-        <div className={styles.container}>
-            <Head>
-                <title>Home</title>
-                <link rel="icon" href="/icons/icon.ico"/>
-            </Head>
+	return (
+		<ThemeProvider theme={theme}>
+			<div className={styles.container}>
+				<Head>
+					<title>Home</title>
+					<link rel="icon" href="/icons/icon.ico" />
+				</Head>
 
-            <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Josh Landsman
-                </h1>
+				<main className={styles.main}>
+					<NavBar pages={["Projects", "Bio", "???"]} />
+					<Grid container
+						  justifyContent={"center"}>
 
-                <img src={"/images/pfp.jpeg"} alt={"pfp"}
-                     className={styles.pfp}/>
+						<Typography className={styles.pfp}>
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. Etiam id.
+						</Typography>
 
+						<img src={"/images/pfp.jpeg"} alt={"pfp"}
+							 className={styles.pfp} />
+					</Grid>
+				</main>
 
-                <body className={styles.description}>Full Stack Developer <br/>
-                Studying at Georgia Institute of
-                Technology
-                </body>
-
-                <AppBar position={"static"} className={styles.test}>
-                    <Toolbar variant="dense" sx={{justifyContent: "center"}}>
-                        <IconButton color="default"
-                                    aria-label="menu" sx={{mr: 1}}
-                                    onClick={() => console.log("clicked")}>
-                            <MenuIcon/>
-                        </IconButton>
-                        <Typography variant="h6" color="inherit"
-                                    component="div">
-                            Photos
-                        </Typography>
-                        <IconButton color="default"
-                                    aria-label="menu" sx={{mr: 1}}>
-                            <MenuIcon/>
-                        </IconButton>
-                        <Typography variant="h6" color="inherit"
-                                    component="div">
-                            Photos
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
-            </main>
-
-            <footer className={styles.footer}>
-                &copy; {new Date().getFullYear()} Josh Landsman. All rights
-                reserved.
-            </footer>
-        </div>
-    )
+				<footer className={styles.footer}>
+					&copy; {new Date().getFullYear()} Josh Landsman. All rights
+					reserved.
+				</footer>
+			</div>
+		</ThemeProvider>
+	);
 }
