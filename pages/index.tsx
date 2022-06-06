@@ -9,13 +9,13 @@ import { Grid, Typography } from "@mui/material";
 export default function Home() {
 	return (
 		<ThemeProvider theme={theme}>
-			<div className={styles.container}>
+			<div className={styles.main}>
 				<Head>
 					<title>Home</title>
 					<link rel="icon" href="/icons/icon.ico" />
 				</Head>
 
-				<main className={styles.main}>
+				<main className={styles.container}>
 					<NavBar pages={["Projects", "Bio", "???"]} />
 					<Grid container
 						  justifyContent={"center"}>
