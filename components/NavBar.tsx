@@ -39,12 +39,13 @@ export class NavBar extends React.Component<NavBarProps, any> {
 
 
 	render() {
-		return <AppBar position={"static"}>
+		return <AppBar position={"static"} sx={{ mb: 2 }}>
 			<Container maxWidth={"xl"}>
 				<Toolbar disableGutters>
 					{this.renderMobile()}
 					{this.renderDesktop()}
 					<Typography
+						color={"#7ee6f2"}
 						variant={"h6"}
 						noWrap
 						component={"a"}
@@ -101,6 +102,7 @@ export class NavBar extends React.Component<NavBarProps, any> {
 			<JoshblIcon
 				fontSize={"large"}
 				sx={{
+					color: "#7ee6f2",
 					flex: "auto",
 					display: { xs: "flex", sm: "none" }
 				}} />
@@ -111,6 +113,7 @@ export class NavBar extends React.Component<NavBarProps, any> {
 		return <>
 			<JoshblIcon fontSize={"large"}
 						sx={{
+							color: "#7ee6f2",
 							display: { xs: "none", sm: "flex" },
 							mr: 1
 						}}
