@@ -59,6 +59,25 @@ export default function Home() {
 						{/* Profile Image */}
 						<Grid item xs={"auto"}>
 							<Box
+								sx={{
+									display: {
+										xs: "flex",
+										md: "none"
+									}
+								}}
+								component={"img"}
+								display={"flex"}
+								className={styles.pfp_mobile}
+								src="/images/pfp.jpeg"
+								alt="Joshbl"
+							/>
+							<Box
+								sx={{
+									display: {
+										xs: "none",
+										md: "flex"
+									}
+								}}
 								component={"img"}
 								display={"flex"}
 								className={styles.pfp}
