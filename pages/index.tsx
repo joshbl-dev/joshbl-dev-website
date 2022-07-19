@@ -20,6 +20,7 @@ export default function Home() {
 		<PageTemplate page={page} components={
 			<>
 				<Typography variant="h4" padding={2}
+							textAlign={"center"}
 							sx={{ fontWeight: "bold" }}>
 					Site Under Construction
 				</Typography>
