@@ -18,55 +18,64 @@ const page = pages.filter(p => p.title == "Home")[0];
 export default function Home() {
 	return (
 		<PageTemplate page={page} components={
-			<><Grid
-				container
-				direction="row"
-				justifyContent="center"
-				alignItems="center"
-				xs={"auto"}
-				padding={2}
-			>
-				{/* Welcome text */}
-				<Grid item md>
-					<Container maxWidth={"md"}
-					>
-						<Typography variant={"h3"} align={"center"}>
-							Creating positive change in the world
-							through
-							computer science.
-						</Typography>
-					</Container>
-				</Grid>
+			<>
+				<Typography variant="h4" padding={2}
+							sx={{ fontWeight: "bold" }}>
+					Site Under Construction
+				</Typography>
+				<Button variant={"contained"}
+						href={"https://old.joshbl.dev"}>
+					Old Site
+				</Button>
+				<Grid
+					container
+					direction="row"
+					justifyContent="center"
+					alignItems="center"
+					xs={"auto"}
+					padding={2}
+				>
+					{/* Welcome text */}
+					<Grid item md>
+						<Container maxWidth={"md"}
+						>
+							<Typography variant={"h3"} align={"center"}>
+								Creating positive change in the world
+								through
+								computer science.
+							</Typography>
+						</Container>
+					</Grid>
 
-				{/* Profile Image */}
-				<Grid item xs={"auto"}>
-					<Box
-						sx={{
-							display: {
-								xs: "flex",
-								md: "none"
-							}
-						}}
-						component={"img"}
-						display={"flex"}
-						className={styles.pfp_mobile}
-						src="/images/pfp.jpeg"
-						alt="Joshbl" />
-					<Box
-						sx={{
-							display: {
-								xs: "none",
-								md: "flex"
-							}
-						}}
-						component={"img"}
-						display={"flex"}
-						className={styles.pfp}
-						src="/images/pfp.jpeg"
-						alt="Joshbl" />
-				</Grid>
+					{/* Profile Image */}
+					<Grid item xs={"auto"}>
+						<Box
+							sx={{
+								display: {
+									xs: "flex",
+									md: "none"
+								}
+							}}
+							component={"img"}
+							display={"flex"}
+							className={styles.pfp_mobile}
+							src="/images/pfp.jpeg"
+							alt="Joshbl" />
+						<Box
+							sx={{
+								display: {
+									xs: "none",
+									md: "flex"
+								}
+							}}
+							component={"img"}
+							display={"flex"}
+							className={styles.pfp}
+							src="/images/pfp.jpeg"
+							alt="Joshbl" />
+					</Grid>
 
-			</Grid><Box maxWidth={"sm"} padding={2}>
+				</Grid><Box maxWidth={"sm"} padding={2}>
 				<Typography variant={"h4"}
 							padding={1}
 							justifyContent={"center"} align={"center"}>Skills
