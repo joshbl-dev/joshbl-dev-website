@@ -15,12 +15,12 @@ export const pages: PageInfo[] = [
 	},
 	{
 		title: "Projects",
-		active: true,
+		active: false,
 		url: "/projects"
 	},
 	{
 		title: "Bio",
-		active: true,
+		active: false,
 		url: "/bio"
 	},
 	{

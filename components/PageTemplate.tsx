@@ -7,8 +7,10 @@ import { ComingSoon } from "./ComingSoon";
 import styles from "../styles/Home.module.css";
 import Head from "next/head";
 import React from "react";
+import { PageInfo } from "../types/page";
 
 export default function PageTemplate(props) {
+	const page: PageInfo = props.page;
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
@@ -18,9 +20,13 @@ export default function PageTemplate(props) {
 					<link rel="icon" href="/icons/icon.ico" />
 				</Head>
 				<main className={styles.container}>
-					<NavBar pages={pages.filter(p => props.page != p)} />
-					<ComingSoon />
+					<NavBar pages={pages.filter(p => page != p)} />
+					{page.active ? props.components : <ComingSoon />}
 				</main>
+				<footer className={styles.footer}>
+					&copy; {new Date().getFullYear()} Josh Landsman. All rights
+					reserved.
+				</footer>
 			</div>
 		</ThemeProvider>
 	);
