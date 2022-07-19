@@ -94,6 +94,7 @@ export class NavBar extends React.Component<NavBarProps, any> {
 				>
 					{this.props.pages.map((page) => (
 						<MenuItem key={page.title}
+								  component={"a"}
 								  onClick={this.handleCloseNavMenu}
 								  href={`${page.url}`}
 						>
