@@ -5,8 +5,6 @@ import Ticker from "react-ticker";
 import { PictureAsPdf } from "@mui/icons-material";
 import { pages } from "../types/constants";
 import PageTemplate from "../components/PageTemplate";
-import Image from "next/image";
-import pfp from "../public/images/pfp.jpeg";
 
 const skills = ["Java",
 	"JavaScript",
@@ -59,12 +57,11 @@ export default function Home() {
 									md: "none"
 								}
 							}}
+							component={"img"}
+							display={"flex"}
 							className={styles.pfp_mobile}
-						>
-							<Image className={styles.rounded_border}
-								   src={pfp}
-								   alt="Joshbl" />
-						</Box>
+							src="/images/pfp.jpeg"
+							alt="Joshbl" />
 						<Box
 							sx={{
 								display: {
@@ -72,11 +69,11 @@ export default function Home() {
 									md: "flex"
 								}
 							}}
-							className={styles.pfp}>
-							<Image className={styles.rounded_border}
-								   src={pfp}
-								   alt="Joshbl" />
-						</Box>
+							component={"img"}
+							display={"flex"}
+							className={styles.pfp}
+							src="/images/pfp.jpeg"
+							alt="Joshbl" />
 					</Grid>
 
 				</Grid><Box maxWidth={"sm"} padding={2}>
