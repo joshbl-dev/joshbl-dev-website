@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import Ticker from "react-ticker";
 import { PictureAsPdf } from "@mui/icons-material";
+import { pages } from "../types/constants";
 
 const skills = ["Java",
 	"JavaScript",
@@ -22,6 +23,7 @@ const skills = ["Java",
 	"Google Cloud", "Azure", "Git", "Lua",
 	"React/React Native", "HTML",
 	"CSS"];
+const page = pages.filter(p => p.title == "Home")[0];
 
 export default function Home() {
 	return (
@@ -32,10 +34,9 @@ export default function Home() {
 					<title>Home</title>
 					<link rel="icon" href="/icons/icon.ico" />
 				</Head>
-
 				<main className={styles.container}>
 					<NavBar
-						pages={["Projects", "Bio", "???"]} />
+						pages={pages.filter(p => page != p)} />
 					<Grid
 						container
 						direction="row"

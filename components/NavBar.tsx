@@ -12,9 +12,12 @@ import {
 } from "@mui/material";
 import JoshblIcon from "./JoshblIcon";
 import MenuIcon from "@mui/icons-material/Menu";
+import styles from "../styles/Home.module.css";
+import { PageInfo } from "../types/page";
+
 
 type NavBarProps = {
-	pages: string[]
+	pages: PageInfo[]
 }
 
 export class NavBar extends React.Component<NavBarProps, any> {
@@ -90,11 +93,12 @@ export class NavBar extends React.Component<NavBarProps, any> {
 					}}
 				>
 					{this.props.pages.map((page) => (
-						<MenuItem key={page}
+						<MenuItem key={page.title}
 								  onClick={this.handleCloseNavMenu}
+								  href={`${page.url}`}
 						>
 							<Typography
-								textAlign="center">{page}</Typography>
+								textAlign="center">{page.title}</Typography>
 						</MenuItem>
 					))}
 				</Menu>
@@ -122,19 +126,23 @@ export class NavBar extends React.Component<NavBarProps, any> {
 			<Box sx={{
 				flexGrow: 1,
 				display: { xs: "none", sm: "flex" },
-				justifyContent: "center"
+				justifyContent: "center",
+				textAlign: "center"
 			}}>
 				{this.props.pages.map((page) => (
 					<Button
-						key={page}
+						variant={"text"}
+						key={page.title}
 						onClick={this.handleCloseNavMenu}
+						className={styles.border}
+						href={`${page.url}`}
 						sx={{
 							my: 2,
-							color: "white",
-							display: "block"
+							display: "block",
+							margin: "0rem 1rem"
 						}}
 					>
-						{page}
+						{page.title}
 					</Button>
 				))}
 			</Box>
