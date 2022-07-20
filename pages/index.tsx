@@ -75,16 +75,18 @@ export default function Home() {
 								   alt={"Joshbl"}
 								   objectFit={"contain"} />
 						</Container>
-						<Container
+						<Box
 							sx={{
 								...desktop_show("flex")
 							}}
 							className={styles.pfp}>
-							<Image className={styles.rounded_border}
-								   src={pfp}
-								   alt={"Joshbl"}
-								   objectFit={"contain"} />
-						</Container>
+							<Container>
+								<Image className={styles.rounded_border}
+									   src={pfp}
+									   alt={"Joshbl"}
+									   objectFit={"contain"} />
+							</Container>
+						</Box>
 					</Grid>
 
 				</Grid><Box maxWidth={"sm"} padding={2}>
