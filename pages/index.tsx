@@ -7,6 +7,7 @@ import { pages } from "../types/constants";
 import PageTemplate from "../components/PageTemplate";
 import Image from "next/image";
 import pfp from "../public/images/pfp.jpeg";
+import { desktop_hide, desktop_show } from "../styles/theme";
 
 const skills = ["Java",
 	"JavaScript",
@@ -52,31 +53,28 @@ export default function Home() {
 
 					{/* Profile Image */}
 					<Grid item xs={"auto"}>
-						<Box
+						<Container
 							sx={{
-								display: {
-									xs: "flex",
-									md: "none"
-								}
+								...desktop_hide("flex")
 							}}
 							className={styles.pfp_mobile}
 						>
+
 							<Image className={styles.rounded_border}
 								   src={pfp}
-								   alt="Joshbl" />
-						</Box>
-						<Box
+								   alt={"Joshbl"}
+								   objectFit={"contain"} />
+						</Container>
+						<Container
 							sx={{
-								display: {
-									xs: "none",
-									md: "flex"
-								}
+								...desktop_show("flex")
 							}}
 							className={styles.pfp}>
 							<Image className={styles.rounded_border}
 								   src={pfp}
-								   alt="Joshbl" />
-						</Box>
+								   alt={"Joshbl"}
+								   objectFit={"contain"} />
+						</Container>
 					</Grid>
 
 				</Grid><Box maxWidth={"sm"} padding={2}>
