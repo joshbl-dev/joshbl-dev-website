@@ -68,8 +68,6 @@ export default function Home() {
 							sx={{
 								...desktop_hide("flex")
 							}}
-							component={"img"}
-							display={"flex"}
 							className={styles.pfp_mobile}
 						>
 							<Image className={styles.rounded_border}
