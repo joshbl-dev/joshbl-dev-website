@@ -33,16 +33,14 @@
     max-height: 400px;
     max-width: 400px;
     margin-top: 20px;
+    border-radius: 20px;
 }
 
 .pfp_mobile {
     max-height: 250px;
     max-width: 250px;
-    margin-top: 20px;
-}
-
-.rounded_border {
     border-radius: 20px;
+    margin-top: 20px;
 }
 
 .border {
