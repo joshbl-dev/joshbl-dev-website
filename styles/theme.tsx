@@ -15,3 +15,57 @@ export const theme: Theme = createTheme({
 		// }
 	}
 });
+
+export function mobile_show(type) {
+	return {
+		display: {
+			xs: type,
+			sm: "none"
+		}
+	};
+}
+
+export function mobile_hide(type) {
+	return {
+		display: {
+			xs: "none",
+			sm: type
+		}
+	};
+}
+
+export function tablet_show(type) {
+	return {
+		display: {
+			xs: "none",
+			sm: type
+		}
+	};
+}
+
+export function tablet_hide(type) {
+	return {
+		display: {
+			xs: type,
+			sm: "none"
+		}
+	};
+}
+
+export function desktop_show(type) {
+	return {
+		display: {
+			xs: "none",
+			md: type
+		}
+	};
+}
+
+export function desktop_hide(type) {
+	return {
+		display: {
+			xs: type,
+			md: "none"
+		}
+	};
+}

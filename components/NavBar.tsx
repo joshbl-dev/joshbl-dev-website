@@ -14,6 +14,7 @@ import JoshblIcon from "./JoshblIcon";
 import MenuIcon from "@mui/icons-material/Menu";
 import styles from "../styles/Home.module.css";
 import { PageInfo } from "../types/page";
+import { tablet_hide, tablet_show } from "../styles/theme";
 
 
 type NavBarProps = {
@@ -65,7 +66,7 @@ export class NavBar extends React.Component<NavBarProps, any> {
 		return <>
 			<Box sx={{
 				flexBasis: "auto",
-				display: { xs: "flex", sm: "none" }
+				...tablet_hide("flex")
 			}}>
 				<IconButton
 					size="large"
@@ -89,7 +90,7 @@ export class NavBar extends React.Component<NavBarProps, any> {
 					open={Boolean(this.state.anchorEl)}
 					onClose={this.handleCloseNavMenu}
 					sx={{
-						display: { xs: "block", sm: "none" }
+						...tablet_hide("block")
 					}}
 				>
 					{this.props.pages.map((page) => (
@@ -109,7 +110,7 @@ export class NavBar extends React.Component<NavBarProps, any> {
 				sx={{
 					color: "#7ee6f2",
 					flex: "auto",
-					display: { xs: "flex", sm: "none" }
+					...tablet_hide("flex")
 				}} />
 		</>;
 	};
@@ -119,14 +120,15 @@ export class NavBar extends React.Component<NavBarProps, any> {
 			<JoshblIcon fontSize={"large"}
 						sx={{
 							color: "#7ee6f2",
-							display: { xs: "none", sm: "flex" },
+							...tablet_show("flex"),
+							// display: { xs: "none", sm: "flex" },
 							mr: 1
 						}}
 			/>
 
 			<Box sx={{
 				flexGrow: 1,
-				display: { xs: "none", sm: "flex" },
+				...tablet_show("flex"),
 				justifyContent: "center",
 				textAlign: "center"
 			}}>

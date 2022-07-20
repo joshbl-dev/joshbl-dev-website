@@ -5,6 +5,14 @@ import Ticker from "react-ticker";
 import { PictureAsPdf } from "@mui/icons-material";
 import { pages } from "../types/constants";
 import PageTemplate from "../components/PageTemplate";
+import Image from "next/image";
+import pfp from "../public/images/pfp.jpeg";
+import {
+	desktop_hide,
+	desktop_show,
+	mobile_hide,
+	mobile_show
+} from "../styles/theme";
 
 const skills = ["Java",
 	"JavaScript",
@@ -13,7 +21,10 @@ const skills = ["Java",
 	"Google Cloud", "Azure", "Git", "Lua",
 	"React/React Native", "HTML",
 	"CSS"];
+
 const page = pages.filter(p => p.title == "Home")[0];
+
+const quote = "Creating positive change in the world through computer science.";
 
 export default function Home() {
 	return (
@@ -40,40 +51,42 @@ export default function Home() {
 					<Grid item md>
 						<Container maxWidth={"md"}
 						>
-							<Typography variant={"h3"} align={"center"}>
-								Creating positive change in the world
-								through
-								computer science.
+							<Typography sx={{ ...mobile_hide("flex") }}
+										variant={"h3"} align={"center"}>
+								{quote}
+							</Typography>
+							<Typography sx={{ ...mobile_show("flex") }}
+										variant={"h5"} align={"center"}>
+								{quote}
 							</Typography>
 						</Container>
 					</Grid>
 
 					{/* Profile Image */}
 					<Grid item xs={"auto"}>
-						<Box
+						<Container
 							sx={{
-								display: {
-									xs: "flex",
-									md: "none"
-								}
+								...desktop_hide("flex")
 							}}
-							component={"img"}
-							display={"flex"}
 							className={styles.pfp_mobile}
-							src="/images/pfp.jpeg"
-							alt="Joshbl" />
+						>
+							<Image className={styles.rounded_border}
+								   src={pfp}
+								   alt={"Joshbl"}
+								   objectFit={"contain"} />
+						</Container>
 						<Box
 							sx={{
-								display: {
-									xs: "none",
-									md: "flex"
-								}
+								...desktop_show("flex")
 							}}
-							component={"img"}
-							display={"flex"}
-							className={styles.pfp}
-							src="/images/pfp.jpeg"
-							alt="Joshbl" />
+							className={styles.pfp}>
+							<Container>
+								<Image className={styles.rounded_border}
+									   src={pfp}
+									   alt={"Joshbl"}
+									   objectFit={"contain"} />
+							</Container>
+						</Box>
 					</Grid>
 
 				</Grid><Box maxWidth={"sm"} padding={2}>
