@@ -44,7 +44,7 @@ export default function Home() {
 					direction="row"
 					justifyContent="center"
 					alignItems="center"
-					xs={"auto"}
+					// xs={"auto"}
 					padding={2}
 				>
 					{/* Welcome text */}
