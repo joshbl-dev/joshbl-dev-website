@@ -20,7 +20,7 @@ export default function PageTemplate(props) {
 					<link rel="icon" href="/icons/icon.ico" />
 				</Head>
 				<main className={styles.container}>
-					<NavBar pages={pages.filter(p => page != p)} />
+					<NavBar pages={pages} />
 					{page.active ? props.components : <ComingSoon />}
 				</main>
 				<footer className={styles.footer}>
