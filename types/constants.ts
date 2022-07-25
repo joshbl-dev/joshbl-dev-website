@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from "axios";
 import { BaseUrl } from "./BaseUrl";
-import { PageInfo } from "./page";
+import { PageInfo } from "./PageInfo";
 
 export const AXIOS_INSTANCE: AxiosInstance = axios.create({
 	baseURL: BaseUrl.JOSHBL_API

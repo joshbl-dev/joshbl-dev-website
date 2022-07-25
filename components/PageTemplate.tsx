@@ -7,7 +7,7 @@ import { ComingSoon } from "./ComingSoon";
 import styles from "../styles/Home.module.css";
 import Head from "next/head";
 import React from "react";
-import { PageInfo } from "../types/page";
+import { PageInfo } from "../types/PageInfo";
 
 export default function PageTemplate(props) {
 	const page: PageInfo = props.page;

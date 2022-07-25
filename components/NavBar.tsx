@@ -13,7 +13,7 @@ import {
 import JoshblIcon from "./JoshblIcon";
 import MenuIcon from "@mui/icons-material/Menu";
 import styles from "../styles/Home.module.css";
-import { PageInfo } from "../types/page";
+import { PageInfo } from "../types/PageInfo";
 import { tablet_hide, tablet_show } from "../styles/theme";
 
 
