@@ -5,14 +5,13 @@ import Ticker from "react-ticker";
 import { PictureAsPdf } from "@mui/icons-material";
 import { pages } from "../types/constants";
 import PageTemplate from "../components/PageTemplate";
-import Image from "next/image";
-import pfp from "../public/images/pfp.jpeg";
 import {
 	desktop_hide,
 	desktop_show,
 	mobile_hide,
 	mobile_show
 } from "../styles/theme";
+import ProfilePicture from "../components/ProfilePicture";
 
 const skills = ["Java",
 	"JavaScript",
@@ -71,10 +70,7 @@ export default function Home() {
 							}}
 							className={styles.pfp_mobile}
 						>
-							<Image className={styles.rounded_border}
-								   src={pfp}
-								   alt={"Joshbl"}
-								   objectFit={"contain"} />
+							<ProfilePicture />
 						</Container>
 						<Box
 							sx={{
@@ -82,10 +78,7 @@ export default function Home() {
 							}}
 							className={styles.pfp}>
 							<Container>
-								<Image className={styles.rounded_border}
-									   src={pfp}
-									   alt={"Joshbl"}
-									   objectFit={"contain"} />
+								<ProfilePicture />
 							</Container>
 						</Box>
 					</Grid>
