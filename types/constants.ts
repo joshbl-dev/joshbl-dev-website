@@ -1,6 +1,7 @@
 import axios, { AxiosInstance } from "axios";
 import { BaseUrl } from "./BaseUrl";
 import { PageInfo } from "./PageInfo";
+import { ProjectInfo } from "./ProjectInfo";
 
 export const AXIOS_INSTANCE: AxiosInstance = axios.create({
 	baseURL: BaseUrl.JOSHBL_API
@@ -15,7 +16,7 @@ export const pages: PageInfo[] = [
 	},
 	{
 		title: "Projects",
-		active: false,
+		active: true,
 		url: "/projects"
 	},
 	{
@@ -27,5 +28,26 @@ export const pages: PageInfo[] = [
 		title: "???",
 		active: false,
 		url: "/mystery"
+	}
+];
+
+export const projects: ProjectInfo[] = [
+	{
+		title: "NCR Global Hackathon",
+		description: "Created a production REST API for NCR’s Global Hackathon to organize international participants, teams, and\n" +
+			"conference talks using NestJS, Azure, and PostgreSQL",
+		url: "https://hackathon.ncr.com/",
+		mediaType: "image",
+		mediaContent: "/images/projects/ghu.png",
+		altText: "Global Hackathon Site"
+	},
+	{
+		title: "NCR Global Hackathon",
+		description: "Created a production REST API for NCR’s Global Hackathon to organize international participants, teams, and\n" +
+			"conference talks using NestJS, Azure, and PostgreSQL",
+		url: "https://hackathon.ncr.com/",
+		mediaType: "video",
+		mediaContent: "https://www.youtube.com/embed/2-aVIdkiwGA",
+		altText: "Global Hackathon Site"
 	}
 ];
