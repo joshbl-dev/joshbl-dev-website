@@ -41,10 +41,11 @@ export default function Home() {
 				</Button>
 				<Grid
 					container
+					item
 					direction="row"
 					justifyContent="center"
 					alignItems="center"
-					// xs={"auto"}
+					xs={"auto"}
 					padding={2}
 				>
 					{/* Welcome text */}
