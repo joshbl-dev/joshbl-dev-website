@@ -2,8 +2,7 @@ import React from "react";
 import { pages, projects } from "../../types/constants";
 import PageTemplate from "../../components/PageTemplate";
 import ProjectCard from "../../components/ProjectCard";
-import { CardMedia, Container } from "@mui/material";
-import styles from "../../styles/Home.module.css";
+import { CardMedia } from "@mui/material";
 
 
 const page = pages.filter(p => p.title == "Projects")[0];
@@ -21,14 +20,12 @@ export default function Projects() {
 							   height={"100%"}
 							   image={project.mediaContent}
 							   alt={project.altText} /> :
-					<Container className={styles.border}>
-						<iframe
-							style={{ border: "none" }}
-							width={"100%"}
-							height={"100%"}
-							src={project.mediaContent}
-						/>
-					</Container>
+					<iframe
+						style={{ border: "none" }}
+						width={"100%"}
+						height={"100%"}
+						src={project.mediaContent}
+					/>
 				} />)}
 			</>
 		}

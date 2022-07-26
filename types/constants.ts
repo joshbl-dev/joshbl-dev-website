@@ -33,6 +33,23 @@ export const pages: PageInfo[] = [
 
 export const projects: ProjectInfo[] = [
 	{
+		title: "Next.js Personal Website",
+		description: "A frontend for the joshbl.dev website. Made with React, Next.js in Typescript using the Material UI library.",
+		url: "https://github.com/joshbl-dev/joshbl-dev-website",
+		mediaType: "image",
+		mediaContent: "/images/projects/ghu.png",
+		altText: "Global Hackathon Site"
+	},
+	{
+		title: "NestJS Personal API",
+		description: "Created a production REST API for NCR’s Global Hackathon to organize international participants, teams, and\n" +
+			"conference talks using NestJS, Azure, and PostgreSQL",
+		url: "https://hackathon.ncr.com/",
+		mediaType: "image",
+		mediaContent: "/images/projects/ghu.png",
+		altText: "Global Hackathon Site"
+	},
+	{
 		title: "NCR Global Hackathon",
 		description: "Created a production REST API for NCR’s Global Hackathon to organize international participants, teams, and\n" +
 			"conference talks using NestJS, Azure, and PostgreSQL",
