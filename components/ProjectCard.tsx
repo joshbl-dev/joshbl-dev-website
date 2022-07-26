@@ -34,9 +34,14 @@ export default function ProjectCard(props: ProjectCardProps) {
 				<Box justifyContent={"center"}
 					 width={"50%"}
 					 sx={{display: "flex", flexDirection: "column"}}>
-					<CardHeader title={projectInfo.title} />
-					<CardContent sx={{}}>
-						<Typography variant="body2">
+					<CardHeader title={projectInfo.title}
+								titleTypographyProps={{
+									fontWeight: "bold",
+									fontSize: "2rem",
+								}} />
+					<CardContent>
+						<Typography variant="body1" fontSize={"1.5rem"}
+									fontWeight={"medium"}>
 							{projectInfo.description}
 						</Typography>
 					</CardContent>
