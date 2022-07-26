@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import {ProjectInfo} from "../types/ProjectInfo";
 import {desktop_hide, desktop_show} from "../styles/theme";
-import styles from "../styles/Home.module.css";
 import LaunchIcon from "@mui/icons-material/Launch";
 
 type ProjectCardProps = {
@@ -44,7 +43,6 @@ export default function ProjectCard(props: ProjectCardProps) {
 		<>
 			{/*Desktop Card*/}
 			<Card
-				className={styles.rounded_border}
 				raised
 				sx={{
 					...desktop_show("flex"),
@@ -84,7 +82,6 @@ export default function ProjectCard(props: ProjectCardProps) {
 
 			{/*Mobile Card*/}
 			<Card
-				className={styles.rounded_border}
 				raised
 				sx={{
 					...desktop_hide("flex"),
