@@ -1,14 +1,41 @@
 import React from "react";
 import Card from "@mui/material/Card";
-import {Box, CardContent, CardHeader, Typography} from "@mui/material";
+import {
+	Box,
+	Button,
+	CardContent,
+	CardHeader,
+	IconButton,
+	Typography,
+} from "@mui/material";
 import {ProjectInfo} from "../types/ProjectInfo";
 import {desktop_hide, desktop_show} from "../styles/theme";
 import styles from "../styles/Home.module.css";
+import LaunchIcon from "@mui/icons-material/Launch";
 
 type ProjectCardProps = {
 	mediaSide: "left" | "right";
 	media: React.ReactNode;
 	projectInfo: ProjectInfo
+}
+
+function externalLink(side: string, link: string) {
+	if (side != "bottom") {
+		const margin = side == "left" ? {marginRight: "10px"} : {marginLeft: "10px"};
+		return (<Box {...margin} marginTop={"10px"}><IconButton
+			href={link}
+			size={"medium"}><LaunchIcon
+		/></IconButton></Box>);
+	} else {
+		return (<Box textAlign={"center"}><Button
+			sx={{
+				width: "20%",
+				padding: "10px",
+			}}
+			size={"medium"}
+			href={link}
+			variant={"outlined"}><Typography>Source</Typography></Button></Box>);
+	}
 }
 
 export default function ProjectCard(props: ProjectCardProps) {
@@ -27,13 +54,15 @@ export default function ProjectCard(props: ProjectCardProps) {
 					justifyContent: "space-between",
 				}}>
 				{props.mediaSide == "left" ? (
-					<Box width={"50%"}>
-						{props.media}
-					</Box>) : undefined}
+						<Box width={"50%"}>
+							{props.media}
+						</Box>) :
+					externalLink(props.mediaSide, projectInfo.url)}
 
 				<Box justifyContent={"center"}
 					 width={"50%"}
 					 sx={{display: "flex", flexDirection: "column"}}>
+
 					<CardHeader title={projectInfo.title}
 								titleTypographyProps={{
 									fontWeight: "bold",
@@ -49,7 +78,7 @@ export default function ProjectCard(props: ProjectCardProps) {
 				{props.mediaSide == "right" ? (
 					<Box width={"50%"}>
 						{props.media}
-					</Box>) : undefined}
+					</Box>) : externalLink(props.mediaSide, projectInfo.url)}
 			</Card>
 
 			{/*Mobile Card*/}
@@ -65,18 +94,24 @@ export default function ProjectCard(props: ProjectCardProps) {
 
 				<Box
 					sx={{display: "flex", flexDirection: "column"}}>
-					<Box height={"50%"}>
+					<Box
+						height={"50%"}
+						alignItems={"center"}>
 						{props.media}
 					</Box>
-					<Box textAlign={"center"}>
-						<CardHeader title={projectInfo.title} />
+
+					<Box paddingTop={"20px"} textAlign={"center"}>
+						{externalLink("bottom", projectInfo.url)}
+						<CardHeader
+							title={projectInfo.title}
+						/>
+
 						<CardContent>
 							<Typography variant="body1">
 								{projectInfo.description}
 							</Typography>
 						</CardContent>
 					</Box>
-
 				</Box>
 
 			</Card>
