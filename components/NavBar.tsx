@@ -13,7 +13,7 @@ import {
 import JoshblIcon from "./JoshblIcon";
 import MenuIcon from "@mui/icons-material/Menu";
 import styles from "../styles/Home.module.css";
-import { PageInfo } from "../types/page";
+import { PageInfo } from "../types/PageInfo";
 import { tablet_hide, tablet_show } from "../styles/theme";
 
 
@@ -22,7 +22,7 @@ type NavBarProps = {
 }
 
 export class NavBar extends React.Component<NavBarProps, any> {
-	constructor(props) {
+	constructor(props: NavBarProps) {
 		super(props);
 		this.state = {
 			anchorEl: null
@@ -121,7 +121,6 @@ export class NavBar extends React.Component<NavBarProps, any> {
 						sx={{
 							color: "#7ee6f2",
 							...tablet_show("flex"),
-							// display: { xs: "none", sm: "flex" },
 							mr: 1
 						}}
 			/>
