@@ -63,8 +63,8 @@ export const projects: ProjectInfo[] = [
 			"for individuals to exchange cooking recipes in a social media style using a Google Firebase real-time database.",
 		url: "https://www.pokefind.co/",
 		mediaType: "video",
-		mediaContent: "https://www.youtube.com/embed/h2Yw2n202WM",
-		altText: "PKNK Video Demo",
+		mediaContent: "https://www.youtube.com/embed/3bjznlsCYQ8",
+		altText: "PokeWars Video Demo",
 	},
 	{
 		title: "PKNK - Food Social Media",
