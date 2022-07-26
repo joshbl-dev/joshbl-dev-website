@@ -52,6 +52,7 @@ export default function ProjectCard(props: ProjectCardProps) {
 					height: "50vh",
 					width: "75vw",
 					justifyContent: "space-between",
+					borderRadius: "20px",
 				}}>
 				{props.mediaSide == "left" ? (
 						<Box width={"50%"}>
@@ -90,6 +91,7 @@ export default function ProjectCard(props: ProjectCardProps) {
 					margin: 3,
 					height: "60vh",
 					width: "75vw",
+					borderRadius: "20px",
 				}}>
 
 				<Box
