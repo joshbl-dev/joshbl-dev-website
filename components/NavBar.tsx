@@ -22,7 +22,7 @@ type NavBarProps = {
 }
 
 export class NavBar extends React.Component<NavBarProps, any> {
-	constructor(props) {
+	constructor(props: NavBarProps) {
 		super(props);
 		this.state = {
 			anchorEl: null
@@ -121,7 +121,6 @@ export class NavBar extends React.Component<NavBarProps, any> {
 						sx={{
 							color: "#7ee6f2",
 							...tablet_show("flex"),
-							// display: { xs: "none", sm: "flex" },
 							mr: 1
 						}}
 			/>

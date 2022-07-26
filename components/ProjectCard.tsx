@@ -1,8 +1,8 @@
-import * as React from "react";
+import React from "react";
 import Card from "@mui/material/Card";
-import { Box, CardContent, CardHeader, Typography } from "@mui/material";
-import { ProjectInfo } from "../types/ProjectInfo";
-import { desktop_hide, desktop_show } from "../styles/theme";
+import {Box, CardContent, CardHeader, Typography} from "@mui/material";
+import {ProjectInfo} from "../types/ProjectInfo";
+import {desktop_hide, desktop_show} from "../styles/theme";
 import styles from "../styles/Home.module.css";
 
 type ProjectCardProps = {
@@ -24,7 +24,7 @@ export default function ProjectCard(props: ProjectCardProps) {
 					margin: 3,
 					height: "50vh",
 					width: "75vw",
-					justifyContent: "space-between"
+					justifyContent: "space-between",
 				}}>
 				{props.mediaSide == "left" ? (
 					<Box width={"50%"}>
@@ -33,7 +33,7 @@ export default function ProjectCard(props: ProjectCardProps) {
 
 				<Box justifyContent={"center"}
 					 width={"50%"}
-					 sx={{ display: "flex", flexDirection: "column" }}>
+					 sx={{display: "flex", flexDirection: "column"}}>
 					<CardHeader title={projectInfo.title} />
 					<CardContent sx={{}}>
 						<Typography variant="body2">
@@ -55,11 +55,11 @@ export default function ProjectCard(props: ProjectCardProps) {
 					...desktop_hide("flex"),
 					margin: 3,
 					height: "60vh",
-					width: "75vw"
+					width: "75vw",
 				}}>
 
 				<Box
-					sx={{ display: "flex", flexDirection: "column" }}>
+					sx={{display: "flex", flexDirection: "column"}}>
 					<Box height={"50%"}>
 						{props.media}
 					</Box>

@@ -10,13 +10,10 @@ export const theme: Theme = createTheme({
 		secondary: {
 			main: "#00a4b4"
 		}
-		// background: {
-		// 	default: "#777777"
-		// }
 	}
 });
 
-export function mobile_show(type) {
+export function mobile_show(type: string) {
 	return {
 		display: {
 			xs: type,
@@ -25,7 +22,7 @@ export function mobile_show(type) {
 	};
 }
 
-export function mobile_hide(type) {
+export function mobile_hide(type: string) {
 	return {
 		display: {
 			xs: "none",
@@ -34,7 +31,7 @@ export function mobile_hide(type) {
 	};
 }
 
-export function tablet_show(type) {
+export function tablet_show(type: string) {
 	return {
 		display: {
 			xs: "none",
@@ -43,7 +40,7 @@ export function tablet_show(type) {
 	};
 }
 
-export function tablet_hide(type) {
+export function tablet_hide(type: string) {
 	return {
 		display: {
 			xs: type,
@@ -52,7 +49,7 @@ export function tablet_hide(type) {
 	};
 }
 
-export function desktop_show(type) {
+export function desktop_show(type: string) {
 	return {
 		display: {
 			xs: "none",
@@ -61,7 +58,7 @@ export function desktop_show(type) {
 	};
 }
 
-export function desktop_hide(type) {
+export function desktop_hide(type: string) {
 	return {
 		display: {
 			xs: type,

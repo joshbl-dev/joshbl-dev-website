@@ -1,15 +1,20 @@
-import { ThemeProvider } from "@mui/material/styles";
-import { theme } from "../styles/theme";
-import { CssBaseline } from "@mui/material";
-import { NavBar } from "./NavBar";
-import { pages } from "../types/constants";
-import { ComingSoon } from "./ComingSoon";
+import {ThemeProvider} from "@mui/material/styles";
+import {theme} from "../styles/theme";
+import {CssBaseline} from "@mui/material";
+import {NavBar} from "./NavBar";
+import {pages} from "../types/constants";
+import {ComingSoon} from "./ComingSoon";
 import styles from "../styles/Home.module.css";
 import Head from "next/head";
 import React from "react";
-import { PageInfo } from "../types/PageInfo";
+import {PageInfo} from "../types/PageInfo";
 
-export default function PageTemplate(props) {
+type PageTemplateProps = {
+	page: PageInfo;
+	components?: React.ReactNode;
+}
+
+export default function PageTemplate(props: PageTemplateProps) {
 	const page: PageInfo = props.page;
 	return (
 		<ThemeProvider theme={theme}>
