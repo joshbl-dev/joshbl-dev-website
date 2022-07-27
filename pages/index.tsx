@@ -93,7 +93,7 @@ export default function Home() {
 				>{() => (<>
 					<Typography
 						variant={"body1"}
-						whiteSpace={"nowrap"}>{skills.map(skill => skill + " | ")}</Typography>
+						whiteSpace={"nowrap"}>{skills.map(skill => " | " + skill)}</Typography>
 				</>)}</Ticker>
 			</Box><Box padding={2}>
 				<Button focusRipple={true} variant={"outlined"}
