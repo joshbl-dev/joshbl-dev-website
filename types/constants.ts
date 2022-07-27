@@ -67,8 +67,8 @@ export const projects: ProjectInfo[] = [
 	},
 	{
 		title: "PKNK - Food Social Media",
-		description: "An Android application in Java for the 2020 QuackHacks hackathon, which provided a platform " +
-			"for individuals to exchange cooking recipes in a social media style using a Google Firebase real-time database.",
+		description: "An Android application in Java for the QuackHacks hackathon, for individuals to " +
+			"exchange cooking recipes in a social media style using a Google Firebase real-time database.",
 		url: "https://github.com/joshbl-dev/PKNK",
 		mediaType: "video",
 		mediaContent: "https://www.youtube.com/embed/h2Yw2n202WM",

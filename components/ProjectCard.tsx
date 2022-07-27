@@ -48,7 +48,7 @@ export default function ProjectCard(props: ProjectCardProps) {
 					...desktop_show("flex"),
 					margin: 3,
 					minHeight: "fit-content",
-					height: "auto",
+					height: "450px",
 					width: "75vw",
 					justifyContent: "space-between",
 					borderRadius: "20px"
@@ -69,7 +69,8 @@ export default function ProjectCard(props: ProjectCardProps) {
 									fontSize: "2rem"
 								}} />
 					<CardContent>
-						<Typography variant="body1" fontSize={"1.5rem"}
+						<Typography variant="body1"
+									fontSize={"1.5rem"}
 									fontWeight={"medium"}>
 							{projectInfo.description}
 						</Typography>
@@ -95,6 +96,7 @@ export default function ProjectCard(props: ProjectCardProps) {
 				<Box
 					sx={{ display: "flex", flexDirection: "column" }}>
 					<Box
+						minHeight={"200px"}
 						height={"fit-content"}
 						alignItems={"center"}
 					>
