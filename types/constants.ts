@@ -78,8 +78,8 @@ export const projects: ProjectInfo[] = [
 		title: "Project Gamma Alpha",
 		description: "Mini games programmed in Lua including idle simulator, blind maze, and flappy bird.",
 		url: "https://github.com/joshbl-dev/Project-Gamma",
-		mediaType: "image",
-		mediaContent: "/images/projects/pga.webp",
+		mediaType: "video",
+		mediaContent: "https://www.youtube.com/embed/2-aVIdkiwGA",
 		altText: "Project Gamma Alpha Demo"
 	}
 ];
