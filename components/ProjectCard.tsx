@@ -87,8 +87,7 @@ export default function ProjectCard(props: ProjectCardProps) {
 				sx={{
 					...desktop_hide("flex"),
 					margin: 3,
-					minHeight: "fit-content",
-					height: "100%",
+					height: "fit-content",
 					width: "75vw",
 					borderRadius: "20px"
 				}}>
@@ -96,9 +95,9 @@ export default function ProjectCard(props: ProjectCardProps) {
 				<Box
 					sx={{ display: "flex", flexDirection: "column" }}>
 					<Box
-						height={"100%"}
+						height={"fit-content"}
 						alignItems={"center"}
-						sx={{ overflow: "hidden" }}>
+					>
 						{props.media}
 					</Box>
 

@@ -17,8 +17,7 @@ export default function Projects() {
 				media={project.mediaType == "image" ?
 					<CardMedia component={"img"}
 							   width={"100%"}
-							   height={"fit-content"}
-
+							   height={"100%"}
 							   image={project.mediaContent}
 							   alt={project.altText} /> :
 
