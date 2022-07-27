@@ -6,10 +6,10 @@ import {
 	CardContent,
 	CardHeader,
 	IconButton,
-	Typography,
+	Typography
 } from "@mui/material";
-import {ProjectInfo} from "../types/ProjectInfo";
-import {desktop_hide, desktop_show} from "../styles/theme";
+import { ProjectInfo } from "../types/ProjectInfo";
+import { desktop_hide, desktop_show } from "../styles/theme";
 import LaunchIcon from "@mui/icons-material/Launch";
 
 type ProjectCardProps = {
@@ -20,7 +20,7 @@ type ProjectCardProps = {
 
 function externalLink(side: string, link: string) {
 	if (side != "bottom") {
-		const margin = side == "left" ? {marginRight: "10px"} : {marginLeft: "10px"};
+		const margin = side == "left" ? { marginRight: "10px" } : { marginLeft: "10px" };
 		return (<Box {...margin} marginTop={"10px"}><IconButton
 			href={link}
 			size={"medium"}><LaunchIcon
@@ -29,7 +29,7 @@ function externalLink(side: string, link: string) {
 		return (<Box textAlign={"center"}><Button
 			sx={{
 				width: "20%",
-				padding: "10px",
+				padding: "10px"
 			}}
 			size={"medium"}
 			href={link}
@@ -50,7 +50,7 @@ export default function ProjectCard(props: ProjectCardProps) {
 					height: "50vh",
 					width: "75vw",
 					justifyContent: "space-between",
-					borderRadius: "20px",
+					borderRadius: "20px"
 				}}>
 				{props.mediaSide == "left" ? (
 						<Box width={"50%"}>
@@ -60,12 +60,12 @@ export default function ProjectCard(props: ProjectCardProps) {
 
 				<Box justifyContent={"center"}
 					 width={"50%"}
-					 sx={{display: "flex", flexDirection: "column"}}>
+					 sx={{ display: "flex", flexDirection: "column" }}>
 
 					<CardHeader title={projectInfo.title}
 								titleTypographyProps={{
 									fontWeight: "bold",
-									fontSize: "2rem",
+									fontSize: "2rem"
 								}} />
 					<CardContent>
 						<Typography variant="body1" fontSize={"1.5rem"}
@@ -88,24 +88,26 @@ export default function ProjectCard(props: ProjectCardProps) {
 					margin: 3,
 					height: "60vh",
 					width: "75vw",
-					borderRadius: "20px",
+					borderRadius: "20px"
 				}}>
 
 				<Box
-					sx={{display: "flex", flexDirection: "column"}}>
+					sx={{ display: "flex", flexDirection: "column" }}>
 					<Box
 						height={"50%"}
-						alignItems={"center"}>
+						alignItems={"center"}
+						sx={{ overflow: "hidden" }}>
 						{props.media}
 					</Box>
 
 					<Box paddingTop={"20px"} textAlign={"center"}>
 						{externalLink("bottom", projectInfo.url)}
-						<CardHeader
-							title={projectInfo.title}
-						/>
+
 
 						<CardContent>
+							<Typography variant="h5" fontWeight={"bold"}>
+								{projectInfo.title}
+							</Typography>
 							<Typography variant="body1">
 								{projectInfo.description}
 							</Typography>
