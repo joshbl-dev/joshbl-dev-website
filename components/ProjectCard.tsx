@@ -98,7 +98,7 @@ export default function ProjectCard(props: ProjectCardProps) {
 					<Box
 						minHeight={"200px"}
 						height={"fit-content"}
-						minWidth={"100%"}
+						width={"75vw"}
 						alignItems={"center"}
 					>
 						{props.media}
