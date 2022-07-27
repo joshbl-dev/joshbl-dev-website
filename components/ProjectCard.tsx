@@ -47,7 +47,8 @@ export default function ProjectCard(props: ProjectCardProps) {
 				sx={{
 					...desktop_show("flex"),
 					margin: 3,
-					height: "50vh",
+					minHeight: "fit-content",
+					height: "auto",
 					width: "75vw",
 					justifyContent: "space-between",
 					borderRadius: "20px"
@@ -86,7 +87,8 @@ export default function ProjectCard(props: ProjectCardProps) {
 				sx={{
 					...desktop_hide("flex"),
 					margin: 3,
-					height: "60vh",
+					minHeight: "fit-content",
+					height: "100%",
 					width: "75vw",
 					borderRadius: "20px"
 				}}>
@@ -94,17 +96,18 @@ export default function ProjectCard(props: ProjectCardProps) {
 				<Box
 					sx={{ display: "flex", flexDirection: "column" }}>
 					<Box
-						height={"50%"}
+						height={"100%"}
 						alignItems={"center"}
 						sx={{ overflow: "hidden" }}>
 						{props.media}
 					</Box>
 
-					<Box paddingTop={"20px"} textAlign={"center"}>
+					<Box paddingTop={"20px"}
+						 textAlign={"center"}>
 						{externalLink("bottom", projectInfo.url)}
 
 
-						<CardContent>
+						<CardContent sx={{ height: "fit-content" }}>
 							<Typography variant="h5" fontWeight={"bold"}>
 								{projectInfo.title}
 							</Typography>

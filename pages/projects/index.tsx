@@ -17,15 +17,18 @@ export default function Projects() {
 				media={project.mediaType == "image" ?
 					<CardMedia component={"img"}
 							   width={"100%"}
-							   height={"100%"}
+							   height={"fit-content"}
+
 							   image={project.mediaContent}
 							   alt={project.altText} /> :
+
 					<iframe
 						style={{ border: "none" }}
 						width={"100%"}
 						height={"100%"}
 						src={project.mediaContent}
 					/>
+
 				} />)}
 			</>
 		}
