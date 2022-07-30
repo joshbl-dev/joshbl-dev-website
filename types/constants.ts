@@ -50,7 +50,7 @@ export const projects: ProjectInfo[] = [
 	},
 	{
 		title: "NCR Global Hackathon",
-		description: "Created a production REST API for NCR’s Global Hackathon to organize international participants, teams, and " +
+		description: "A production REST API for NCR’s Global Hackathon to organize international participants, teams, and " +
 			"conference talks using NestJS, Azure, and PostgreSQL.",
 		url: "https://hackathon.ncr.com/",
 		mediaType: "image",
@@ -67,7 +67,7 @@ export const projects: ProjectInfo[] = [
 	},
 	{
 		title: "PKNK - Food Social Media",
-		description: "An Android application in Java for the QuackHacks hackathon, for individuals to " +
+		description: "An Android application, in Java, for the QuackHacks hackathon to " +
 			"exchange cooking recipes in a social media style using a Google Firebase real-time database.",
 		url: "https://github.com/joshbl-dev/PKNK",
 		mediaType: "video",
