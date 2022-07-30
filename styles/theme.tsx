@@ -15,6 +15,7 @@ export const theme: Theme = createTheme({
 			main: "#00a4b4",
 		},
 	},
+
 });
 
 export function mobile_show(type: string) {

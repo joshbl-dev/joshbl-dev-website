@@ -1,8 +1,8 @@
 import React from "react";
-import { pages, projects } from "../../types/constants";
+import {pages, projects} from "../../types/constants";
 import PageTemplate from "../../components/PageTemplate";
 import ProjectCard from "../../components/ProjectCard";
-import { CardMedia } from "@mui/material";
+import {CardMedia} from "@mui/material";
 
 
 const page = pages.filter(p => p.title == "Projects")[0];
@@ -22,7 +22,7 @@ export default function Projects() {
 							   alt={project.altText} /> :
 
 					<iframe
-						style={{ border: "none" }}
+						style={{border: "none"}}
 						width={"100%"}
 						height={"100%"}
 						src={project.mediaContent}
@@ -31,9 +31,6 @@ export default function Projects() {
 				} />)}
 			</>
 		}
-
-			//<iframe src="https://www.youtube.com/embed/2-aVIdkiwGA" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-			//                         allowfullscreen>
 
 		/>
 	);
