@@ -1,4 +1,5 @@
 import { Chip, Typography } from "@mui/material";
+import { chipLinks } from "../types/constants";
 
 type topicChipProps = {
 	text: string;
@@ -15,7 +16,8 @@ export default function TopicChip(props: topicChipProps) {
 				style={{ whiteSpace: "pre-line" }}>{text}</Typography>
 		}
 			// Todo: Redirect to external link
-			// clickable={true}
+			  clickable={chipLinks.has(text)}
+			  component={"a"} href={chipLinks.get(text)}
 			  sx={{
 				  // height: "fit-content",
 				  padding: .5,

@@ -155,3 +155,31 @@ export const interests: InterestInfo[] = [
 		image: ice_cream
 	}
 ];
+
+export const chipLinks: Map<string, string> = new Map<string, string>([
+	["Computer Science", "https://www.cc.gatech.edu/degree-programs/bachelor-science-computer-science"],
+	["Intelligence", "https://www.cc.gatech.edu/academics/threads/intelligence"],
+	["Information Internetworks", "https://www.cc.gatech.edu/academics/threads/information-internetworks"],
+	["Object-Oriented Programming", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=for%20CS%201322.-,CS%C2%A01331,-.%20Introduction%20to%20Object"],
+	["Data Structures & Algorithms", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=CS%C2%A01331.-,CS%C2%A01332,-.%20Data%20Structures%20and"],
+	["Computer Organization and Programming", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=CS%C2%A02050.-,CS%C2%A02110,-.%20Computer%20Organization%20and"],
+	["Systems and Networks", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=and%20C%20programming.-,CS%C2%A02200,-.%20Computer%20Systems%20and"],
+	["Intro to AI", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=CS%C2%A03510.-,CS%C2%A03600,-.%20Introduction%20to%20Artificial"],
+	["Applied Combinatorics", "https://math.gatech.edu/courses/math/3012"],
+	["Linear Algebra", "https://math.gatech.edu/courses/math/1554"],
+	["Discrete Mathematics", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=21%20Credit%20Hours.-,CS%C2%A02050,-.%20Introduction%20to%20Discrete"],
+	["Python", "https://www.python.org/"],
+	["OpenCV", "https://opencv.org/"],
+	["Sklearn", "https://scikit-learn.org/stable/"],
+	["SciPy", "https://scipy.org/"],
+	["Google Cloud Functions", "https://cloud.google.com/functions"],
+	["Google Cloud Scheduler", "https://cloud.google.com/scheduler"],
+	["Slack API", "https://api.slack.com/"],
+	["Typescript", "https://www.typescriptlang.org/"],
+	["NestJS", "https://nestjs.com/"],
+	["Azure", "https://azure.microsoft.com/en-us/"],
+	["PostgreSQL", "https://www.postgresql.org/"],
+	["Java", "https://www.java.com/en/"],
+	["Minecraft API", "https://hub.spigotmc.org/javadocs/bukkit/"],
+	["BeautifulSoup", "https://pypi.org/project/beautifulsoup4/"]
+]);
