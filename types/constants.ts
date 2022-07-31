@@ -3,6 +3,7 @@ import {BaseUrl} from "./BaseUrl";
 import {PageInfo} from "./PageInfo";
 import {ProjectInfo} from "./ProjectInfo";
 import {JobInfo} from "./JobInfo";
+import {InterestInfo} from "./InterestInfo";
 
 export const AXIOS_INSTANCE: AxiosInstance = axios.create({
 	baseURL: BaseUrl.JOSHBL_API,
@@ -115,5 +116,32 @@ export const jobs: JobInfo[] = [
 		position: "Software Intern",
 		projectType: "Computer Vision & Web Scraper",
 		techStack: ["Python", "OpenCV", "BeautifulSoup"],
+	},
+];
+
+export const interests: InterestInfo[] = [
+	{
+		name: "Skiing",
+		image: "/images/interests/skiing.webp",
+	},
+	{
+		name: "Sushi",
+		image: "/images/interests/sushi.webp",
+	},
+	{
+		name: "Star Wars",
+		image: "/images/interests/star_wars.webp",
+	},
+	{
+		name: "Hiking",
+		image: "/images/interests/hiking.webp",
+	},
+	{
+		name: "Gaming",
+		image: "/images/interests/gaming.webp",
+	},
+	{
+		name: "Ice Cream",
+		image: "/images/interests/ice_cream.webp",
 	},
 ];

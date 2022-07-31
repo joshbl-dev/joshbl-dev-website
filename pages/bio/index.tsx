@@ -2,7 +2,6 @@ import {pages} from "../../types/constants";
 import PageTemplate from "../../components/PageTemplate";
 import {Box, Divider, Typography} from "@mui/material";
 import Timeline from "../../components/Timeline";
-import ImageCarousel from "../../components/ImageCarousel";
 import {
 	desktop_hide,
 	desktop_show,
@@ -10,6 +9,7 @@ import {
 	tablet_show,
 } from "../../styles/theme";
 import TopicChip from "../../components/TopicChip";
+import ImageCarousel from "../../components/ImageCarousel";
 
 const page = pages.filter(p => p.title == "Bio")[0];
 
@@ -56,10 +56,9 @@ export default function Bio() {
 		<PageTemplate page={page} components={<>
 			<Box margin={"20px"} justifyContent={"center"}
 				 textAlign={"center"}>
-				{/*{divider()}*/}
 				{sectionTitle("College Education")}
 				<Box border={"solid"} borderRadius={"20px"} minWidth={"lg"}
-					 maxWidth={"80vw"} margin={"20px"}>
+					 maxWidth={"100%"} margin={"20px"}>
 
 					<Box justifyContent={"space-between"}
 						 {...desktop_show("flex")}>
@@ -115,9 +114,9 @@ export default function Bio() {
 				{divider()}
 				{sectionTitle("Professional Work Experience")}
 				{Timeline()}
-				
+
 				{divider()}
-				{sectionTitle("Hobbies")}
+				{sectionTitle("Interests")}
 				{ImageCarousel()}
 			</Box>
 		</>} />

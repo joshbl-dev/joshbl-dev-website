@@ -1,14 +1,17 @@
-import {KeyboardArrowLeft, KeyboardArrowRight} from "@mui/icons-material";
-import {Box, Button, MobileStepper, Paper, Typography} from "@mui/material";
+import {Box, Button, MobileStepper, Typography} from "@mui/material";
 import SwipeableViews from "react-swipeable-views";
 import {autoPlay} from "react-swipeable-views-utils";
 import React from "react";
+import {interests} from "../types/constants";
+import {desktop_hide, desktop_show} from "../styles/theme";
+import {KeyboardArrowLeft, KeyboardArrowRight} from "@mui/icons-material";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
+
 export default function ImageCarousel() {
 	const [activeStep, setActiveStep] = React.useState(0);
-	const maxSteps = 2;
+	const maxSteps = interests.length;
 
 	const handleNext = () => {
 		setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -22,44 +25,40 @@ export default function ImageCarousel() {
 		setActiveStep(step);
 	};
 
-	return (
-		<Box sx={{maxWidth: 400, flexGrow: 1}}>
-			<Paper
-				square
-				elevation={0}
-				sx={{
-					display: "flex",
-					alignItems: "center",
-					height: 50,
-					pl: 2,
-					bgcolor: "background.default",
-				}}
-			>
-				<Typography>label</Typography>
-			</Paper>
+	function carousel(size: number) {
+
+		return (<>
 			<AutoPlaySwipeableViews
+				height={"fit-content"}
 				index={activeStep}
 				onChangeIndex={handleStepChange}
 				enableMouseEvents
 			>
-				{[1, 2].map((step, index) => (
-					<div key={step}>
-						{Math.abs(activeStep - index) <= 2 ? (
-							<Box
-								component="img"
-								sx={{
-									height: 255,
-									display: "block",
-									maxWidth: 400,
-									overflow: "hidden",
-									width: "100%",
-								}}
-								src={"/images/projects/nest.webp"}
-								alt={"step"}
-							/>
-						) : null}
-					</div>
-				))}
+				{interests.map((interest, index) => (
+						<Box
+							display={"block"} justifyContent={"center"}
+							key={interest.name}>
+							{Math.abs(activeStep - index) <= 2 ? (
+								<>
+									<Box
+
+										component="img"
+										sx={{
+											borderRadius: "20px",
+											height: size + "px",
+											overflow: "hidden",
+											width: "auto",
+										}}
+										src={interest.image}
+										alt={interest.name}
+									/>
+									<Typography
+										variant={"h5"}>{interest.name}</Typography>
+								</>
+							) : undefined}</Box>
+
+					),
+				)}
 			</AutoPlaySwipeableViews>
 			<MobileStepper
 				steps={maxSteps}
@@ -87,6 +86,24 @@ export default function ImageCarousel() {
 					</Button>
 				}
 			/>
+		</>);
+	}
+
+	return (
+		<Box margin={"20px"} display={"flex"}
+			 justifyContent={"center"} width={"100%"}>
+			<Box
+				{...desktop_show("block")}
+				maxWidth={"md"}
+			>
+				{carousel(400)}
+			</Box>
+			<Box
+				{...desktop_hide("block")}
+				maxWidth={"sm"}
+			>
+				{carousel(250)}
+			</Box>
 		</Box>
 	);
 }
