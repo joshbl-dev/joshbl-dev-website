@@ -1,12 +1,19 @@
-import axios, {AxiosInstance} from "axios";
-import {BaseUrl} from "./BaseUrl";
-import {PageInfo} from "./PageInfo";
-import {ProjectInfo} from "./ProjectInfo";
-import {JobInfo} from "./JobInfo";
-import {InterestInfo} from "./InterestInfo";
+import axios, { AxiosInstance } from "axios";
+import { BaseUrl } from "./BaseUrl";
+import { PageInfo } from "./PageInfo";
+import { ProjectInfo } from "./ProjectInfo";
+import { JobInfo } from "./JobInfo";
+import { InterestInfo } from "./InterestInfo";
+import gaming from "../public/images/interests/gaming.webp";
+import skiing from "../public/images/interests/skiing.webp";
+import sushi from "../public/images/interests/sushi.webp";
+import star_wars from "../public/images/interests/star_wars.webp";
+import hiking from "../public/images/interests/hiking.webp";
+import ice_cream from "../public/images/interests/ice_cream.webp";
+
 
 export const AXIOS_INSTANCE: AxiosInstance = axios.create({
-	baseURL: BaseUrl.JOSHBL_API,
+	baseURL: BaseUrl.JOSHBL_API
 });
 
 
@@ -14,23 +21,23 @@ export const pages: PageInfo[] = [
 	{
 		title: "Home",
 		active: true,
-		url: "/",
+		url: "/"
 	},
 	{
 		title: "Projects",
 		active: true,
-		url: "/projects",
+		url: "/projects"
 	},
 	{
 		title: "Bio",
 		active: true,
-		url: "/bio",
+		url: "/bio"
 	},
 	{
 		title: "???",
 		active: false,
-		url: "/mystery",
-	},
+		url: "/mystery"
+	}
 ];
 
 export const projects: ProjectInfo[] = [
@@ -40,7 +47,7 @@ export const projects: ProjectInfo[] = [
 		url: "https://github.com/joshbl-dev/joshbl-dev-website",
 		mediaType: "image",
 		mediaContent: "/images/projects/next.webp",
-		altText: "Next.js Logo",
+		altText: "Next.js Logo"
 	},
 	{
 		title: "NestJS Personal API",
@@ -48,7 +55,7 @@ export const projects: ProjectInfo[] = [
 		url: "https://github.com/joshbl-dev/joshbl-dev-api",
 		mediaType: "image",
 		mediaContent: "/images/projects/nest.webp",
-		altText: "NestJS Logo",
+		altText: "NestJS Logo"
 	},
 	{
 		title: "NCR Global Hackathon",
@@ -57,7 +64,7 @@ export const projects: ProjectInfo[] = [
 		url: "https://hackathon.ncr.com/",
 		mediaType: "image",
 		mediaContent: "/images/projects/ghu.webp",
-		altText: "Global Hackathon Site",
+		altText: "Global Hackathon Site"
 	},
 	{
 		title: "PokéWars - Minecraft Server",
@@ -65,7 +72,7 @@ export const projects: ProjectInfo[] = [
 		url: "https://www.pokefind.co/",
 		mediaType: "video",
 		mediaContent: "https://www.youtube.com/embed/3bjznlsCYQ8",
-		altText: "PokeWars Video Demo",
+		altText: "PokeWars Video Demo"
 	},
 	{
 		title: "PKNK - Food Social Media",
@@ -74,7 +81,7 @@ export const projects: ProjectInfo[] = [
 		url: "https://github.com/joshbl-dev/PKNK",
 		mediaType: "video",
 		mediaContent: "https://www.youtube.com/embed/h2Yw2n202WM",
-		altText: "PKNK Video Demo",
+		altText: "PKNK Video Demo"
 	},
 	{
 		title: "Project Gamma Alpha",
@@ -82,8 +89,8 @@ export const projects: ProjectInfo[] = [
 		url: "https://github.com/joshbl-dev/Project-Gamma",
 		mediaType: "video",
 		mediaContent: "https://www.youtube.com/embed/2-aVIdkiwGA",
-		altText: "Project Gamma Alpha Demo",
-	},
+		altText: "Project Gamma Alpha Demo"
+	}
 ];
 
 export const jobs: JobInfo[] = [
@@ -92,7 +99,7 @@ export const jobs: JobInfo[] = [
 		year: 2022,
 		position: "Software Engineer Intern",
 		projectType: "Computer Vision",
-		techStack: ["Python", "OpenCV", "Sklearn", "SciPy", "Google Cloud Functions", "Google Cloud Scheduler", "Slack API"],
+		techStack: ["Python", "OpenCV", "Sklearn", "SciPy", "Google Cloud Functions", "Google Cloud Scheduler", "Slack API"]
 
 	},
 	{
@@ -100,7 +107,7 @@ export const jobs: JobInfo[] = [
 		year: 2021,
 		position: "Software Engineer Intern",
 		projectType: "Backend REST API",
-		techStack: ["Typescript", "NestJS", "Azure", "PostgreSQL"],
+		techStack: ["Typescript", "NestJS", "Azure", "PostgreSQL"]
 
 	},
 	{
@@ -108,40 +115,40 @@ export const jobs: JobInfo[] = [
 		year: 2020,
 		position: "Software Developer",
 		projectType: "Game Development",
-		techStack: ["Java", "Minecraft API"],
+		techStack: ["Java", "Minecraft API"]
 	},
 	{
 		name: "XLink",
 		year: 2020,
 		position: "Software Intern",
 		projectType: "Computer Vision & Web Scraper",
-		techStack: ["Python", "OpenCV", "BeautifulSoup"],
-	},
+		techStack: ["Python", "OpenCV", "BeautifulSoup"]
+	}
 ];
 
 export const interests: InterestInfo[] = [
 	{
 		name: "Skiing",
-		image: "/images/interests/skiing.webp",
+		image: skiing
 	},
 	{
 		name: "Sushi",
-		image: "/images/interests/sushi.webp",
+		image: sushi
 	},
 	{
 		name: "Star Wars",
-		image: "/images/interests/star_wars.webp",
+		image: star_wars
 	},
 	{
 		name: "Hiking",
-		image: "/images/interests/hiking.webp",
+		image: hiking
 	},
 	{
 		name: "Gaming",
-		image: "/images/interests/gaming.webp",
+		image: gaming
 	},
 	{
 		name: "Ice Cream",
-		image: "/images/interests/ice_cream.webp",
-	},
+		image: ice_cream
+	}
 ];

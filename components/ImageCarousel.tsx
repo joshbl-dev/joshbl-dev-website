@@ -1,10 +1,10 @@
-import {Box, Button, MobileStepper, Typography} from "@mui/material";
+import { Box, Button, MobileStepper, Typography } from "@mui/material";
 import SwipeableViews from "react-swipeable-views";
-import {autoPlay} from "react-swipeable-views-utils";
+import { autoPlay } from "react-swipeable-views-utils";
 import React from "react";
-import {interests} from "../types/constants";
-import {desktop_hide, desktop_show} from "../styles/theme";
-import {KeyboardArrowLeft, KeyboardArrowRight} from "@mui/icons-material";
+import { interests } from "../types/constants";
+import { desktop_hide, desktop_show } from "../styles/theme";
+import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 import Image from "next/image";
 
 
@@ -45,13 +45,14 @@ export default function ImageCarousel() {
 									<Typography
 										variant={"h5"}>{interest.name}</Typography>
 
-									<Box sx={{position: "relative"}}
+									<Box sx={{ position: "relative" }}
 										 height={height + "px"}
 										 width={width + "px"}
 										 margin={"auto"}>
 										<Image
 											layout={"fill"}
 											objectFit={"contain"}
+											placeholder="blur"
 											src={interest.image}
 											alt={interest.name} />
 									</Box>
@@ -59,7 +60,7 @@ export default function ImageCarousel() {
 								</>
 							) : undefined}</Box>
 
-					),
+					)
 				)}
 			</AutoPlaySwipeableViews>
 			<MobileStepper
