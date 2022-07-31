@@ -43,17 +43,8 @@ export default function ImageCarousel() {
 							key={interest.name}>
 							{Math.abs(activeStep - index) <= 2 ? (
 								<>
-									{/*<Box*/}
-									{/*	component="img"*/}
-									{/*	sx={{*/}
-									{/*		borderRadius: "20px",*/}
-									{/*		height: size + "px",*/}
-									{/*		overflow: "hidden",*/}
-									{/*		width: "100%",*/}
-									{/*	}}*/}
-									{/*	src={interest.image}*/}
-									{/*	alt={interest.name}*/}
-									{/*/>*/}
+									<Typography
+										variant={"h5"}>{interest.name}</Typography>
 
 									<Image
 										height={size + "px"}
@@ -61,8 +52,7 @@ export default function ImageCarousel() {
 										objectFit={"contain"}
 										src={interest.image}
 										alt={interest.name} />
-									<Typography
-										variant={"h5"}>{interest.name}</Typography>
+
 								</>
 							) : undefined}</Box>
 
