@@ -106,7 +106,7 @@ export class NavBar extends React.Component<NavBarProps, any> {
 				</Menu>
 			</Box>
 			<JoshblIcon
-				fontSize={"large"}
+				href={"/"}
 				sx={{
 					color: "#7ee6f2",
 					flex: "auto",
@@ -117,12 +117,13 @@ export class NavBar extends React.Component<NavBarProps, any> {
 
 	private renderDesktop = () => {
 		return <>
-			<JoshblIcon fontSize={"large"}
-						sx={{
-							color: "#7ee6f2",
-							...tablet_show("flex"),
-							mr: 1
-						}}
+			<JoshblIcon
+				href={"/"}
+				sx={{
+					color: "#7ee6f2",
+					...tablet_show("flex"),
+					mr: 1
+				}}
 			/>
 
 			<Box sx={{

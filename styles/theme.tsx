@@ -12,9 +12,10 @@ export const theme: Theme = createTheme({
 			main: "#7ee6f2",
 		},
 		secondary: {
-			main: "#00a4b4",
+			main: "#00616c",
 		},
 	},
+
 });
 
 export function mobile_show(type: string) {

@@ -29,15 +29,15 @@ export default function Home() {
 	return (
 		<PageTemplate page={page} components={
 			<>
-				<Typography variant="h4" padding={2}
-							textAlign={"center"}
-							sx={{ fontWeight: "bold" }}>
-					Site Under Construction
-				</Typography>
-				<Button variant={"contained"}
-						href={"https://old.joshbl.dev"}>
-					Old Site
-				</Button>
+				{/*<Typography variant="h4" padding={2}*/}
+				{/*			textAlign={"center"}*/}
+				{/*			sx={{ fontWeight: "bold" }}>*/}
+				{/*	Site Under Construction*/}
+				{/*</Typography>*/}
+				{/*<Button variant={"contained"}*/}
+				{/*		href={"https://old.joshbl.dev"}>*/}
+				{/*	Old Site*/}
+				{/*</Button>*/}
 				<Grid
 					container
 					item
@@ -45,7 +45,7 @@ export default function Home() {
 					justifyContent="center"
 					alignItems="center"
 					xs={"auto"}
-					padding={2}
+					margin={"20px"}
 				>
 					{/* Welcome text */}
 					<Grid item md>
@@ -56,7 +56,7 @@ export default function Home() {
 								{quote}
 							</Typography>
 							<Typography sx={{ ...mobile_show("flex") }}
-										variant={"h5"} align={"center"}>
+										variant={"h4"} align={"center"}>
 								{quote}
 							</Typography>
 						</Container>
@@ -83,9 +83,9 @@ export default function Home() {
 						</Box>
 					</Grid>
 
-				</Grid><Box maxWidth={"sm"} padding={2}>
+				</Grid><Box maxWidth={"sm"} margin={"20px"}>
 				<Typography variant={"h4"}
-							padding={1}
+							margin={"10px"}
 							justifyContent={"center"} align={"center"}>Skills
 					&
 					Technologies</Typography>
@@ -95,7 +95,7 @@ export default function Home() {
 						variant={"body1"}
 						whiteSpace={"nowrap"}>{skills.map(skill => " | " + skill)}</Typography>
 				</>)}</Ticker>
-			</Box><Box padding={2}>
+			</Box><Box margin={"20px"}>
 				<Button focusRipple={true} variant={"outlined"}
 						size={"large"}
 						onClick={() => window.open("/pdfs/Resume.pdf", "_blank")}
