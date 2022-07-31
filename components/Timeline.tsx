@@ -4,9 +4,9 @@ import {
 	StepContent,
 	StepLabel,
 	Stepper,
-	Typography
+	Typography,
 } from "@mui/material";
-import { jobs } from "../types/constants";
+import {jobs} from "../types/constants";
 import TopicChip from "./TopicChip";
 
 export default function Timeline() {
@@ -29,13 +29,12 @@ export default function Timeline() {
 										variant={"h5"}>{job.name}</Typography>
 									<Typography
 										variant={"subtitle1"}
-										sx={{ fontStyle: "italics" }}>
+										sx={{fontStyle: "italics"}}>
 										{job.position}</Typography>
 								</Box>
 							</StepLabel>
 							<StepContent>
 								{job.techStack.map(tech => <TopicChip
-									key={tech + Math.random()}
 									text={tech} />)}
 							</StepContent>
 						</Step>

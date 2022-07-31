@@ -8,13 +8,13 @@ import {
 	Menu,
 	MenuItem,
 	Toolbar,
-	Typography
+	Typography,
 } from "@mui/material";
 import JoshblIcon from "./JoshblIcon";
 import MenuIcon from "@mui/icons-material/Menu";
 import styles from "../styles/Home.module.css";
-import { PageInfo } from "../types/PageInfo";
-import { tablet_hide, tablet_show } from "../styles/theme";
+import {PageInfo} from "../types/PageInfo";
+import {tablet_hide, tablet_show} from "../styles/theme";
 
 
 type NavBarProps = {
@@ -25,25 +25,25 @@ export class NavBar extends React.Component<NavBarProps, any> {
 	constructor(props: NavBarProps) {
 		super(props);
 		this.state = {
-			anchorEl: null
+			anchorEl: null,
 		};
 	}
 
 	handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
 		this.setState({
-			anchorEl: event.currentTarget
+			anchorEl: event.currentTarget,
 		});
 	};
 
 	handleCloseNavMenu = () => {
 		this.setState({
-			anchorEl: null
+			anchorEl: null,
 		});
 	};
 
 
 	render() {
-		return <AppBar position={"static"} sx={{ mb: 2 }}>
+		return <AppBar position={"static"} sx={{mb: 2}}>
 			<Container maxWidth={"xl"}>
 				<Toolbar disableGutters>
 					{this.renderMobile()}
@@ -65,8 +65,8 @@ export class NavBar extends React.Component<NavBarProps, any> {
 	private renderMobile = () => {
 		return <>
 			<Box sx={{
-				// flexBasis: "auto",
-				...tablet_hide("flex")
+				flexBasis: "auto",
+				...tablet_hide("flex"),
 			}}>
 				<IconButton
 					size="large"
@@ -80,17 +80,17 @@ export class NavBar extends React.Component<NavBarProps, any> {
 					anchorEl={this.state.anchorEl}
 					anchorOrigin={{
 						vertical: "bottom",
-						horizontal: "left"
+						horizontal: "left",
 					}}
 					keepMounted
 					transformOrigin={{
 						vertical: "top",
-						horizontal: "left"
+						horizontal: "left",
 					}}
 					open={Boolean(this.state.anchorEl)}
 					onClose={this.handleCloseNavMenu}
 					sx={{
-						...tablet_hide("block")
+						...tablet_hide("block"),
 					}}
 				>
 					{this.props.pages.map((page) => (
@@ -110,7 +110,7 @@ export class NavBar extends React.Component<NavBarProps, any> {
 				sx={{
 					color: "#7ee6f2",
 					flex: "auto",
-					...tablet_hide("flex")
+					...tablet_hide("flex"),
 				}} />
 		</>;
 	};
@@ -121,7 +121,7 @@ export class NavBar extends React.Component<NavBarProps, any> {
 						sx={{
 							color: "#7ee6f2",
 							...tablet_show("flex"),
-							mr: 1
+							mr: 1,
 						}}
 			/>
 
@@ -129,7 +129,7 @@ export class NavBar extends React.Component<NavBarProps, any> {
 				flexGrow: 1,
 				...tablet_show("flex"),
 				justifyContent: "center",
-				textAlign: "center"
+				textAlign: "center",
 			}}>
 				{this.props.pages.map((page) => (
 					<Button
@@ -141,7 +141,7 @@ export class NavBar extends React.Component<NavBarProps, any> {
 						sx={{
 							my: 2,
 							display: "block",
-							margin: "0rem 1rem"
+							margin: "0rem 1rem",
 						}}
 					>
 						{page.title}

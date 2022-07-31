@@ -1,12 +1,12 @@
-import { pages } from "../../types/constants";
+import {pages} from "../../types/constants";
 import PageTemplate from "../../components/PageTemplate";
-import { Box, Divider, Typography } from "@mui/material";
+import {Box, Divider, Typography} from "@mui/material";
 import Timeline from "../../components/Timeline";
 import {
 	desktop_hide,
 	desktop_show,
 	tablet_hide,
-	tablet_show
+	tablet_show,
 } from "../../styles/theme";
 import TopicChip from "../../components/TopicChip";
 import ImageCarousel from "../../components/ImageCarousel";
@@ -22,8 +22,7 @@ function facts(subject: string, facts: string[]) {
 						variant={"h5"}>{subject}:
 				<Box display="block">
 
-					{facts.map(fact => <TopicChip key={fact + Math.random()}
-												  text={fact} />)}
+					{facts.map(fact => <TopicChip text={fact} />)}
 				</Box>
 			</Typography>
 		</Box>);
@@ -39,7 +38,7 @@ function divider() {
 						 // padding: "1px",
 						 width: "75%",
 						 borderWidth: "5px",
-						 borderRadius: "20px"
+						 borderRadius: "20px",
 					 }} />
 		</Box>);
 }
