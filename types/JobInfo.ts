@@ -3,6 +3,6 @@ export type JobInfo = {
 	year: number
 	position: string;
 	projectType: string;
-	TechStack: string[];
+	techStack: string[];
 	logo?: string;
 }

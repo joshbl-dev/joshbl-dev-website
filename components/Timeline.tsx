@@ -7,10 +7,13 @@ import {
 	Typography,
 } from "@mui/material";
 import {jobs} from "../types/constants";
+import TopicChip from "./TopicChip";
 
 export default function Timeline() {
 	return (
 		<Box justifyContent={"center"}
+			// border={"solid"}
+			// borderRadius={"20px"}
 			 textAlign={"left"} width={"fit-content"}>
 			<Stepper orientation="vertical">
 				{jobs.map((job, index) => {
@@ -18,21 +21,21 @@ export default function Timeline() {
 								  expanded>
 							<StepLabel
 								StepIconComponent={() => <Typography
-									variant={"h4"}>{job.year}</Typography>}
-
-							>
-								<Box display={"flex"}
-									 alignItems={"center"}
-								>
-									<Typography padding={"1rem"}
-												variant={"h5"}>{job.name}</Typography>
-									<Typography padding={"1rem"}
-												variant={"subtitle1"}>
-										[{job.position}]</Typography>
+									variant={"h4"}
+									fontWeight={"bold"}
+								>{job.year}</Typography>}>
+								<Box height={"fit-content"} margin={"10px"}>
+									<Typography
+										variant={"h5"}>{job.name}</Typography>
+									<Typography
+										variant={"subtitle1"}
+										sx={{fontStyle: "italics"}}>
+										{job.position}</Typography>
 								</Box>
 							</StepLabel>
 							<StepContent>
-								<Typography>{job.TechStack.join(", ")}</Typography>
+								{job.techStack.map(tech => <TopicChip
+									text={tech} />)}
 							</StepContent>
 						</Step>
 					);

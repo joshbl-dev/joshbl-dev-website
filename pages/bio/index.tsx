@@ -1,17 +1,31 @@
 import {pages} from "../../types/constants";
 import PageTemplate from "../../components/PageTemplate";
-import {Box, Divider, Grid, Typography} from "@mui/material";
+import {Box, Divider, Typography} from "@mui/material";
 import Timeline from "../../components/Timeline";
 import ImageCarousel from "../../components/ImageCarousel";
+import {
+	desktop_hide,
+	desktop_show,
+	tablet_hide,
+	tablet_show,
+} from "../../styles/theme";
+import TopicChip from "../../components/TopicChip";
 
 const page = pages.filter(p => p.title == "Bio")[0];
 
-function factsText(subject: string, text: string) {
-	return (<Box width={"100%"}><Typography margin={"20px"}
-											textAlign={"left"}
-											variant={"h5"}>{subject}: <Typography
-		padding={"10px"}
-		variant={"body1"}>{text}</Typography></Typography></Box>);
+function facts(subject: string, facts: string[]) {
+	return (
+		<Box>
+			<Typography margin={"10px"}
+						textAlign={"left"}
+						width={"fit-content"}
+						variant={"h5"}>{subject}:
+				<Box display="block">
+
+					{facts.map(fact => <TopicChip text={fact} />)}
+				</Box>
+			</Typography>
+		</Box>);
 }
 
 function divider() {
@@ -21,7 +35,7 @@ function divider() {
 			 justifyContent={"center"}>
 			<Divider orientation={"horizontal"}
 					 sx={{
-						 padding: "1px",
+						 // padding: "1px",
 						 width: "75%",
 						 borderWidth: "5px",
 						 borderRadius: "20px",
@@ -40,46 +54,68 @@ const mathCourses: string[] = ["Applied Combinatorics", "Linear Algebra", "Discr
 export default function Bio() {
 	return (
 		<PageTemplate page={page} components={<>
-			<Box margin={3} justifyContent={"center"}
+			<Box margin={"20px"} justifyContent={"center"}
 				 textAlign={"center"}>
+				{/*{divider()}*/}
 				{sectionTitle("College Education")}
-				<Grid container
-					  width={"fit-content"}
-					  maxWidth={"lg"}
-					  margin={"20px"}
-					  direction={"row"}
-					  justifyContent={"space-between"}
-					  alignItems={"stretch"}
-					  padding={"20px"}
-					  border={"solid"}
-					  borderRadius={"20px"}
-					  textAlign={"center"}
-				>
-					<Grid item textAlign={"left"}
-						  width={"fit-content"}
-					>
-						<Typography margin={"20px"} variant={"h4"}
-									whiteSpace={"nowrap"}
-						>Georgia Institute of Technology </Typography>
+				<Box border={"solid"} borderRadius={"20px"} minWidth={"lg"}
+					 maxWidth={"80vw"} margin={"20px"}>
 
-					</Grid>
-					<Grid item
-						  width={"fit-content"}
-						  textAlign={"right"}
-						  justifyContent={"flex-end"}>
+					<Box justifyContent={"space-between"}
+						 {...desktop_show("flex")}>
+						<Typography
+							margin={"20px"} variant={"h4"}
+							whiteSpace={"nowrap"}>
+							Georgia Institute of Technology
+						</Typography>
+
 						<Typography margin={"20px"}
 									whiteSpace={"nowrap"}
-									width={"fit-content"}
-									variant={"h4"}>2020-2024</Typography>
-					</Grid>
-					{factsText("Major", "Computer Science")}
-					{factsText("Concentrations", "Intelligence and Information Internetworks")}
-					{factsText("CS Courses", csCourses.join(", "))}
-					{factsText("Math Courses", mathCourses.join(", "))}
-				</Grid>
+									variant={"h4"}>
+							2020-2024
+						</Typography>
+					</Box>
+
+					<Box
+						height={"fit-content"}
+						justifyContent={"center"}
+						{...desktop_hide("block")}>
+						<Typography
+							{...tablet_hide("block")}
+							margin={"20px"}
+							variant={"h4"}
+							text-align={"center"}
+							whiteSpace={"nowrap"}>
+							Georgia Tech
+						</Typography>
+						<Typography
+							{...tablet_show("block")}
+							margin={"20px"}
+							variant={"h4"}
+							text-align={"center"}
+							whiteSpace={"nowrap"}>
+							Georgia Institute of Technology
+						</Typography>
+
+						<Typography margin={"20px"}
+									whiteSpace={"nowrap"}
+									variant={"h5"}>
+							2020-2024
+						</Typography>
+					</Box>
+
+
+					<Box padding={"10px"}>
+						{facts("Major", ["Computer Science"])}
+						{facts("Concentrations", ["Intelligence", "Information Internetworks"])}
+						{facts("CS Courses", csCourses)}
+						{facts("Math Courses", mathCourses)}
+					</Box>
+				</Box>
 				{divider()}
 				{sectionTitle("Professional Work Experience")}
 				{Timeline()}
+				
 				{divider()}
 				{sectionTitle("Hobbies")}
 				{ImageCarousel()}

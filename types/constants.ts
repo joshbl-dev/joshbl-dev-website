@@ -91,7 +91,7 @@ export const jobs: JobInfo[] = [
 		year: 2022,
 		position: "Software Engineer Intern",
 		projectType: "Computer Vision",
-		TechStack: ["Python", "OpenCV", "Sklearn", "SciPy", "Google Cloud Functions", "Google Cloud Scheduler", "Slack API"],
+		techStack: ["Python", "OpenCV", "Sklearn", "SciPy", "Google Cloud Functions", "Google Cloud Scheduler", "Slack API"],
 
 	},
 	{
@@ -99,7 +99,7 @@ export const jobs: JobInfo[] = [
 		year: 2021,
 		position: "Software Engineer Intern",
 		projectType: "Backend REST API",
-		TechStack: ["Typescript", "NestJS", "Azure", "PostgreSQL"],
+		techStack: ["Typescript", "NestJS", "Azure", "PostgreSQL"],
 
 	},
 	{
@@ -107,13 +107,13 @@ export const jobs: JobInfo[] = [
 		year: 2020,
 		position: "Software Developer",
 		projectType: "Game Development",
-		TechStack: ["Java", "Minecraft API"],
+		techStack: ["Java", "Minecraft API"],
 	},
 	{
 		name: "XLink",
 		year: 2020,
 		position: "Software Intern",
 		projectType: "Computer Vision & Web Scraper",
-		TechStack: ["Python", "OpenCV", "BeautifulSoup"],
+		techStack: ["Python", "OpenCV", "BeautifulSoup"],
 	},
 ];
