@@ -32,11 +32,6 @@ export const pages: PageInfo[] = [
 		title: "Bio",
 		active: true,
 		url: "/bio"
-	},
-	{
-		title: "???",
-		active: false,
-		url: "/mystery"
 	}
 ];
 
@@ -90,6 +85,14 @@ export const projects: ProjectInfo[] = [
 		mediaType: "video",
 		mediaContent: "https://www.youtube.com/embed/2-aVIdkiwGA",
 		altText: "Project Gamma Alpha Demo"
+	},
+	{
+		title: "Old joshbl.dev Website",
+		description: "Original digital portfolio website. Made with HTML, CSS, and JavaScript using Jekyll template.",
+		url: "https://old.joshbl.dev",
+		mediaType: "image",
+		mediaContent: "/images/projects/old.webp",
+		altText: "Old joshbl.dev Website"
 	}
 ];
 

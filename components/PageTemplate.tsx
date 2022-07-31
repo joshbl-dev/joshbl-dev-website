@@ -1,13 +1,13 @@
-import {ThemeProvider} from "@mui/material/styles";
-import {theme} from "../styles/theme";
-import {CssBaseline} from "@mui/material";
-import {NavBar} from "./NavBar";
-import {pages} from "../types/constants";
-import {ComingSoon} from "./ComingSoon";
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "../styles/theme";
+import { CssBaseline } from "@mui/material";
+import { NavBar } from "./NavBar";
+import { pages } from "../types/constants";
+import { ComingSoon } from "./ComingSoon";
 import styles from "../styles/Home.module.css";
 import Head from "next/head";
 import React from "react";
-import {PageInfo} from "../types/PageInfo";
+import { PageInfo } from "../types/PageInfo";
 
 type PageTemplateProps = {
 	page: PageInfo;
@@ -26,7 +26,7 @@ export default function PageTemplate(props: PageTemplateProps) {
 				</Head>
 				<main className={styles.container}>
 					<NavBar pages={pages} />
-					{page.active ? props.components : <ComingSoon />}
+					{page?.active ? props.components : <ComingSoon />}
 				</main>
 				<footer className={styles.footer}>
 					&copy; {new Date().getFullYear()} Josh Landsman. All rights
