@@ -21,7 +21,7 @@ export default function TopicChip(props: topicChipProps) {
 				  padding: .5,
 				  minHeight: "fit-content",
 				  minWidth: "fit-content",
-				  maxWidth: "fit-content",
+				  // maxWidth: "fit-content",
 				  // textAlign: "center",
 				  marginRight: .5,
 				  marginLeft: .5,
