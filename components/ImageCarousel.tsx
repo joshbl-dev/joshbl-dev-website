@@ -27,7 +27,7 @@ export default function ImageCarousel() {
 		setActiveStep(step);
 	};
 
-	function carousel(size: number) {
+	function carousel(width: number, height: number) {
 
 		return (<>
 			<AutoPlaySwipeableViews
@@ -39,19 +39,22 @@ export default function ImageCarousel() {
 				{interests.map((interest, index) => (
 						<Box
 							display={"block"} justifyContent={"center"}
-
 							key={interest.name}>
 							{Math.abs(activeStep - index) <= 2 ? (
 								<>
 									<Typography
 										variant={"h5"}>{interest.name}</Typography>
 
-									<Image
-										height={size + "px"}
-										width={"500px"}
-										objectFit={"contain"}
-										src={interest.image}
-										alt={interest.name} />
+									<Box sx={{position: "relative"}}
+										 height={height + "px"}
+										 width={width + "px"}
+										 margin={"auto"}>
+										<Image
+											layout={"fill"}
+											objectFit={"contain"}
+											src={interest.image}
+											alt={interest.name} />
+									</Box>
 
 								</>
 							) : undefined}</Box>
@@ -95,13 +98,13 @@ export default function ImageCarousel() {
 				{...desktop_show("block")}
 				maxWidth={"md"}
 			>
-				{carousel(400)}
+				{carousel(450, 300)}
 			</Box>
 			<Box
 				{...desktop_hide("block")}
-				maxWidth={"sm"}
+				width={"315px"}
 			>
-				{carousel(250)}
+				{carousel(300, 200)}
 			</Box>
 		</Box>
 	);
