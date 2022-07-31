@@ -5,6 +5,8 @@ import React from "react";
 import {interests} from "../types/constants";
 import {desktop_hide, desktop_show} from "../styles/theme";
 import {KeyboardArrowLeft, KeyboardArrowRight} from "@mui/icons-material";
+import Image from "next/image";
+
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -37,21 +39,28 @@ export default function ImageCarousel() {
 				{interests.map((interest, index) => (
 						<Box
 							display={"block"} justifyContent={"center"}
+
 							key={interest.name}>
 							{Math.abs(activeStep - index) <= 2 ? (
 								<>
-									<Box
+									{/*<Box*/}
+									{/*	component="img"*/}
+									{/*	sx={{*/}
+									{/*		borderRadius: "20px",*/}
+									{/*		height: size + "px",*/}
+									{/*		overflow: "hidden",*/}
+									{/*		width: "100%",*/}
+									{/*	}}*/}
+									{/*	src={interest.image}*/}
+									{/*	alt={interest.name}*/}
+									{/*/>*/}
 
-										component="img"
-										sx={{
-											borderRadius: "20px",
-											height: size + "px",
-											overflow: "hidden",
-											width: "auto",
-										}}
+									<Image
+										height={size + "px"}
+										width={"500px"}
+										objectFit={"contain"}
 										src={interest.image}
-										alt={interest.name}
-									/>
+										alt={interest.name} />
 									<Typography
 										variant={"h5"}>{interest.name}</Typography>
 								</>
@@ -91,7 +100,7 @@ export default function ImageCarousel() {
 
 	return (
 		<Box margin={"20px"} display={"flex"}
-			 justifyContent={"center"} width={"100%"}>
+			 justifyContent={"center"} maxWidth={"100%"}>
 			<Box
 				{...desktop_show("block")}
 				maxWidth={"md"}
