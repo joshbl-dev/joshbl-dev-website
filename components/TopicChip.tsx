@@ -1,4 +1,4 @@
-import {Chip} from "@mui/material";
+import { Chip } from "@mui/material";
 
 type topicChipProps = {
 	text: string;
@@ -8,7 +8,7 @@ export default function TopicChip(props: topicChipProps) {
 	const text = props.text;
 
 	return (
-		<Chip color={"secondary"} key={text + Math.random()} label={text}
+		<Chip color={"secondary"} label={text}
 			// Todo: Redirect to external link
 			// clickable={true}
 			  sx={{
@@ -17,7 +17,7 @@ export default function TopicChip(props: topicChipProps) {
 				  marginBottom: 1,
 				  marginTop: 1,
 				  fontWeight: "bold",
-				  fontSize: "1rem",
+				  fontSize: "1rem"
 			  }} />
 	);
 
