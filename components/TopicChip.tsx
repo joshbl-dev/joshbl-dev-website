@@ -8,7 +8,7 @@ export default function TopicChip(props: topicChipProps) {
 	const text = props.text;
 
 	return (
-		<Chip color={"secondary"} key={text} label={text}
+		<Chip color={"secondary"} key={text + Math.random()} label={text}
 			// Todo: Redirect to external link
 			// clickable={true}
 			  sx={{
