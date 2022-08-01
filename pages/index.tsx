@@ -23,7 +23,7 @@ const skills = ["Java",
 
 const page = pages.filter(p => p.title == "Home")[0];
 
-const quote = "Creating positive change in the world through computer science.";
+const quote = "Creating positive change in the world through computer science";
 
 export default function Home() {
 	return (
