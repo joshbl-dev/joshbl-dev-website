@@ -37,6 +37,14 @@ export const pages: PageInfo[] = [
 
 export const projects: ProjectInfo[] = [
 	{
+		title: "Team Dinner",
+		description: "An all-in-one mobile solution for organizing team dinners through team organization, meal polls, and payment tracking. Made with Flutter, NestJS, and Firestore.",
+		url: "https://github.com/joshbl-dev/TeamDinner-JIB-2341",
+		mediaType: "video",
+		mediaContent: "https://www.youtube.com/embed/BHT6qq0Yg5g",
+		altText: "Team Dinner Video Demo"
+	},
+	{
 		title: "Next.js Personal Website",
 		description: "A frontend for the joshbl.dev website. Made with React, Next.js in Typescript using the Material UI library.",
 		url: "https://github.com/joshbl-dev/joshbl-dev-website",
@@ -97,6 +105,13 @@ export const projects: ProjectInfo[] = [
 ];
 
 export const jobs: JobInfo[] = [
+	{
+		name: "Capital One",
+		year: 2023,
+		position: "Software Engineer Intern",
+		projectType: "TBD",
+		techStack: ["Technology Internship Program"]
+	},
 	{
 		name: "NCR",
 		year: 2022,
@@ -181,5 +196,11 @@ export const chipLinks: Map<string, string> = new Map<string, string>([
 	["PostgreSQL", "https://www.postgresql.org/"],
 	["Java", "https://www.java.com/en/"],
 	["Minecraft API", "https://hub.spigotmc.org/javadocs/bukkit/"],
-	["BeautifulSoup", "https://pypi.org/project/beautifulsoup4/"]
+	["BeautifulSoup", "https://pypi.org/project/beautifulsoup4/"],
+	["Design & Analysis of Algorithms", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=design%20and%20animation.-,CS%C2%A03510,-.%20Design%20and%20Analysis"],
+	["Intro to Database Systems", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=verifying%20program%20specifications.-,CS%C2%A04400,-.%20Introduction%20to%20Database"],
+	["Intro to Perception & Robotics", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=and%20reinforced%20learning.-,CS%C2%A03630,-.%20Introduction%20to%20Perception"],
+	["Computer Networking I", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=between%20these%20models.-,CS%C2%A03251,-.%20Computer%20Networking%20I"],
+	["Probability and Statistics", "https://math.gatech.edu/courses/math/3670"],
+	["Technology Internship Program", "https://www.capitalonecareers.com/internship-programs"]
 ]);

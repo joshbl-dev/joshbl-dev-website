@@ -49,8 +49,9 @@ function sectionTitle(title: string) {
 }
 
 const csCourses: string[] = ["Object-Oriented Programming", "Data Structures & Algorithms", "Computer Organization and Programming",
-	"Systems and Networks", "Intro to AI"];
-const mathCourses: string[] = ["Applied Combinatorics", "Linear Algebra", "Discrete Mathematics"];
+	"Systems and Networks", "Intro to AI", "Design & Analysis of Algorithms", "Intro to Database Systems",
+	"Intro to Perception & Robotics", "Computer Networking I"];
+const mathCourses: string[] = ["Applied Combinatorics", "Linear Algebra", "Discrete Mathematics", "Probability and Statistics"];
 
 
 function content() {
