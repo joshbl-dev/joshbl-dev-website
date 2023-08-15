@@ -13,12 +13,25 @@ import {
 } from "../styles/theme";
 import ProfilePicture from "../components/ProfilePicture";
 
-const skills = ["Java",
+const skills = [
+	"Java",
 	"JavaScript",
 	"NestJS",
-	"TypeScript", "Python", "PostgreSQL", "Firebase",
-	"Google Cloud", "Azure", "Git", "Lua",
-	"React/React Native", "HTML",
+	"Next.js",
+	"TypeScript",
+	"Python",
+	"AWS",
+	"PostgreSQL",
+	"Firebase",
+	"Google Cloud",
+	"Azure",
+	"React/React Native",
+	"Dart",
+	"Flutter",
+	"Git",
+	"Lua",
+	"Vercel",
+	"HTML",
 	"CSS"];
 
 const page = pages.filter(p => p.title == "Home")[0];
@@ -72,15 +85,13 @@ export default function Home() {
 						>
 							<ProfilePicture />
 						</Container>
-						<Box
+						<Container
 							sx={{
 								...desktop_show("flex")
 							}}
 							className={styles.pfp}>
-							<Container>
-								<ProfilePicture />
-							</Container>
-						</Box>
+							<ProfilePicture />
+						</Container>
 					</Grid>
 
 				</Grid><Box maxWidth={"sm"} margin={"20px"}>

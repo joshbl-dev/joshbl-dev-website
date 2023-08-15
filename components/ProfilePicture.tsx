@@ -7,5 +7,9 @@ export default function ProfilePicture() {
 	return (<Image className={styles.rounded_border}
 				   src={pfp}
 				   alt={"Joshbl"}
-				   objectFit={"contain"} />);
+				   fill={true}
+				   style={{
+					   objectFit: "cover"
+				   }}
+	/>);
 }

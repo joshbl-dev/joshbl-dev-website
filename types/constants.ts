@@ -98,6 +98,13 @@ export const projects: ProjectInfo[] = [
 
 export const jobs: JobInfo[] = [
 	{
+		name: "Capital One",
+		year: 2023,
+		position: "Software Engineer Intern",
+		projectType: "Cyber Security",
+		techStack: ["Python", "Typer", "JavaScript", "Slack API", "Docker", "AWS Lambda", "AWS CloudWatch", "AWS S3", "AWS DynamoDB", "Jenkins"]
+	},
+	{
 		name: "NCR",
 		year: 2022,
 		position: "Software Engineer Intern",
@@ -181,5 +188,27 @@ export const chipLinks: Map<string, string> = new Map<string, string>([
 	["PostgreSQL", "https://www.postgresql.org/"],
 	["Java", "https://www.java.com/en/"],
 	["Minecraft API", "https://hub.spigotmc.org/javadocs/bukkit/"],
-	["BeautifulSoup", "https://pypi.org/project/beautifulsoup4/"]
+	["BeautifulSoup", "https://pypi.org/project/beautifulsoup4/"],
+	["Design & Analysis of Algorithms", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=design%20and%20animation.-,CS%C2%A03510,-.%20Design%20and%20Analysis"],
+	["Intro to Database Systems", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=verifying%20program%20specifications.-,CS%C2%A04400,-.%20Introduction%20to%20Database"],
+	["Intro to Perception & Robotics", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=and%20reinforced%20learning.-,CS%C2%A03630,-.%20Introduction%20to%20Perception"],
+	["Computer Networking I", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=between%20these%20models.-,CS%C2%A03251,-.%20Computer%20Networking%20I"],
+	["Probability and Statistics", "https://math.gatech.edu/courses/math/3670"],
+	["Technology Internship Program", "https://www.capitalonecareers.com/internship-programs"],
+	["Typer", "https://typer.tiangolo.com/"],
+	["JavaScript", "https://www.javascript.com/"],
+	["Slack API", "https://api.slack.com/"],
+	["Docker", "https://www.docker.com/"],
+	["AWS Lambda", "https://aws.amazon.com/lambda/"],
+	["AWS DynamoDB", "https://aws.amazon.com/dynamodb/"],
+	["AWS S3", "https://aws.amazon.com/s3/"],
+	["AWS CloudWatch", "https://aws.amazon.com/cloudwatch/"],
+	["Jenkins", "https://www.jenkins.io/"],
+	["", ""]
 ]);
+
+export const undergradCsCourses: string[] = ["Object-Oriented Programming", "Data Structures & Algorithms", "Computer Organization and Programming",
+	"Systems and Networks", "Intro to AI", "Design & Analysis of Algorithms", "Intro to Database Systems",
+	"Intro to Perception & Robotics", "Computer Networking I"];
+export const undergradMathCourses: string[] = ["Applied Combinatorics", "Linear Algebra", "Discrete Mathematics", "Probability and Statistics"];
+
