@@ -109,7 +109,7 @@ export const jobs: JobInfo[] = [
 		name: "Capital One",
 		year: 2023,
 		position: "Software Engineer Intern",
-		projectType: "Cyber Security",
+		projectType: "Cybersecurity",
 		techStack: ["Python", "Typer", "JavaScript", "Slack API", "Docker", "AWS Lambda", "AWS CloudWatch", "AWS S3", "AWS DynamoDB", "Jenkins"]
 	},
 	{
