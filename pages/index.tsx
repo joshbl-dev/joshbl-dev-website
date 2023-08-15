@@ -74,14 +74,14 @@ export default function Home() {
 							}}
 							className={styles.pfp_mobile}
 						>
-							<ProfilePicture />
+							<ProfilePicture width={250} height={250} />
 						</Container>
 						<Container
 							sx={{
 								...desktop_show("flex")
 							}}
 							className={styles.pfp}>
-							<ProfilePicture />
+							<ProfilePicture width={350} height={350} />
 						</Container>
 					</Grid>
 
