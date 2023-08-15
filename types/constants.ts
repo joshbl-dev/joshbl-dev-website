@@ -37,6 +37,14 @@ export const pages: PageInfo[] = [
 
 export const projects: ProjectInfo[] = [
 	{
+		title: "Team Dinner",
+		description: "An all-in-one mobile solution for organizing team dinners through team organization, meal polls, and payment tracking. Made with Flutter, NestJS, and Firestore.",
+		url: "https://github.com/joshbl-dev/TeamDinner-JIB-2341",
+		mediaType: "video",
+		mediaContent: "https://www.youtube.com/embed/BHT6qq0Yg5g",
+		altText: "Team Dinner Video Demo"
+	},
+	{
 		title: "Next.js Personal Website",
 		description: "A frontend for the joshbl.dev website. Made with React, Next.js in Typescript using the Material UI library.",
 		url: "https://github.com/joshbl-dev/joshbl-dev-website",
@@ -101,7 +109,7 @@ export const jobs: JobInfo[] = [
 		name: "Capital One",
 		year: 2023,
 		position: "Software Engineer Intern",
-		projectType: "Cyber Security",
+		projectType: "Cybersecurity",
 		techStack: ["Python", "Typer", "JavaScript", "Slack API", "Docker", "AWS Lambda", "AWS CloudWatch", "AWS S3", "AWS DynamoDB", "Jenkins"]
 	},
 	{
