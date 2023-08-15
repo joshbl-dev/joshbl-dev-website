@@ -13,12 +13,25 @@ import {
 } from "../styles/theme";
 import ProfilePicture from "../components/ProfilePicture";
 
-const skills = ["Java",
+const skills = [
+	"Java",
 	"JavaScript",
 	"NestJS",
-	"TypeScript", "Python", "PostgreSQL", "Firebase",
-	"Google Cloud", "Azure", "Git", "Lua",
-	"React/React Native", "HTML",
+	"Next.js",
+	"TypeScript",
+	"Python",
+	"AWS",
+	"PostgreSQL",
+	"Firebase",
+	"Google Cloud",
+	"Azure",
+	"React/React Native",
+	"Dart",
+	"Flutter",
+	"Git",
+	"Lua",
+	"Vercel",
+	"HTML",
 	"CSS"];
 
 const page = pages.filter(p => p.title == "Home")[0];
@@ -29,15 +42,6 @@ export default function Home() {
 	return (
 		<PageTemplate page={page} components={
 			<>
-				{/*<Typography variant="h4" padding={2}*/}
-				{/*			textAlign={"center"}*/}
-				{/*			sx={{ fontWeight: "bold" }}>*/}
-				{/*	Site Under Construction*/}
-				{/*</Typography>*/}
-				{/*<Button variant={"contained"}*/}
-				{/*		href={"https://old.joshbl.dev"}>*/}
-				{/*	Old Site*/}
-				{/*</Button>*/}
 				<Grid
 					container
 					item
@@ -70,17 +74,15 @@ export default function Home() {
 							}}
 							className={styles.pfp_mobile}
 						>
-							<ProfilePicture />
+							<ProfilePicture width={250} height={250} />
 						</Container>
-						<Box
+						<Container
 							sx={{
 								...desktop_show("flex")
 							}}
 							className={styles.pfp}>
-							<Container>
-								<ProfilePicture />
-							</Container>
-						</Box>
+							<ProfilePicture width={350} height={350} />
+						</Container>
 					</Grid>
 
 				</Grid><Box maxWidth={"sm"} margin={"20px"}>

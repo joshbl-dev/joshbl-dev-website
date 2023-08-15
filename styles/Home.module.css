@@ -30,15 +30,17 @@
 
 
 .pfp {
-    max-height: 400px;
-    max-width: 400px;
+    height: 350px;
+    width: 350px;
     margin-top: 20px;
+    position: relative;
 }
 
 .pfp_mobile {
-    max-height: 250px;
-    max-width: 250px;
+    height: 250px;
+    width: 250px;
     margin-top: 20px;
+    position: relative;
 }
 
 .rounded_border {

@@ -37,14 +37,6 @@ export const pages: PageInfo[] = [
 
 export const projects: ProjectInfo[] = [
 	{
-		title: "Team Dinner",
-		description: "An all-in-one mobile solution for organizing team dinners through team organization, meal polls, and payment tracking. Made with Flutter, NestJS, and Firestore.",
-		url: "https://github.com/joshbl-dev/TeamDinner-JIB-2341",
-		mediaType: "video",
-		mediaContent: "https://www.youtube.com/embed/BHT6qq0Yg5g",
-		altText: "Team Dinner Video Demo"
-	},
-	{
 		title: "Next.js Personal Website",
 		description: "A frontend for the joshbl.dev website. Made with React, Next.js in Typescript using the Material UI library.",
 		url: "https://github.com/joshbl-dev/joshbl-dev-website",
@@ -109,8 +101,8 @@ export const jobs: JobInfo[] = [
 		name: "Capital One",
 		year: 2023,
 		position: "Software Engineer Intern",
-		projectType: "TBD",
-		techStack: ["Technology Internship Program"]
+		projectType: "Cyber Security",
+		techStack: ["Python", "Typer", "JavaScript", "Slack API", "Docker", "AWS Lambda", "AWS CloudWatch", "AWS S3", "AWS DynamoDB", "Jenkins"]
 	},
 	{
 		name: "NCR",
@@ -202,5 +194,21 @@ export const chipLinks: Map<string, string> = new Map<string, string>([
 	["Intro to Perception & Robotics", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=and%20reinforced%20learning.-,CS%C2%A03630,-.%20Introduction%20to%20Perception"],
 	["Computer Networking I", "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=between%20these%20models.-,CS%C2%A03251,-.%20Computer%20Networking%20I"],
 	["Probability and Statistics", "https://math.gatech.edu/courses/math/3670"],
-	["Technology Internship Program", "https://www.capitalonecareers.com/internship-programs"]
+	["Technology Internship Program", "https://www.capitalonecareers.com/internship-programs"],
+	["Typer", "https://typer.tiangolo.com/"],
+	["JavaScript", "https://www.javascript.com/"],
+	["Slack API", "https://api.slack.com/"],
+	["Docker", "https://www.docker.com/"],
+	["AWS Lambda", "https://aws.amazon.com/lambda/"],
+	["AWS DynamoDB", "https://aws.amazon.com/dynamodb/"],
+	["AWS S3", "https://aws.amazon.com/s3/"],
+	["AWS CloudWatch", "https://aws.amazon.com/cloudwatch/"],
+	["Jenkins", "https://www.jenkins.io/"],
+	["", ""]
 ]);
+
+export const undergradCsCourses: string[] = ["Object-Oriented Programming", "Data Structures & Algorithms", "Computer Organization and Programming",
+	"Systems and Networks", "Intro to AI", "Design & Analysis of Algorithms", "Intro to Database Systems",
+	"Intro to Perception & Robotics", "Computer Networking I"];
+export const undergradMathCourses: string[] = ["Applied Combinatorics", "Linear Algebra", "Discrete Mathematics", "Probability and Statistics"];
+
