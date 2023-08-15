@@ -8,6 +8,7 @@ export default function ProfilePicture() {
 				   src={pfp}
 				   alt={"Joshbl"}
 				   fill={true}
+				   sizes={"100vw"}
 				   style={{
 					   objectFit: "cover"
 				   }}

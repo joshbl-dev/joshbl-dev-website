@@ -42,15 +42,6 @@ export default function Home() {
 	return (
 		<PageTemplate page={page} components={
 			<>
-				{/*<Typography variant="h4" padding={2}*/}
-				{/*			textAlign={"center"}*/}
-				{/*			sx={{ fontWeight: "bold" }}>*/}
-				{/*	Site Under Construction*/}
-				{/*</Typography>*/}
-				{/*<Button variant={"contained"}*/}
-				{/*		href={"https://old.joshbl.dev"}>*/}
-				{/*	Old Site*/}
-				{/*</Button>*/}
 				<Grid
 					container
 					item
