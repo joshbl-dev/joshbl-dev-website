@@ -26,7 +26,7 @@ export default function Timeline() {
 								>{job.year}</Typography>}>
 								<Box height={"fit-content"} margin={"10px"}>
 									<Typography
-										variant={"h5"}>{job.name}</Typography>
+										variant={"h5"}>{job.name} - {job.projectType}</Typography>
 									<Typography
 										variant={"subtitle1"}
 										sx={{ fontStyle: "italics" }}>
