@@ -12,10 +12,10 @@ export default function ProfilePicture(props: ProfilePictureProps) {
 				   src={pfp}
 				   alt={"Joshbl"}
 		// fill={true}
-				   width={props.width}
-				   height={props.height}
+				   sizes="100vw"
 				   style={{
-					   objectFit: "cover"
+					   width: "100%",
+					   height: "auto"
 				   }}
 	/>);
 }
