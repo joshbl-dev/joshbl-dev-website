@@ -1,10 +1,11 @@
 import {
+	gradCsCourses,
 	pages,
 	undergradCsCourses,
 	undergradMathCourses
 } from "../../types/constants";
 import PageTemplate from "../../components/PageTemplate";
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import Timeline from "../../components/Timeline";
 import TopicChip from "../../components/TopicChip";
 import ImageCarousel from "../../components/ImageCarousel";
@@ -35,61 +36,68 @@ function facts(subject: string, facts: string[], chipMap?: Map<string, string>) 
 function content() {
 	return (
 		<>
-			<EducationBox
-				boxTitle={"Graduate Education"}
-				schoolFullName={
-					"Georgia Institute of Technology"
-				}
-				schoolShortName={
-					"Georgia Tech"
-				}
-				years={
-					"2024-2025"
-				}
-				facts={
-					<>
-						{facts("Master's Degree", ["Computer Science"],
-							new Map([
-								["Computer Science", "https://www.cc.gatech.edu/degree-programs/bsms-program-computer-science"]
-							])
-						)}
-						{facts("Concentration", ["Machine Learning"],
-							new Map([
-								["Machine Learning", "https://www.cc.gatech.edu/ms-computer-science-specializations"]
-							])
-						)}
-					</>
-				}
+			<Container style={{
+				display: "flex",
+				flexDirection: "column",
+				alignItems: "center"
+			}}>
+				<EducationBox
+					boxTitle={"Graduate Education"}
+					schoolFullName={
+						"Georgia Institute of Technology"
+					}
+					schoolShortName={
+						"Georgia Tech"
+					}
+					years={
+						"2024-2025"
+					}
+					facts={
+						<>
+							{facts("Master's Degree", ["Computer Science"],
+								new Map([
+									["Computer Science", "https://www.cc.gatech.edu/degree-programs/bsms-program-computer-science"]
+								])
+							)}
+							{facts("Concentration", ["Machine Learning"],
+								new Map([
+									["Machine Learning", "https://www.cc.gatech.edu/ms-computer-science-specializations"]
+								])
+							)}
+							{facts("CS Courses", gradCsCourses)}
+						</>
+					}
 
-			/>
-			<DividerLine />
-			<EducationBox
-				boxTitle={"Undergraduate Education"}
-				schoolFullName={
-					"Georgia Institute of Technology"
-				}
-				schoolShortName={
-					"Georgia Tech"
-				}
-				years={
-					"2020-2024"
-				}
-				facts={
-					<>
-						{facts("Bachelor's Degree", ["Computer Science"])}
-						{facts("Concentrations", ["Intelligence", "Information Internetworks"])}
-						{facts("CS Courses", undergradCsCourses)}
-						{facts("Math Courses", undergradMathCourses)}
-					</>
-				}
-			/>
-			<DividerLine />
-			<SectionTitle title={"Professional Work Experience"} />
-			<Timeline />
+				/>
+				<DividerLine />
+				<EducationBox
+					boxTitle={"Undergraduate Education"}
+					schoolFullName={
+						"Georgia Institute of Technology"
+					}
+					schoolShortName={
+						"Georgia Tech"
+					}
+					years={
+						"2020-2024"
+					}
+					facts={
+						<>
+							{facts("Bachelor's Degree", ["Computer Science"])}
+							{facts("Concentrations", ["Intelligence", "Information Internetworks"])}
+							{facts("CS Courses", undergradCsCourses)}
+							{facts("Math Courses", undergradMathCourses)}
+						</>
+					}
+				/>
+				<DividerLine />
+				<SectionTitle title={"Professional Work Experience"} />
+				<Timeline />
 
-			<DividerLine />
-			<SectionTitle title={"Interests"} />
-			<ImageCarousel />
+				<DividerLine />
+				<SectionTitle title={"Interests"} />
+				<ImageCarousel />
+			</Container>
 		</>
 	)
 		;
