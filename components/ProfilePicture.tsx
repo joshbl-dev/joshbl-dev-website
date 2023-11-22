@@ -14,8 +14,9 @@ export default function ProfilePicture(props: ProfilePictureProps) {
 		// fill={true}
 				   sizes="100vw"
 				   style={{
-					   width: "100%",
-					   height: "auto"
+					   
+					   width: props.width,
+					   height: props.height
 				   }}
 	/>);
 }
