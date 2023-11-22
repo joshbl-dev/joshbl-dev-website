@@ -69,7 +69,13 @@ function content() {
 					}
 
 				/>
-				<DividerLine />
+			</Container>
+			<DividerLine />
+			<Container style={{
+				display: "flex",
+				flexDirection: "column",
+				alignItems: "center"
+			}}>
 				<EducationBox
 					boxTitle={"Undergraduate Education"}
 					schoolFullName={
@@ -90,14 +96,19 @@ function content() {
 						</>
 					}
 				/>
-				<DividerLine />
+			</Container>
+			<DividerLine />
+			<Container style={{
+				display: "flex",
+				flexDirection: "column",
+				alignItems: "center"
+			}}>
 				<SectionTitle title={"Professional Work Experience"} />
 				<Timeline />
-
-				<DividerLine />
-				<SectionTitle title={"Interests"} />
-				<ImageCarousel />
 			</Container>
+			<DividerLine />
+			<SectionTitle title={"Interests"} />
+			<ImageCarousel />
 		</>
 	)
 		;
