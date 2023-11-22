@@ -50,7 +50,7 @@ export default function ImageCarousel() {
 										 width={width + "px"}
 										 margin={"auto"}>
 										<Image
-											placeholder="blur"
+											// placeholder="blur"
 											src={interest.image}
 											alt={interest.name}
 											sizes="100vw"
