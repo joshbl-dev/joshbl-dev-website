@@ -21,6 +21,7 @@ function facts(subject: string, facts: string[], chipMap?: Map<string, string>) 
 			<Typography margin={"10px"}
 						textAlign={"left"}
 						width={"fit-content"}
+						maxWidth={"100%"}
 						variant={"h5"}>{subject}:
 				<Box display="block">
 
