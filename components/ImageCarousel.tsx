@@ -50,11 +50,15 @@ export default function ImageCarousel() {
 										 width={width + "px"}
 										 margin={"auto"}>
 										<Image
-											layout={"fill"}
-											objectFit={"contain"}
 											placeholder="blur"
 											src={interest.image}
-											alt={interest.name} />
+											alt={interest.name}
+											sizes="100vw"
+											style={{
+												width: "100%",
+												height: "auto"
+											}}
+										/>
 									</Box>
 
 								</>
