@@ -18,7 +18,7 @@ export const EducationBox = (props: educationBoxProps) => {
 	return <>
 		<SectionTitle title={props.boxTitle} />
 		<Box border={"solid"} borderRadius={"20px"} minWidth={"lg"}
-			 maxWidth={"100%"} margin={"20px"}>
+			 maxWidth={"80%"} margin={"20px"}>
 
 			<Box justifyContent={"space-between"}
 				 {...desktop_show("flex")}>

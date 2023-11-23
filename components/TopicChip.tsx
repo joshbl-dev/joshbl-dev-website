@@ -14,19 +14,21 @@ export default function TopicChip(props: topicChipProps) {
 			<Typography
 				fontWeight={"bold"}
 				fontSize={"1rem"}
-				style={{ whiteSpace: "pre-line" }}>{text}</Typography>
+				style={{
+					whiteSpace: "normal",
+					overflow: "visible",
+					textAlign: "center"
+				}}
+			>{text}</Typography>
 		}
 			// Todo: Redirect to external link
 			  clickable={props.chipMap ? props.chipMap.has(text) : chipLinks.has(text)}
 			  component={"a"}
 			  href={props.chipMap ? props.chipMap.get(text) : chipLinks.get(text)}
 			  sx={{
-				  // height: "fit-content",
 				  padding: .5,
-				  minHeight: "fit-content",
-				  minWidth: "fit-content",
-				  // maxWidth: "fit-content",
-				  // textAlign: "center",
+				  height: "auto",
+				  flexWrap: "wrap",
 				  marginRight: .5,
 				  marginLeft: .5,
 				  marginBottom: 1,

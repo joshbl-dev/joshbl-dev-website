@@ -11,6 +11,8 @@ import {
 import { ProjectInfo } from "../types/ProjectInfo";
 import { desktop_hide, desktop_show } from "../styles/theme";
 import LaunchIcon from "@mui/icons-material/Launch";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 type ProjectCardProps = {
 	mediaSide: "left" | "right";
@@ -39,89 +41,101 @@ function externalLink(side: string, link: string) {
 
 export default function ProjectCard(props: ProjectCardProps) {
 	const projectInfo = props.projectInfo;
+
+	const { ref, inView } = useInView({
+		triggerOnce: true
+	});
+
 	return (
-		<>
-			{/*Desktop Card*/}
-			<Card
-				raised
-				sx={{
-					...desktop_show("flex"),
-					margin: 3,
-					minHeight: "fit-content",
-					height: "450px",
-					width: "75vw",
-					justifyContent: "space-between",
-					borderRadius: "20px"
-				}}>
-				{props.mediaSide == "left" ? (
-						<Box width={"50%"}>
-							{props.media}
-						</Box>) :
-					externalLink(props.mediaSide, projectInfo.url)}
+		<motion.div
+			ref={ref}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: inView ? 1 : 0 }}
+			transition={{ duration: 1 }}
+		>
+			<>
+				{/*Desktop Card*/}
+				<Card
+					raised
+					sx={{
+						...desktop_show("flex"),
+						margin: 3,
+						minHeight: "fit-content",
+						height: "450px",
+						width: "75vw",
+						justifyContent: "space-between",
+						borderRadius: "20px"
+					}}>
+					{props.mediaSide == "left" ? (
+							<Box width={"50%"}>
+								{props.media}
+							</Box>) :
+						externalLink(props.mediaSide, projectInfo.url)}
 
-				<Box justifyContent={"center"}
-					 width={"50%"}
-					 sx={{ display: "flex", flexDirection: "column" }}>
+					<Box justifyContent={"center"}
+						 width={"50%"}
+						 sx={{ display: "flex", flexDirection: "column" }}>
 
-					<CardHeader title={projectInfo.title}
-								titleTypographyProps={{
-									fontWeight: "bold",
-									fontSize: "2rem"
-								}} />
-					<CardContent>
-						<Typography variant="body1"
-									fontSize={"1.5rem"}
-									fontWeight={"medium"}>
-							{projectInfo.description}
-						</Typography>
-					</CardContent>
-				</Box>
-				{props.mediaSide == "right" ? (
-					<Box width={"50%"}>
-						{props.media}
-					</Box>) : externalLink(props.mediaSide, projectInfo.url)}
-			</Card>
-
-			{/*Mobile Card*/}
-			<Card
-				raised
-				sx={{
-					...desktop_hide("flex"),
-					margin: 3,
-					height: "fit-content",
-					width: "75vw",
-					borderRadius: "20px"
-				}}>
-
-				<Box
-					sx={{ display: "flex", flexDirection: "column" }}>
-					<Box
-						minHeight={"200px"}
-						height={"fit-content"}
-						width={"75vw"}
-						alignItems={"center"}
-					>
-						{props.media}
-					</Box>
-
-					<Box paddingTop={"20px"}
-						 textAlign={"center"}>
-						{externalLink("bottom", projectInfo.url)}
-
-
-						<CardContent sx={{ height: "fit-content" }}>
-							<Typography variant="h5" fontWeight={"bold"}>
-								{projectInfo.title}
-							</Typography>
-							<Typography variant="body1">
+						<CardHeader title={projectInfo.title}
+									titleTypographyProps={{
+										fontWeight: "bold",
+										fontSize: "2rem"
+									}} />
+						<CardContent>
+							<Typography variant="body1"
+										fontSize={"1.5rem"}
+										fontWeight={"medium"}>
 								{projectInfo.description}
 							</Typography>
 						</CardContent>
 					</Box>
-				</Box>
+					{props.mediaSide == "right" ? (
+						<Box width={"50%"}>
+							{props.media}
+						</Box>) : externalLink(props.mediaSide, projectInfo.url)}
+				</Card>
 
-			</Card>
+				{/*Mobile Card*/}
+				<Card
+					raised
+					sx={{
+						...desktop_hide("flex"),
+						margin: 3,
+						height: "fit-content",
+						width: "75vw",
+						borderRadius: "20px"
+					}}>
 
-		</>
+					<Box
+						sx={{ display: "flex", flexDirection: "column" }}>
+						<Box
+							minHeight={"200px"}
+							height={"fit-content"}
+							width={"75vw"}
+							alignItems={"center"}
+						>
+							{props.media}
+						</Box>
+
+						<Box paddingTop={"20px"}
+							 textAlign={"center"}>
+							{externalLink("bottom", projectInfo.url)}
+
+
+							<CardContent sx={{ height: "fit-content" }}>
+								<Typography variant="h5" fontWeight={"bold"}>
+									{projectInfo.title}
+								</Typography>
+								<Typography variant="body1">
+									{projectInfo.description}
+								</Typography>
+							</CardContent>
+						</Box>
+					</Box>
+
+				</Card>
+
+			</>
+		</motion.div>
 	);
 }

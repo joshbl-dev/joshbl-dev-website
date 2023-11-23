@@ -10,12 +10,11 @@ type ProfilePictureProps = {
 export default function ProfilePicture(props: ProfilePictureProps) {
 	return (<Image className={styles.rounded_border}
 				   src={pfp}
-				   alt={"Joshbl"}
-		// fill={true}
-				   width={props.width}
-				   height={props.height}
+				   alt={"Profile Picture"}
+				   sizes="100vw"
 				   style={{
-					   objectFit: "cover"
+					   width: "auto",
+					   height: props.height
 				   }}
 	/>);
 }

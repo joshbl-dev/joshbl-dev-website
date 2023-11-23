@@ -212,11 +212,16 @@ export const chipLinks: Map<string, string> = new Map<string, string>([
 	["AWS S3", "https://aws.amazon.com/s3/"],
 	["AWS CloudWatch", "https://aws.amazon.com/cloudwatch/"],
 	["Jenkins", "https://www.jenkins.io/"],
+	["Computer Vision", "https://omscs.gatech.edu/cs-6476-computer-vision"],
+	["Machine Learning", "https://mahdi-roozbahani.github.io/CS46417641-fall2023/"],
+	["Network Security", "https://oscar.gatech.edu/bprod/bwckctlg.p_disp_course_detail?cat_term_in=202308&subj_code_in=CS&crse_numb_in=4262"],
+	["Automata & Complexity", "https://catalog.gatech.edu/coursesaz/cs/#:~:text=animations%20and%20more.-,CS%C2%A04510,-.%20Automata%20and%20Complexity"],
 	["", ""]
 ]);
 
 export const undergradCsCourses: string[] = ["Object-Oriented Programming", "Data Structures & Algorithms", "Computer Organization and Programming",
 	"Systems and Networks", "Intro to AI", "Design & Analysis of Algorithms", "Intro to Database Systems",
-	"Intro to Perception & Robotics", "Computer Networking I"];
+	"Intro to Perception & Robotics", "Computer Networking I", "Network Security", "Automata & Complexity"];
 export const undergradMathCourses: string[] = ["Applied Combinatorics", "Linear Algebra", "Discrete Mathematics", "Probability and Statistics"];
 
+export const gradCsCourses: string[] = ["Computer Vision", "Machine Learning"];
