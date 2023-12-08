@@ -14,6 +14,7 @@
     "@mui/material": "^5.14.19",
     "@mui/styles": "^5.14.19",
     "@vercel/analytics": "^1.1.1",
+    "@vercel/postgres": "^0.5.1",
     "axios": "^1.6.2",
     "eslint-config-next": "^14.0.3",
     "framer-motion": "^10.16.12",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@types/node": "^20.10.2",
     "@types/react": "^18.2.40",
+    "@vercel/node": "^3.0.11",
     "prettier": "3.1.0",
     "typescript": "^5.3.2"
   },
