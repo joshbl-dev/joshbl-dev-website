@@ -1,7 +1,46 @@
 {
+    "b3245438-2e4b-447f-a547-506a44811ccf": {
+        "school": "Georgia Institute of Technology",
+        "degree": "Master's",
+        "abbreviation": "M.S.",
+        "major": "Computer Science",
+        "start_year": "2024",
+        "end_year": "2025",
+        "concentrations": [
+            {
+                "name": "Machine Learning",
+                "url": "https://www.cc.gatech.edu/ms-computer-science-specializations"
+            }
+        ],
+        "semesters": [
+            {
+                "year": "2023",
+                "term": "Fall",
+                "courses": [
+                    {
+                        "course": "CS 7641",
+                        "name": "Machine Learning",
+                        "url": "https://mahdi-roozbahani.github.io/CS46417641-fall2023/"
+                    }
+                ]
+            },
+            {
+                "year": "2024",
+                "term": "Spring",
+                "courses": [
+                    {
+                        "course": "CS 6476",
+                        "name": "Computer Vision",
+                        "url": "https://omscs.gatech.edu/cs-6476-computer-vision"
+                    }
+                ]
+            }
+        ]
+    },
     "657cc3c7-ae35-4c45-a0ec-ee65aff8a16f": {
         "school": "Georgia Institute of Technology",
         "degree": "Bachelor's",
+        "abbreviation": "B.S.",
         "major": "Computer Science",
         "start_year": "2020",
         "end_year": "2024",
@@ -236,43 +275,6 @@
                         "course": "Soc 1101",
                         "name": "Intro to Sociology",
                         "url": "https://catalog.gatech.edu/coursesaz/soc/#:~:text=SOC%C2%A01101.-,SOC%C2%A01101,-.%20Introduction%20to%20Sociology"
-                    }
-                ]
-            }
-        ]
-    },
-    "b3245438-2e4b-447f-a547-506a44811ccf": {
-        "school": "Georgia Institute of Technology",
-        "degree": "Master's",
-        "major": "Computer Science",
-        "start_year": "2024",
-        "end_year": "2025",
-        "concentrations": [
-            {
-                "name": "Machine Learning",
-                "url": "https://www.cc.gatech.edu/ms-computer-science-specializations"
-            }
-        ],
-        "semesters": [
-            {
-                "year": "2023",
-                "term": "Fall",
-                "courses": [
-                    {
-                        "course": "CS 7641",
-                        "name": "Machine Learning",
-                        "url": "https://mahdi-roozbahani.github.io/CS46417641-fall2023/"
-                    }
-                ]
-            },
-            {
-                "year": "2024",
-                "term": "Spring",
-                "courses": [
-                    {
-                        "course": "CS 6476",
-                        "name": "Computer Vision",
-                        "url": "https://omscs.gatech.edu/cs-6476-computer-vision"
                     }
                 ]
             }

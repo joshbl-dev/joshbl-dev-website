@@ -3,6 +3,7 @@ export type EducationInfo = {[key: string]: Education};
 export type Education = {
 	school: string;
 	degree: string;
+	abbreviation: string;
 	major: string;
 	start_year: string;
 	end_year: string;

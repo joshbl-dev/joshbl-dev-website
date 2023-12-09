@@ -1,9 +1,8 @@
 import {pages} from "../../types/constants";
 import PageTemplate from "../../components/PageTemplate";
-import {Box, Container, Typography} from "@mui/material";
-import TopicChip from "../../components/TopicChip";
+import {Box, Container} from "@mui/material";
 import ImageCarousel from "../../components/ImageCarousel";
-import {EducationBoxNew} from "../../components/EducationBox";
+import {EducationBox} from "../../components/EducationBox";
 import {DividerLine} from "../../components/DividerLine";
 import {SectionTitle} from "../../components/SectionTitle";
 import * as fs from "fs";
@@ -13,46 +12,22 @@ import Timeline from "../../components/Timeline";
 
 const page = pages.filter(p => p.title == "Bio")[0];
 
-function facts(subject: string, facts: string[], chipMap?: Map<string, string>) {
-	return (
-		<Box>
-			<Typography margin={"10px"}
-						textAlign={"left"}
-						width={"fit-content"}
-						maxWidth={"100%"}
-						variant={"h5"}>{subject}:
-				<Box display="block">
-
-					{facts.map(fact => <TopicChip key={fact + Math.random()}
-												  text={fact}
-												  chipMap={chipMap}
-					/>)}
-				</Box>
-			</Typography>
-		</Box>);
-}
-
 function content(props: EducationInfo) {
-	const educationBoxes = Object.entries(props).map(([key, data]) => {
-		return <Container disableGutters={true}>
-			<Container
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "center",
-				}}>
-				<EducationBoxNew
-					key={key}
-					{...data} />
+	const educations = Object.entries(props).map(([key, data]) => data);
 
-			</Container>
-			<DividerLine />
-		</Container>;
-	});
 	return (
 		<>
-
-			{educationBoxes}
+			<Container sx={{
+				marginBottom: "20px",
+			}}>
+				<SectionTitle title={"Education"} />
+			</Container>
+			<Container sx={{
+				width: "100vw",
+			}}>
+				<EducationBox data={educations} />
+			</Container>
+			<DividerLine />
 			<Container style={{
 				display: "flex",
 				flexDirection: "column",
