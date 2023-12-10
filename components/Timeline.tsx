@@ -4,16 +4,15 @@ import {
 	StepContent,
 	StepLabel,
 	Stepper,
-	Typography
+	Typography,
 } from "@mui/material";
-import { jobs } from "../types/constants";
+import {jobs} from "../types/constants";
 import TopicChip from "./TopicChip";
+import {v4 as uuidv4} from "uuid";
 
 export default function Timeline() {
 	return (
 		<Box justifyContent={"center"}
-			// border={"solid"}
-			// borderRadius={"20px"}
 			 textAlign={"left"} width={"fit-content"}>
 			<Stepper orientation="vertical">
 				{jobs.map((job, index) => {
@@ -29,20 +28,19 @@ export default function Timeline() {
 										variant={"h5"}>{job.name} - {job.projectType}</Typography>
 									<Typography
 										variant={"subtitle1"}
-										sx={{ fontStyle: "italics" }}>
+										sx={{fontStyle: "italics"}}>
 										{job.position}</Typography>
 								</Box>
 							</StepLabel>
 							<StepContent>
 								{job.techStack.map(tech => <TopicChip
-									key={tech + Math.random()}
+									key={uuidv4()}
 									text={tech} />)}
 							</StepContent>
 						</Step>
 					);
 				})}
 				<Step />
-
 			</Stepper>
 		</Box>
 	);
