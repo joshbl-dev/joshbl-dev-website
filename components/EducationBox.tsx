@@ -33,29 +33,42 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 function Timeline({semesters}: {semesters: Semester[]}) {
 	const [activeStep, setActiveStep] = React.useState<number>(-1);
+	const [openSteps, setOpenSteps] = React.useState<number[]>([]);
 	const mobile = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
 	const handleExpand = (step: number) => {
 		setActiveStep(activeStep === step ? -1 : step);
+		setOpenSteps((prevOpenSteps) => {
+			if (!prevOpenSteps.includes(step)) {
+
+				return [step, ...prevOpenSteps]; // add the step
+			} else {
+				return prevOpenSteps.filter((value) => value !== step); // remove the step
+			}
+		});
 	};
+
 	return (
-		<Box justifyContent={"center"}
-			 marginLeft={"10px"}
-			 textAlign={"left"} width={"fit-content"}>
-			<Stepper activeStep={activeStep}
-					 orientation="vertical">
-				{semesters.reverse().map((semester, index) => {
-					return (<Step key={uuidv4()}
-								  completed={true}
-								  expanded={mobile ? activeStep === index : true}
-								  onClick={() => handleExpand(index)}>
+		<Box
+			marginLeft={"10px"}
+			textAlign={"left"} width={"fit-content"}>
+			<Stepper
+				activeStep={-1}
+				nonLinear={true}
+				orientation="vertical">
+				{semesters.map((semester, index) => {
+					return (<Step
+							key={index}
+							expanded={mobile ? openSteps.includes(index) : true}
+						>
 							<StepLabel
 								StepIconComponent={() => <><Typography
-									variant={"h4"}
+									variant={"h5"}
 									fontWeight={"bold"}>
 									{semester.year + " " + semester.term}
 								</Typography>
-									{mobile ? <IconButton>
-										{activeStep === index ?
+									{mobile ? <IconButton
+										onClick={() => handleExpand(index)}>
+										{openSteps.includes(index) ?
 											<ExpandMoreIcon /> :
 											<ChevronRight />}
 									</IconButton> : <></>}
@@ -107,7 +120,9 @@ function CourseCard(props: Course) {
 			sx={{
 				width: mobile ? "100%" : "fit-content",
 			}}
-			title={props.name}
+			title={<Typography
+				variant={"h6"}
+			>{props.name}</Typography>}
 			subheader={props.course}>
 		</CardHeader>
 		<CardActions>
@@ -156,7 +171,6 @@ export function EducationBox(props: educationBoxProps) {
 			<Card sx={{
 				display: "flex",
 				flexDirection: "column",
-				alignItems: "center",
 				borderRadius: "15px",
 			}}>
 				<ToggleButtonGroup
@@ -183,12 +197,14 @@ export function EducationBox(props: educationBoxProps) {
 				</ToggleButtonGroup>
 				<CardHeader
 					title={<Typography fontWeight={"bold"}
-									   variant={"h5"}
+									   variant={"h4"}
 					>
 						{education.school}
 					</Typography>}
 					subheader={<>
-						<Typography>{education.degree + " in " + education.major + "\n" + education.start_year + " - " + education.end_year}</Typography>
+						<Typography
+							variant={"h5"}
+						>{education.degree + " in " + education.major + "\n" + education.start_year + " - " + education.end_year}</Typography>
 						<Box
 							sx={{
 								display: "flex",
@@ -199,7 +215,7 @@ export function EducationBox(props: educationBoxProps) {
 							}}
 						>
 							{education.concentrations.map((data) => (
-								<ConcentrationChip {...data} />
+								<ConcentrationChip key={uuidv4()} {...data} />
 							))}
 						</Box>
 					</>}
@@ -212,8 +228,6 @@ export function EducationBox(props: educationBoxProps) {
 				<CardContent sx={{
 					display: "flex",
 					flexDirection: "column",
-					alignItems: "center",
-					justifyContent: "center",
 				}}>
 					<Timeline semesters={education.semesters} />
 				</CardContent>

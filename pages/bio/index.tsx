@@ -6,7 +6,7 @@ import {EducationBox} from "../../components/EducationBox";
 import {DividerLine} from "../../components/DividerLine";
 import {SectionTitle} from "../../components/SectionTitle";
 import * as fs from "fs";
-import {EducationInfo} from "../../types/EducationInfo";
+import {Education, EducationInfo} from "../../types/EducationInfo";
 import path from "node:path";
 import Timeline from "../../components/Timeline";
 
@@ -14,7 +14,6 @@ const page = pages.filter(p => p.title == "Bio")[0];
 
 function content(props: EducationInfo) {
 	const educations = Object.entries(props).map(([key, data]) => data);
-
 	return (
 		<>
 			<Container sx={{
