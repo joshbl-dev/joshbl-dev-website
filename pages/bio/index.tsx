@@ -6,7 +6,7 @@ import {EducationBox} from "../../components/EducationBox";
 import {DividerLine} from "../../components/DividerLine";
 import {SectionTitle} from "../../components/SectionTitle";
 import * as fs from "fs";
-import {Education, EducationInfo} from "../../types/EducationInfo";
+import {EducationInfo} from "../../types/EducationInfo";
 import path from "node:path";
 import Timeline from "../../components/Timeline";
 

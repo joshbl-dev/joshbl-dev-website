@@ -22,20 +22,19 @@ import {
 } from "../types/EducationInfo";
 import Card from "@mui/material/Card";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import React from "react";
+import React, {useState} from "react";
 import {theme} from "../styles/theme";
 import {v4 as uuidv4} from "uuid";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import {ChevronRight} from "@mui/icons-material";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
+import ExpandCollapseIcon from "./ExpandCollapseIcon";
 
-function Timeline({semesters, openSteps, setOpenSteps}: {
+function Timeline({semesters, openSteps, setOpenSteps, isMobile}: {
 	semesters: Semester[],
 	openSteps: string[],
-	setOpenSteps: React.Dispatch<React.SetStateAction<string[]>>
+	setOpenSteps: React.Dispatch<React.SetStateAction<string[]>>,
+	isMobile: boolean
 }) {
-	const mobile = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
 	const handleExpand = (step: string) => {
 		setOpenSteps((prevOpenSteps) => {
 			if (!prevOpenSteps.includes(step)) {
@@ -54,9 +53,10 @@ function Timeline({semesters, openSteps, setOpenSteps}: {
 				activeStep={-1}
 				orientation="vertical">
 				{semesters.map((semester) => {
+					const isExpanded = openSteps.includes(semester.id);
 					return (<Step
 							key={semester.id}
-							expanded={mobile ? openSteps.includes(semester.id) : true}
+							expanded={isMobile ? isExpanded : true}
 						>
 							<StepLabel
 								StepIconComponent={() => <><Typography
@@ -64,17 +64,14 @@ function Timeline({semesters, openSteps, setOpenSteps}: {
 									fontWeight={"bold"}>
 									{semester.year + " " + semester.term}
 								</Typography>
-									{mobile ? <IconButton
+									{isMobile ? <IconButton
 										onClick={() => handleExpand(semester.id)}>
-										{openSteps.includes(semester.id) ?
-											<ExpandMoreIcon /> :
-											<ChevronRight />}
+										<ExpandCollapseIcon
+											isExpanded={isExpanded} />
 									</IconButton> : <></>}
 								</>}>
 							</StepLabel>
-							<StepContent
-								// transitionDuration={0}
-							>
+							<StepContent>
 								<Box sx={
 									{
 										display: "flex",
@@ -87,7 +84,9 @@ function Timeline({semesters, openSteps, setOpenSteps}: {
 
 										<CourseCard
 											key={uuidv4()}
-											{...course} />,
+											course={course}
+											isMobile={isMobile}
+										/>,
 									)}
 								</Box>
 							</StepContent>
@@ -101,37 +100,37 @@ function Timeline({semesters, openSteps, setOpenSteps}: {
 }
 
 
-function CourseCard(props: Course) {
-	const mobile = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
-
+function CourseCard({course, isMobile}: {course: Course, isMobile: boolean}) {
+	const [isHovered, setIsHovered] = useState(false);
 	return <Card
 		variant="outlined"
 		sx={{
 			borderRadius: "15px",
 			display: "flex",
-			width: mobile ? "100%" : "fit-content",
+			width: isMobile ? "100%" : "fit-content",
 			flexDirection: "row",
 			backgroundColor: theme.palette.background.default,
+			boxShadow: isHovered ? "0px 5px 20px rgba(0,0,0,0.2)" : "none",
 		}}
-		onMouseOver={(event) => event.currentTarget.style.boxShadow = "0px 5px 15px rgba(0,0,0,0.1)"}
-		onMouseOut={(event) => event.currentTarget.style.boxShadow = "none"}
+		onMouseOver={() => setIsHovered(true)}
+		onMouseOut={() => setIsHovered(false)}
 	>
 		<CardHeader
 			sx={{
-				width: mobile ? "100%" : "fit-content",
+				width: isMobile ? "100%" : "fit-content",
 			}}
 			title={<Typography
 				variant={"h6"}
-			>{props.name}</Typography>}
-			subheader={props.course}>
+			>{course.name}</Typography>}
+			subheader={course.course}>
 		</CardHeader>
 		<CardActions>
-			<IconButton href={props.url} target="_blank" color="secondary">
+			<IconButton href={course.url} target="_blank"
+						color="secondary">
 				<InfoOutlinedIcon />
 			</IconButton>
 		</CardActions>
 	</Card>;
-
 }
 
 function ConcentrationChip(props: Concentration) {
@@ -157,6 +156,7 @@ type educationBoxProps = {
 }
 
 export function EducationBox(props: educationBoxProps) {
+	const mobile = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
 	const [education, setEducation] = React.useState<Education>(props.data[0]);
 	const [openSteps, setOpenSteps] = React.useState<string[]>([]);
 	return <>
@@ -173,16 +173,14 @@ export function EducationBox(props: educationBoxProps) {
 				borderRadius: "15px",
 			}}>
 				<ToggleButtonGroup
-					// color={"primary"}
 					fullWidth={true}
 					value={education.abbreviation}
-					onChange={(event, value) => {
+					onChange={(_event, value) => {
 						if (value != null && value != education.abbreviation) {
 							setEducation(props.data.filter((educationNew) => educationNew.abbreviation == value)[0]);
 						}
 					}}
 					exclusive
-					aria-label="text alignment"
 				>
 					{props.data.map((education) => (
 						<ToggleButton
@@ -230,7 +228,9 @@ export function EducationBox(props: educationBoxProps) {
 				}}>
 					<Timeline semesters={education.semesters}
 							  openSteps={openSteps}
-							  setOpenSteps={setOpenSteps} />
+							  setOpenSteps={setOpenSteps}
+							  isMobile={mobile}
+					/>
 				</CardContent>
 			</Card>
 		</Box>
