@@ -59,13 +59,17 @@ function Timeline({semesters, openSteps, setOpenSteps, isMobile}: {
 							expanded={isMobile ? isExpanded : true}
 						>
 							<StepLabel
+								onClick={() => handleExpand(semester.id)}
 								StepIconComponent={() => <><Typography
 									variant={"h5"}
 									fontWeight={"bold"}>
 									{semester.year + " " + semester.term}
 								</Typography>
 									{isMobile ? <IconButton
-										onClick={() => handleExpand(semester.id)}>
+										onClick={(event) => {
+											event.stopPropagation();
+											handleExpand(semester.id);
+										}}>
 										<ExpandCollapseIcon
 											isExpanded={isExpanded} />
 									</IconButton> : <></>}
