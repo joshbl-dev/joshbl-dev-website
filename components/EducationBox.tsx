@@ -13,7 +13,6 @@ import {
 	ToggleButtonGroup,
 	Typography,
 } from "@mui/material";
-import {useTheme} from "@mui/styles";
 import {Theme} from "@mui/system";
 import {
 	Concentration,
@@ -31,18 +30,18 @@ import {ChevronRight} from "@mui/icons-material";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-function Timeline({semesters}: {semesters: Semester[]}) {
-	const [activeStep, setActiveStep] = React.useState<number>(-1);
-	const [openSteps, setOpenSteps] = React.useState<number[]>([]);
+function Timeline({semesters, openSteps, setOpenSteps}: {
+	semesters: Semester[],
+	openSteps: string[],
+	setOpenSteps: React.Dispatch<React.SetStateAction<string[]>>
+}) {
 	const mobile = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
-	const handleExpand = (step: number) => {
-		setActiveStep(activeStep === step ? -1 : step);
+	const handleExpand = (step: string) => {
 		setOpenSteps((prevOpenSteps) => {
 			if (!prevOpenSteps.includes(step)) {
-
-				return [step, ...prevOpenSteps]; // add the step
+				return [step, ...prevOpenSteps];
 			} else {
-				return prevOpenSteps.filter((value) => value !== step); // remove the step
+				return prevOpenSteps.filter((value) => value !== step);
 			}
 		});
 	};
@@ -53,12 +52,11 @@ function Timeline({semesters}: {semesters: Semester[]}) {
 			textAlign={"left"} width={"fit-content"}>
 			<Stepper
 				activeStep={-1}
-				nonLinear={true}
 				orientation="vertical">
-				{semesters.map((semester, index) => {
+				{semesters.map((semester) => {
 					return (<Step
-							key={index}
-							expanded={mobile ? openSteps.includes(index) : true}
+							key={semester.id}
+							expanded={mobile ? openSteps.includes(semester.id) : true}
 						>
 							<StepLabel
 								StepIconComponent={() => <><Typography
@@ -67,14 +65,16 @@ function Timeline({semesters}: {semesters: Semester[]}) {
 									{semester.year + " " + semester.term}
 								</Typography>
 									{mobile ? <IconButton
-										onClick={() => handleExpand(index)}>
-										{openSteps.includes(index) ?
+										onClick={() => handleExpand(semester.id)}>
+										{openSteps.includes(semester.id) ?
 											<ExpandMoreIcon /> :
 											<ChevronRight />}
 									</IconButton> : <></>}
 								</>}>
 							</StepLabel>
-							<StepContent>
+							<StepContent
+								// transitionDuration={0}
+							>
 								<Box sx={
 									{
 										display: "flex",
@@ -157,9 +157,8 @@ type educationBoxProps = {
 }
 
 export function EducationBox(props: educationBoxProps) {
-	const theme = useTheme();
-
 	const [education, setEducation] = React.useState<Education>(props.data[0]);
+	const [openSteps, setOpenSteps] = React.useState<string[]>([]);
 	return <>
 		<Box
 			sx={{
@@ -229,7 +228,9 @@ export function EducationBox(props: educationBoxProps) {
 					display: "flex",
 					flexDirection: "column",
 				}}>
-					<Timeline semesters={education.semesters} />
+					<Timeline semesters={education.semesters}
+							  openSteps={openSteps}
+							  setOpenSteps={setOpenSteps} />
 				</CardContent>
 			</Card>
 		</Box>

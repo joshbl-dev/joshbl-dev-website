@@ -17,6 +17,7 @@ export type Concentration = {
 };
 
 export type Semester = {
+	id: string;
 	year: string;
 	term: string;
 	courses: Course[];

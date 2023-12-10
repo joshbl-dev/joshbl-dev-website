@@ -18,6 +18,7 @@
         ],
         "semesters": [
             {
+                "id": "894da673-1ebb-4a41-a9df-1e8752af8413",
                 "year": "2024",
                 "term": "Spring",
                 "courses": [
@@ -44,6 +45,7 @@
                 ]
             },
             {
+                "id": "ae9ea404-5172-4a59-84e7-b993f2b08480",
                 "year": "2023",
                 "term": "Fall",
                 "courses": [
@@ -70,6 +72,7 @@
                 ]
             },
             {
+                "id": "fe0203eb-ea44-446b-be6b-a498279f1cbc",
                 "year": "2023",
                 "term": "Spring",
                 "courses": [
@@ -96,6 +99,7 @@
                 ]
             },
             {
+                "id": "2615391f-e08a-461a-a899-394528cb11b9",
                 "year": "2022",
                 "term": "Fall",
                 "courses": [
@@ -127,6 +131,7 @@
                 ]
             },
             {
+                "id": "bfaba17e-3341-4e96-b314-5c475dbe0f0e",
                 "year": "2022",
                 "term": "Spring",
                 "courses": [
@@ -153,6 +158,7 @@
                 ]
             },
             {
+                "id": "42dcab93-c753-4bfd-a470-628c98ce7170",
                 "year": "2021",
                 "term": "Fall",
                 "courses": [
@@ -179,6 +185,7 @@
                 ]
             },
             {
+                "id": "0d61ac9a-8ea5-466e-a43f-845d92ba818e",
                 "year": "2021",
                 "term": "Spring",
                 "courses": [
@@ -210,6 +217,7 @@
                 ]
             },
             {
+                "id": "70ab2a43-ed5a-489f-946c-3c20ce7560e7",
                 "year": "2020",
                 "term": "Fall",
                 "courses": [
@@ -257,6 +265,7 @@
         ],
         "semesters": [
             {
+                "id": "e0da1946-82b6-49df-bb94-b8f3a144ebe9",
                 "year": "2024",
                 "term": "Spring",
                 "courses": [
@@ -268,6 +277,7 @@
                 ]
             },
             {
+                "id": "9e9f10af-b9f5-477b-8cfd-30e09012903f",
                 "year": "2023",
                 "term": "Fall",
                 "courses": [
