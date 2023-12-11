@@ -1,0 +1,293 @@
+{
+    "657cc3c7-ae35-4c45-a0ec-ee65aff8a16f": {
+        "school": "Georgia Institute of Technology",
+        "degree": "Bachelor's",
+        "abbreviation": "B.S.",
+        "major": "Computer Science",
+        "start_year": "2020",
+        "end_year": "2024",
+        "concentrations": [
+            {
+                "name": "Intelligence",
+                "url": "https://www.cc.gatech.edu/academics/threads/intelligence"
+            },
+            {
+                "name": "Information Internetworks",
+                "url": "https://www.cc.gatech.edu/academics/threads/information-internetworks"
+            }
+        ],
+        "semesters": [
+            {
+                "id": "894da673-1ebb-4a41-a9df-1e8752af8413",
+                "year": "2024",
+                "term": "Spring",
+                "courses": [
+                    {
+                        "course": "CS 4803 EML",
+                        "name": "Special Topics: Efficient Machine Learning",
+                        "url": "https://oscar.gatech.edu/pls/bprod/bwckschd.p_disp_detail_sched?term_in=202402&crn_in=30860"
+                    },
+                    {
+                        "course": "CS 4854",
+                        "name": "Intro Malware Reverse Engineering",
+                        "url": "https://saltaformaggio.ece.gatech.edu/teaching/spring2021/intro-re/"
+                    },
+                    {
+                        "course": "CS 6476",
+                        "name": "Computer Vision",
+                        "url": "https://omscs.gatech.edu/cs-6476-computer-vision"
+                    },
+                    {
+                        "course": "Soc 1101",
+                        "name": "Intro to Sociology",
+                        "url": "https://catalog.gatech.edu/coursesaz/soc/#:~:text=SOC%C2%A01101.-,SOC%C2%A01101,-.%20Introduction%20to%20Sociology"
+                    }
+                ]
+            },
+            {
+                "id": "ae9ea404-5172-4a59-84e7-b993f2b08480",
+                "year": "2023",
+                "term": "Fall",
+                "courses": [
+                    {
+                        "course": "CS 4262",
+                        "name": "Network Security",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=modern%20commercial%20networks.-,CS%C2%A04262,-.%20Network%20Security.%203"
+                    },
+                    {
+                        "course": "CS 7641",
+                        "name": "Machine Learning",
+                        "url": "https://mahdi-roozbahani.github.io/CS46417641-fall2023/"
+                    },
+                    {
+                        "course": "CS 4510",
+                        "name": "Automata and Complexity",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=animations%20and%20more.-,CS%C2%A04510,-.%20Automata%20and%20Complexity"
+                    },
+                    {
+                        "course": "LMC 3516",
+                        "name": "Literary and Cultural Modernism",
+                        "url": "https://catalog.gatech.edu/coursesaz/lmc/#:~:text=religion%20to%20science.-,LMC%C2%A03516,-.%20Literary%20and%20Cultural"
+                    }
+                ]
+            },
+            {
+                "id": "fe0203eb-ea44-446b-be6b-a498279f1cbc",
+                "year": "2023",
+                "term": "Spring",
+                "courses": [
+                    {
+                        "course": "CS 3251",
+                        "name": "Computer Networking I",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=between%20these%20models.-,CS%C2%A03251,-.%20Computer%20Networking%20I"
+                    },
+                    {
+                        "course": "CS 3630",
+                        "name": "Intro to Perception and Robotics",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=and%20reinforced%20learning.-,CS%C2%A03630,-.%20Introduction%20to%20Perception"
+                    },
+                    {
+                        "course": "CS 3312 & LMC 3431",
+                        "name": "Junior Design Part 2",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=CS%C2%A04911.-,CS%C2%A03312,-.%20Project%20Implementation.%202"
+                    },
+                    {
+                        "course": "LMC 3512",
+                        "name": "British and Continental Romanticism",
+                        "url": "https://catalog.gatech.edu/coursesaz/lmc/#:~:text=and%20historical%20significance.-,LMC%C2%A03512,-.%20British%20and%20Continental"
+                    }
+                ]
+            },
+            {
+                "id": "2615391f-e08a-461a-a899-394528cb11b9",
+                "year": "2022",
+                "term": "Fall",
+                "courses": [
+                    {
+                        "course": "CS 3510",
+                        "name": "Design and Analysis of Algorithms",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=CS%C2%A03510.-,CS%C2%A03600,-.%20Introduction%20to%20Artificial"
+                    },
+                    {
+                        "course": "CS 4400",
+                        "name": "Intro to Database Systems",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=verifying%20program%20specifications.-,CS%C2%A04400,-.%20Introduction%20to%20Database"
+                    },
+                    {
+                        "course": "CS 3311 & LMC 3432",
+                        "name": "Junior Design Part 1",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=principles%20and%20practices.-,CS%C2%A03311,-.%20Part%201%20of"
+                    },
+                    {
+                        "course": "Math 3670",
+                        "name": "Probability and Statistics with Applications",
+                        "url": "https://math.gatech.edu/courses/math/3670"
+                    },
+                    {
+                        "course": "HTS 2084",
+                        "name": "Technology and Society",
+                        "url": "https://catalog.gatech.edu/coursesaz/hts/#:~:text=of%20their%20times.-,HTS%C2%A02084,-.%20Technology%20and%20Society"
+                    }
+                ]
+            },
+            {
+                "id": "bfaba17e-3341-4e96-b314-5c475dbe0f0e",
+                "year": "2022",
+                "term": "Spring",
+                "courses": [
+                    {
+                        "course": "CS 2200",
+                        "name": "Systems and Networks",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=and%20C%20programming.-,CS%C2%A02200,-.%20Computer%20Systems%20and"
+                    },
+                    {
+                        "course": "CS 3600",
+                        "name": "Intro to Artificial Intelligence",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=CS%C2%A03510.-,CS%C2%A03600,-.%20Introduction%20to%20Artificial"
+                    },
+                    {
+                        "course": "EAS 1601",
+                        "name": "Habitable Planet",
+                        "url": "https://catalog.gatech.edu/coursesaz/eas/#:~:text=EAS%C2%A01601.-,EAS%C2%A01601,-.%20How%20Stuff%20Works"
+                    },
+                    {
+                        "course": "Math 3012",
+                        "name": "Applied Combinatorics",
+                        "url": "https://math.gatech.edu/courses/math/3012"
+                    }
+                ]
+            },
+            {
+                "id": "42dcab93-c753-4bfd-a470-628c98ce7170",
+                "year": "2021",
+                "term": "Fall",
+                "courses": [
+                    {
+                        "course": "CS 2110",
+                        "name": "Computer Organization and Programming",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=CS%C2%A02050.-,CS%C2%A02110,-.%20Computer%20Organization%20and"
+                    },
+                    {
+                        "course": "CS 2340",
+                        "name": "Objects and Design",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=producing%20effective%20solutions.-,CS%C2%A02340,-.%20Objects%20and%20Design"
+                    },
+                    {
+                        "course": "CS 4873",
+                        "name": "Computing, Society, and Professionalism",
+                        "url": "https://faculty.cc.gatech.edu/~asb/teaching/4873/fall2021/index.html"
+                    },
+                    {
+                        "course": "Psyc 1101",
+                        "name": "General Psychology",
+                        "url": "https://catalog.gatech.edu/coursesaz/psyc/#:~:text=PSYC%C2%A01101.%20Introduction%20to%20Psychology.%203%20Credit%20Hours."
+                    }
+                ]
+            },
+            {
+                "id": "0d61ac9a-8ea5-466e-a43f-845d92ba818e",
+                "year": "2021",
+                "term": "Spring",
+                "courses": [
+                    {
+                        "course": "CS 1332",
+                        "name": "Data Structures and Algorithms",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=CS%C2%A01332.%20Data%20Structures%20and%20Algorithms%20for%20Applications.%203%20Credit%20Hours."
+                    },
+                    {
+                        "course": "Math 2550",
+                        "name": "Multivariable Calculus",
+                        "url": "https://math.gatech.edu/courses/math/2550"
+                    },
+                    {
+                        "course": "Phys 2211",
+                        "name": "Intro Physics I",
+                        "url": "https://oscar.gatech.edu/bprod/bwckctlg.p_disp_course_detail?cat_term_in=202002&subj_code_in=PHYS&crse_numb_in=2211"
+                    },
+                    {
+                        "course": "Engl 1102",
+                        "name": "English Composition II",
+                        "url": "https://catalog.gatech.edu/coursesaz/engl/#:~:text=ENGL%C2%A01102.%20English%20Composition%20II.%203%20Credit%20Hours."
+                    },
+                    {
+                        "course": "Hist 2112",
+                        "name": "The United States since 1877",
+                        "url": "https://catalog.gatech.edu/coursesaz/hist/#:~:text=HIST%C2%A02112.%20US%20History%20II.%203%20Credit%20Hours."
+                    }
+                ]
+            },
+            {
+                "id": "70ab2a43-ed5a-489f-946c-3c20ce7560e7",
+                "year": "2020",
+                "term": "Fall",
+                "courses": [
+                    {
+                        "course": "CS 1331",
+                        "name": "Object-Oriented Programming",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=for%20CS%201322.-,CS%C2%A01331,-.%20Introduction%20to%20Object"
+                    },
+                    {
+                        "course": "CS 2050",
+                        "name": "Discrete Mathematics",
+                        "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=21%20Credit%20Hours.-,CS%C2%A02050,-.%20Introduction%20to%20Discrete"
+                    },
+                    {
+                        "course": "Math 1554",
+                        "name": "Linear Algebra",
+                        "url": "https://math.gatech.edu/courses/math/1554"
+                    },
+                    {
+                        "course": "CS 1100",
+                        "name": "Freshman Leap Seminar",
+                        "url": "https://catalog.gatech.edu/coursesaz/cs/#:~:text=CS%C2%A01100.%20Freshman%20Leap%20Seminar.%201%20Credit%20Hour."
+                    },
+                    {
+                        "course": "APPH 1040",
+                        "name": "Scientific Foundations of Health",
+                        "url": "https://catalog.gatech.edu/coursesaz/apph/#:~:text=APPH%C2%A01040.%20Scientific%20Foundations%20of%20Health.%202%20Credit%20Hours."
+                    }
+                ]
+            }
+        ]
+    },
+    "b3245438-2e4b-447f-a547-506a44811ccf": {
+        "school": "Georgia Institute of Technology",
+        "degree": "Master's",
+        "abbreviation": "M.S.",
+        "major": "Computer Science",
+        "start_year": "2024",
+        "end_year": "2025",
+        "concentrations": [
+            {
+                "name": "Machine Learning",
+                "url": "https://www.cc.gatech.edu/ms-computer-science-specializations"
+            }
+        ],
+        "semesters": [
+            {
+                "id": "e0da1946-82b6-49df-bb94-b8f3a144ebe9",
+                "year": "2024",
+                "term": "Spring",
+                "courses": [
+                    {
+                        "course": "CS 6476",
+                        "name": "Computer Vision",
+                        "url": "https://omscs.gatech.edu/cs-6476-computer-vision"
+                    }
+                ]
+            },
+            {
+                "id": "9e9f10af-b9f5-477b-8cfd-30e09012903f",
+                "year": "2023",
+                "term": "Fall",
+                "courses": [
+                    {
+                        "course": "CS 7641",
+                        "name": "Machine Learning",
+                        "url": "https://mahdi-roozbahani.github.io/CS46417641-fall2023/"
+                    }
+                ]
+            }
+        ]
+    }
+}
