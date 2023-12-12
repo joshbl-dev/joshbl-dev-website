@@ -1,12 +1,12 @@
-import {pages} from "../../types/constants";
+import { pages } from "../../types/constants";
 import PageTemplate from "../../components/PageTemplate";
-import {Box, Container} from "@mui/material";
+import { Box, Container } from "@mui/material";
 import ImageCarousel from "../../components/ImageCarousel";
-import {EducationBox} from "../../components/EducationBox";
-import {DividerLine} from "../../components/DividerLine";
-import {SectionTitle} from "../../components/SectionTitle";
+import { EducationBox } from "../../components/EducationBox";
+import { DividerLine } from "../../components/DividerLine";
+import { SectionTitle } from "../../components/SectionTitle";
 import * as fs from "fs";
-import {EducationInfo} from "../../types/EducationInfo";
+import { EducationInfo } from "../../types/EducationInfo";
 import path from "node:path";
 import Timeline from "../../components/Timeline";
 
@@ -17,12 +17,12 @@ function content(props: EducationInfo) {
 	return (
 		<>
 			<Container sx={{
-				marginBottom: "20px",
+				marginBottom: "20px"
 			}}>
 				<SectionTitle title={"Education"} />
 			</Container>
 			<Container sx={{
-				width: "100vw",
+				width: "100%"
 			}}>
 				<EducationBox data={educations} />
 			</Container>
@@ -30,7 +30,7 @@ function content(props: EducationInfo) {
 			<Container style={{
 				display: "flex",
 				flexDirection: "column",
-				alignItems: "center",
+				alignItems: "center"
 			}}>
 				<SectionTitle title={"Professional Work Experience"} />
 				<Timeline />
@@ -62,7 +62,7 @@ export async function getStaticProps() {
 	const data = JSON.parse(fileContents);
 
 	return {
-		"props": data,
+		"props": data
 	};
 }
 
