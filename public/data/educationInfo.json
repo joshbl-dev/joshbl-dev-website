@@ -28,11 +28,6 @@
                         "url": "https://oscar.gatech.edu/pls/bprod/bwckschd.p_disp_detail_sched?term_in=202402&crn_in=30860"
                     },
                     {
-                        "course": "CS 4854",
-                        "name": "Intro Malware Reverse Engineering",
-                        "url": "https://saltaformaggio.ece.gatech.edu/teaching/spring2021/intro-re/"
-                    },
-                    {
                         "course": "CS 6476",
                         "name": "Computer Vision",
                         "url": "https://omscs.gatech.edu/cs-6476-computer-vision"
