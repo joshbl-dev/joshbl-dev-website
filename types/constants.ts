@@ -98,6 +98,13 @@ export const projects: ProjectInfo[] = [
 
 export const jobs: JobInfo[] = [
 	{
+		name: "Lucille Games",
+		year: 2024,
+		position: "Contracted Game Developer",
+		projectType: "Game Development",
+		techStack: ["NestJS", "Typescript", "JavaScript", "Java", "Azure", "Bash"],
+	},
+	{
 		name: "Capital One",
 		year: 2023,
 		position: "Software Engineer Intern",
@@ -188,5 +195,6 @@ export const chipLinks: Map<string, string> = new Map<string, string>([
 	["AWS S3", "https://aws.amazon.com/s3/"],
 	["AWS CloudWatch", "https://aws.amazon.com/cloudwatch/"],
 	["Jenkins", "https://www.jenkins.io/"],
+	["Bash", "https://www.gnu.org/software/bash/"],
 	["", ""],
 ]);
