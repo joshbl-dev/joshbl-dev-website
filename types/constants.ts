@@ -98,9 +98,9 @@ export const projects: ProjectInfo[] = [
 
 export const jobs: JobInfo[] = [
 	{
-		name: "Capital One - Technology Internship Program",
+		name: "Capital One",
 		year: 2024,
-		position: "TBA",
+		position: "Technology Internship Program",
 		projectType: "TBA",
 		techStack: [],
 	},
