@@ -24,7 +24,7 @@
                 "courses": [
                     {
                         "course": "CS 4803 EML",
-                        "name": "Special Topics: Efficient Machine Learning",
+                        "name": "Efficient Machine Learning",
                         "url": "https://oscar.gatech.edu/pls/bprod/bwckschd.p_disp_detail_sched?term_in=202402&crn_in=30860"
                     },
                     {
@@ -34,8 +34,13 @@
                     },
                     {
                         "course": "Soc 1101",
-                        "name": "Intro to Sociology",
+                        "name": "Sociology",
                         "url": "https://catalog.gatech.edu/coursesaz/soc/#:~:text=SOC%C2%A01101.-,SOC%C2%A01101,-.%20Introduction%20to%20Sociology"
+                    },
+                    {
+                        "course": "GT 4100",
+                        "name": "Personal Finance",
+                        "url": "https://oscar.gatech.edu/bprod/bwckctlg.p_disp_course_detail?cat_term_in=202108&subj_code_in=GT&crse_numb_in=4100"
                     }
                 ]
             },
@@ -78,7 +83,7 @@
                     },
                     {
                         "course": "CS 3630",
-                        "name": "Intro to Perception and Robotics",
+                        "name": "Perception and Robotics",
                         "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=and%20reinforced%20learning.-,CS%C2%A03630,-.%20Introduction%20to%20Perception"
                     },
                     {
@@ -105,7 +110,7 @@
                     },
                     {
                         "course": "CS 4400",
-                        "name": "Intro to Database Systems",
+                        "name": "Database Systems",
                         "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=verifying%20program%20specifications.-,CS%C2%A04400,-.%20Introduction%20to%20Database"
                     },
                     {
@@ -137,7 +142,7 @@
                     },
                     {
                         "course": "CS 3600",
-                        "name": "Intro to Artificial Intelligence",
+                        "name": "Artificial Intelligence",
                         "url": "https://catalog.gatech.edu/courses-undergrad/cs/#:~:text=CS%C2%A03510.-,CS%C2%A03600,-.%20Introduction%20to%20Artificial"
                     },
                     {
