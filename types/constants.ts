@@ -98,6 +98,13 @@ export const projects: ProjectInfo[] = [
 
 export const jobs: JobInfo[] = [
 	{
+		name: "Capital One - Technology Internship Program",
+		year: 2024,
+		position: "TBA",
+		projectType: "TBA",
+		techStack: [],
+	},
+	{
 		name: "Lucille Games",
 		year: 2024,
 		position: "Contracted Game Developer",
