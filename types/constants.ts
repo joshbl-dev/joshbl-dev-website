@@ -29,6 +29,14 @@ export const pages: PageInfo[] = [
 
 export const projects: ProjectInfo[] = [
 	{
+		title: "Pokémon World - Battle Simulator",
+		description: "A custom built Pokémon region containing Pokémon, full storylines, trainers and more. Developed with Java, Typescript, and Redis.",
+		url: "https://www.pokefind.co/",
+		mediaType: "video",
+		mediaContent: "https://www.youtube.com/embed/eVWgIa_tl_M?si=p03zN_FrVqERHxhx",
+		altText: "Pokémon World Video Demo",
+	},
+	{
 		title: "Team Dinner",
 		description: "An all-in-one mobile solution for organizing team dinners through team organization, meal polls, and payment tracking. Made with Flutter, NestJS, and Firestore.",
 		url: "https://github.com/joshbl-dev/TeamDinner-JIB-2341",
@@ -109,7 +117,7 @@ export const jobs: JobInfo[] = [
 		year: 2024,
 		position: "Contracted Game Developer",
 		projectType: "Game Development",
-		techStack: ["NestJS", "Typescript", "JavaScript", "Java", "Azure", "Bash"],
+		techStack: ["NestJS", "Typescript", "JavaScript", "Java", "Azure", "Redis", "OVHCloud", "MongoDB", "DynamoDB", "Bash"],
 	},
 	{
 		name: "Capital One",
@@ -203,5 +211,9 @@ export const chipLinks: Map<string, string> = new Map<string, string>([
 	["AWS CloudWatch", "https://aws.amazon.com/cloudwatch/"],
 	["Jenkins", "https://www.jenkins.io/"],
 	["Bash", "https://www.gnu.org/software/bash/"],
+	["Redis", "https://redis.io/"],
+	["OVHCloud", "https://www.ovhcloud.com/"],
+	["MongoDB", "https://www.mongodb.com/"],
+	["DynamoDB", "https://aws.amazon.com/dynamodb/"],
 	["", ""],
 ]);

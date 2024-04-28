@@ -1,15 +1,15 @@
 import styles from "../styles/Home.module.css";
 import React from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import {Box, Button, Container, Grid, Typography} from "@mui/material";
 import Ticker from "react-ticker";
-import { PictureAsPdf } from "@mui/icons-material";
-import { pages } from "../types/constants";
+import {PictureAsPdf} from "@mui/icons-material";
+import {pages} from "../types/constants";
 import PageTemplate from "../components/PageTemplate";
 import {
 	desktop_hide,
 	desktop_show,
 	mobile_hide,
-	mobile_show
+	mobile_show,
 } from "../styles/theme";
 import ProfilePicture from "../components/ProfilePicture";
 
@@ -19,17 +19,27 @@ const skills = [
 	"NestJS",
 	"Next.js",
 	"TypeScript",
+	"Node.js",
 	"Python",
-	"AWS",
-	"PostgreSQL",
-	"Firebase",
-	"Google Cloud",
-	"Azure",
+	"OpenCV",
+	"TensorFlow",
+	"Sklearn",
+	"SciPy",
+	"Lua",
+	"Bash",
 	"React/React Native",
 	"Dart",
 	"Flutter",
+	"Google Cloud",
+	"Azure",
+	"AWS",
+	"SQL",
+	"NoSQL",
+	"Serverless Functions",
+	"Redis",
 	"Git",
-	"Lua",
+	"Docker",
+	"Jenkins",
 	"Vercel",
 	"HTML",
 	"CSS"];
@@ -55,11 +65,11 @@ export default function Home() {
 					<Grid item md>
 						<Container maxWidth={"md"}
 						>
-							<Typography sx={{ ...mobile_hide("flex") }}
+							<Typography sx={{...mobile_hide("flex")}}
 										variant={"h3"} align={"center"}>
 								{quote}
 							</Typography>
-							<Typography sx={{ ...mobile_show("flex") }}
+							<Typography sx={{...mobile_show("flex")}}
 										variant={"h4"} align={"center"}>
 								{quote}
 							</Typography>
@@ -70,7 +80,7 @@ export default function Home() {
 					<Grid item xs={"auto"}>
 						<Container
 							sx={{
-								...desktop_hide("flex")
+								...desktop_hide("flex"),
 							}}
 							className={styles.pfp_mobile}
 						>
@@ -78,7 +88,7 @@ export default function Home() {
 						</Container>
 						<Container
 							sx={{
-								...desktop_show("flex")
+								...desktop_show("flex"),
 							}}
 							className={styles.pfp}>
 							<ProfilePicture width={350} height={350} />
