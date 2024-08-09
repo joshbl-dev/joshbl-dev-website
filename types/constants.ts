@@ -211,7 +211,7 @@ export const chipLinks: Map<string, string> = new Map<string, string>([
 	["AWS CloudWatch", "https://aws.amazon.com/cloudwatch/"],
 	["AWS Batch", "https://aws.amazon.com/batch/"],
 	["AWS RDS", "https://aws.amazon.com/rds/"],
-	["AWS EventBridge", "https://aws.amazon.com/eventbridge/"]
+	["AWS EventBridge", "https://aws.amazon.com/eventbridge/"],
 	["Jenkins", "https://www.jenkins.io/"],
 	["Bash", "https://www.gnu.org/software/bash/"],
 	["Redis", "https://redis.io/"],
