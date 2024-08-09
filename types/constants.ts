@@ -108,16 +108,16 @@ export const jobs: JobInfo[] = [
 	{
 		name: "Capital One",
 		year: 2024,
-		position: "Technology Internship Program",
-		projectType: "TBA",
-		techStack: [],
+		position: "Software Engineer Intern",
+		projectType: "Enterprise Tech",
+		techStack: ["Python", "PostgreSQL", "Snowflake", "AWS Batch", "AWS Lambda", "AWS EventBridge", "AWS RDS", "Splunk", "Jenkins"],
 	},
 	{
 		name: "Lucille Games",
 		year: 2024,
 		position: "Contracted Game Developer",
 		projectType: "Game Development",
-		techStack: ["NestJS", "Typescript", "JavaScript", "Java", "Azure", "Redis", "OVHCloud", "MongoDB", "DynamoDB", "Bash"],
+		techStack: ["NestJS", "Typescript", "JavaScript", "Java", "Azure", "Redis", "OVHCloud", "MongoDB", "AWS DynamoDB", "Bash"],
 	},
 	{
 		name: "Capital One",
@@ -209,11 +209,15 @@ export const chipLinks: Map<string, string> = new Map<string, string>([
 	["AWS DynamoDB", "https://aws.amazon.com/dynamodb/"],
 	["AWS S3", "https://aws.amazon.com/s3/"],
 	["AWS CloudWatch", "https://aws.amazon.com/cloudwatch/"],
+	["AWS Batch", "https://aws.amazon.com/batch/"],
+	["AWS RDS", "https://aws.amazon.com/rds/"],
+	["AWS EventBridge", "https://aws.amazon.com/eventbridge/"]
 	["Jenkins", "https://www.jenkins.io/"],
 	["Bash", "https://www.gnu.org/software/bash/"],
 	["Redis", "https://redis.io/"],
 	["OVHCloud", "https://www.ovhcloud.com/"],
 	["MongoDB", "https://www.mongodb.com/"],
-	["DynamoDB", "https://aws.amazon.com/dynamodb/"],
+	["Snowflake", "https://www.snowflake.com/"],
+	["Splunk", "https://www.splunk.com/"],
 	["", ""],
 ]);
