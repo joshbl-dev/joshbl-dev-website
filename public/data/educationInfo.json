@@ -29,14 +29,14 @@
                         "url": "https://oscar.gatech.edu/bprod/bwckctlg.p_display_courses?term_in=202408&one_subj=CSE&sel_crse_strt=6242&sel_crse_end=6242&sel_subj=&sel_levl=&sel_schd=&sel_coll=&sel_divs=&sel_dept=&sel_attr="
                     },
                     {
-                        "course": "CS 8803 LLM",
-                        "name": "Large Language Models",
-                        "url": "https://oscar.gatech.edu/pls/bprod/bwckschd.p_disp_detail_sched?term_in=202408&crn_in=92288"
+                        "course": "CS 6239",
+                        "name": "Enterprise Cyber Management",
+                        "url": "https://oscar.gatech.edu/bprod/bwckctlg.p_display_courses?term_in=202408&one_subj=CS&sel_crse_strt=6239&sel_crse_end=6239&sel_subj=&sel_levl=&sel_schd=&sel_coll=&sel_divs=&sel_dept=&sel_attr="
                     },
                     {
-                        "course": "CS 8803 VLM",
-                        "name": "Vision-Language Foundation Models",
-                        "url": "https://oscar.gatech.edu/pls/bprod/bwckschd.p_disp_detail_sched?term_in=202408&crn_in=92282"
+                        "course": "CS 8803 EGD",
+                        "name": "Educational Game Design",
+                        "url": "https://oscar.gatech.edu/pls/bprod/bwckschd.p_disp_detail_sched?term_in=202408&crn_in=92285"
                     }
                 ]
             },
