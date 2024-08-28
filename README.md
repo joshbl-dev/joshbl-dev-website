@@ -1,41 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped
-with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Joshbl-dev-website
 
-## Getting Started
+## A personal digital portfolio
 
-First, run the development server:
+## Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Clone the repository
+2. Run `yarn install` to install the dependencies
+3. Run `yarn dev` to start the development server
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see
+   the result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the
-result.
+## Home Page
 
-You can start editing the page by modifying `pages/index.tsx`. The page
-auto-updates as you edit the file.
+The home page is the landing page of the website. It contains a brief
+introduction of the website and the author.
+It also contains a list of skills that the author has and a link to a resume.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed
-on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This
-endpoint can be edited in `pages/api/fetchEducation.tsx`.
+## Projects Page
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are
-treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead
-of React pages.
+The projects page contains a list of projects that the author has worked on.
+Each project has a title, a description, and a link to the project.
+It also has a visual representation of the project and link to the project site
+or source code.
+Projects can be updated by adding a new project to the projects array in the
+`constants.ts` file in `/types` folder.
 
-## Learn More
+## Bio Page
 
-To learn more about Next.js, take a look at the following resources:
+The bio page contains an overview of the author's educational background, work
+experience, and interests.
+Educational info can be updated in `educationInfo.json` in the `/public/data`
+folder.
+Work experience can be updated in `constants.ts` in the `/types` folder (also
+update chipLinks in constants to allow clickable redirects).
+Interests can be updated in `constants.ts` in the `/types` folder.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Updating visual elements
 
-You can check
-out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your
-feedback and contributions are welcome!
+The visual elements of the website can be updated by adding media files to the
+`/public` folder.
+Some hardcoded file paths may need to be updated in the code to reflect the new
+file paths.
+
+Color schemes can be updated in the `theme.ts` file in the `/styles` folder.
 
 ## Deploy on Vercel
 
