@@ -14,6 +14,33 @@
     ],
     "semesters": [
       {
+        "id": "aac1a6ef-519c-464f-af6a-0a72f87d397f",
+        "year": "2025",
+        "term": "Spring",
+        "courses": [
+          {
+            "course": "CS 7637",
+            "name": "Knowledge-Based AI",
+            "url": "https://oscar.gatech.edu/bprod/bwckctlg.p_display_courses?term_in=202502&one_subj=CS&sel_crse_strt=7637&sel_crse_end=7637&sel_subj=&sel_levl=&sel_schd=&sel_coll=&sel_divs=&sel_dept=&sel_attr="
+          },
+          {
+            "course": "CS 8803 DRL",
+            "name": "Deep Reinforcement Learning",
+            "url": "https://oscar.gatech.edu/pls/bprod/bwckschd.p_disp_detail_sched?term_in=202502&crn_in=32390"
+          },
+          {
+            "course": "CS 8803 MS",
+            "name": "Machine Learning Security",
+            "url": "https://oscar.gatech.edu/pls/bprod/bwckschd.p_disp_detail_sched?term_in=202502&crn_in=34520"
+          },
+          {
+            "course": "CSE 6140 EGD",
+            "name": "Computer Science & Engineering Algorithms",
+            "url": "https://oscar.gatech.edu/bprod/bwckctlg.p_display_courses?term_in=202502&one_subj=CSE&sel_crse_strt=6140&sel_crse_end=6140&sel_subj=&sel_levl=&sel_schd=&sel_coll=&sel_divs=&sel_dept=&sel_attr="
+          }
+        ]
+      },
+      {
         "id": "4524fb62-c15b-40c1-9dd5-47a8ba5826a1",
         "year": "2024",
         "term": "Fall",
