@@ -107,6 +107,13 @@ export const projects: ProjectInfo[] = [
 export const jobs: JobInfo[] = [
 	{
 		name: "Capital One",
+		year: 2025,
+		position: "Software Engineer Associate",
+		projectType: "Payments",
+		techStack: ["Go", "Java", "Python", "AWS", "Snowflake", "Splunk", "Jenkins"],
+	},
+	{
+		name: "Capital One",
 		year: 2024,
 		position: "Software Engineer Intern",
 		projectType: "Enterprise Tech",
