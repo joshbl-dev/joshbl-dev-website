@@ -54,15 +54,16 @@ export default function Home() {
 			<>
 				<Grid
 					container
-					item
-					direction="row"
-					justifyContent="center"
-					alignItems="center"
-					xs={"auto"}
-					margin={"20px"}
+					sx={{
+						display: "flex",
+						flexDirection: "row",
+						justifyContent: "center",
+						alignItems: "center",
+						margin: "20px",
+					}}
 				>
 					{/* Welcome text */}
-					<Grid item md>
+					<Grid size={{ md: 6 }}>
 						<Container maxWidth={"md"}
 						>
 							<Typography sx={{...mobile_hide("flex")}}
@@ -77,7 +78,7 @@ export default function Home() {
 					</Grid>
 
 					{/* Profile Image */}
-					<Grid item xs={"auto"}>
+					<Grid size={{ xs: "auto" }}>
 						<Container
 							sx={{
 								...desktop_hide("flex"),
@@ -95,19 +96,18 @@ export default function Home() {
 						</Container>
 					</Grid>
 
-				</Grid><Box maxWidth={"sm"} margin={"20px"}>
+				</Grid><Box sx={{ maxWidth: "sm", margin: "20px" }}>
 				<Typography variant={"h4"}
-							margin={"10px"}
-							justifyContent={"center"} align={"center"}>Skills
+							sx={{ margin: "10px", justifyContent: "center", textAlign: "center" }}>Skills
 					&
 					Technologies</Typography>
 				<Ticker speed={2}
 				>{() => (<>
 					<Typography
 						variant={"body1"}
-						whiteSpace={"nowrap"}>{skills.map(skill => " | " + skill)}</Typography>
+						sx={{ whiteSpace: "nowrap" }}>{skills.map(skill => " | " + skill)}</Typography>
 				</>)}</Ticker>
-			</Box><Box margin={"20px"}>
+			</Box><Box sx={{ margin: "20px" }}>
 				<Button focusRipple={true} variant={"outlined"}
 						size={"large"}
 						onClick={() => window.open("/pdfs/Resume.pdf", "_blank")}

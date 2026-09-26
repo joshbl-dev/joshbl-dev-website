@@ -99,8 +99,9 @@ export class NavBar extends React.Component<NavBarProps, any> {
 								  onClick={this.handleCloseNavMenu}
 								  href={`${page.url}`}
 						>
-							<Typography
-								textAlign="center">{page.title}</Typography>
+							<Typography sx={{ textAlign: "center" }}>
+								{page.title}
+							</Typography>
 						</MenuItem>
 					))}
 				</Menu>

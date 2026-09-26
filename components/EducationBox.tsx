@@ -47,45 +47,49 @@ function Timeline({semesters, openSteps, setOpenSteps, isMobile}: {
 
 	return (
 		<Box
-			marginLeft={"10px"}
-			textAlign={"left"} width={"fit-content"}>
+			sx={{
+				marginLeft: "10px",
+				textAlign: "left",
+				width: "fit-content",
+			}}>
 			<Stepper
 				activeStep={-1}
 				orientation="vertical">
 				{semesters.map((semester) => {
 					const isExpanded = openSteps.includes(semester.id);
-					return (<Step
-							key={semester.id}
-							expanded={isMobile ? isExpanded : true}
-						>
+					return (
+						<Step key={semester.id} expanded={isMobile ? isExpanded : true}>
 							<StepLabel
 								onClick={() => handleExpand(semester.id)}
-								StepIconComponent={() => <><Typography
-									variant={"h5"}
-									fontWeight={"bold"}>
-									{semester.year + " " + semester.term}
-								</Typography>
-									{isMobile ? <IconButton
-										onClick={(event) => {
-											event.stopPropagation();
-											handleExpand(semester.id);
-										}}>
-										<ExpandCollapseIcon
-											isExpanded={isExpanded} />
-									</IconButton> : <></>}
-								</>}>
+								sx={{
+									cursor: "pointer",
+									"& .MuiStepLabel-iconContainer": { display: "none" },
+									"& .MuiStepLabel-label": { display: "block" },
+								}}
+							>
+								<Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+									<Typography sx={{ fontWeight: "bold" }} variant="h5">
+										{semester.year + " " + semester.term}
+									</Typography>
+									{isMobile && (
+										<IconButton
+											onClick={(event) => {
+												event.stopPropagation();
+												handleExpand(semester.id);
+											}}>
+											<ExpandCollapseIcon isExpanded={isExpanded} />
+										</IconButton>
+									)}
+								</Box>
 							</StepLabel>
 							<StepContent>
-								<Box sx={
-									{
-										display: "flex",
-										flexWrap: "wrap",
-										flexDirection: "row",
-										gap: "10px",
-									}
-								}>
+								<Box sx={{
+									display: "flex",
+									flexWrap: "wrap",
+									flexDirection: "row",
+									gap: "10px",
+								}}>
 									{semester.courses.map(course =>
-
 										<CourseCard
 											key={uuidv4()}
 											course={course}
@@ -140,8 +144,8 @@ function CourseCard({course, isMobile}: {course: Course, isMobile: boolean}) {
 function ConcentrationChip(props: Concentration) {
 	return <Chip
 		label={<Typography
-			fontWeight={"bold"}
-			style={{
+			sx={{
+				fontWeight: "bold",
 				whiteSpace: "normal",
 				overflow: "visible",
 				textAlign: "center",
@@ -197,15 +201,18 @@ export function EducationBox(props: educationBoxProps) {
 					))}
 				</ToggleButtonGroup>
 				<CardHeader
-					title={<Typography fontWeight={"bold"}
+					title={<Typography sx={{ fontWeight: "bold" }}
 									   variant={"h4"}
 					>
 						{education.school}
 					</Typography>}
 					subheader={<>
-						<Typography
-							variant={"h5"}
-						>{education.degree + " in " + education.major + "\n" + education.start_year + " - " + education.end_year}</Typography>
+						<Typography variant="h5" component="div">
+							{education.degree} in {education.major}
+						</Typography>
+						<Typography variant="h5" component="div">
+							{education.start_year} - {education.end_year}
+						</Typography>
 						<Box
 							sx={{
 								display: "flex",

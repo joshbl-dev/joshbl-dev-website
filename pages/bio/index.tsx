@@ -47,9 +47,7 @@ export default function Bio(props: EducationInfo) {
 	return (
 		<PageTemplate page={page} components={
 			<>
-				<Box maxWidth="100vw" margin={"20px"}
-					 justifyContent={"center"}
-					 textAlign={"center"}>
+				<Box sx={{ maxWidth: "100vw", margin: "20px", justifyContent: "center", textAlign: "center" }}>
 					{content(props)}
 				</Box>
 			</>} />
@@ -65,5 +63,4 @@ export async function getStaticProps() {
 		"props": data
 	};
 }
-
 
