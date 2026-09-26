@@ -12,9 +12,9 @@ export default function TopicChip(props: topicChipProps) {
 	return (
 		<Chip color={"secondary"} label={
 			<Typography
-				fontWeight={"bold"}
-				fontSize={"1rem"}
-				style={{
+				sx={{
+					fontWeight: "bold",
+					fontSize: "1rem",
 					whiteSpace: "normal",
 					overflow: "visible",
 					textAlign: "center"

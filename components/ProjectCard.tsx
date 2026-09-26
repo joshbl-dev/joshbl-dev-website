@@ -23,12 +23,12 @@ type ProjectCardProps = {
 function externalLink(side: string, link: string) {
 	if (side != "bottom") {
 		const margin = side == "left" ? { marginRight: "10px" } : { marginLeft: "10px" };
-		return (<Box {...margin} marginTop={"10px"}><IconButton
+		return (<Box sx={{ ...margin, marginTop: "10px" }}><IconButton
 			href={link}
 			size={"medium"}><LaunchIcon
 		/></IconButton></Box>);
 	} else {
-		return (<Box textAlign={"center"}><Button
+		return (<Box sx={{ textAlign: "center" }}><Button
 			sx={{
 				width: "20%",
 				padding: "10px"
@@ -67,30 +67,29 @@ export default function ProjectCard(props: ProjectCardProps) {
 						borderRadius: "20px"
 					}}>
 					{props.mediaSide == "left" ? (
-							<Box width={"50%"}>
+							<Box sx={{ width: "50%" }}>
 								{props.media}
 							</Box>) :
 						externalLink(props.mediaSide, projectInfo.url)}
 
-					<Box justifyContent={"center"}
-						 width={"50%"}
-						 sx={{ display: "flex", flexDirection: "column" }}>
+					<Box sx={{ justifyContent: "center", width: "50%", display: "flex", flexDirection: "column" }}>
 
-						<CardHeader title={projectInfo.title}
-									titleTypographyProps={{
-										fontWeight: "bold",
-										fontSize: "2rem"
-									}} />
+						<CardHeader
+							title={
+								<Typography variant="h4" sx={{ fontWeight: "bold" }}>
+									{projectInfo.title}
+								</Typography>
+							}
+						/>
 						<CardContent>
 							<Typography variant="body1"
-										fontSize={"1.5rem"}
-										fontWeight={"medium"}>
+										sx={{ fontSize: "1.5rem", fontWeight: "500" }}>
 								{projectInfo.description}
 							</Typography>
 						</CardContent>
 					</Box>
 					{props.mediaSide == "right" ? (
-						<Box width={"50%"}>
+						<Box sx={{ width: "50%" }}>
 							{props.media}
 						</Box>) : externalLink(props.mediaSide, projectInfo.url)}
 				</Card>
@@ -109,21 +108,17 @@ export default function ProjectCard(props: ProjectCardProps) {
 					<Box
 						sx={{ display: "flex", flexDirection: "column" }}>
 						<Box
-							minHeight={"200px"}
-							height={"fit-content"}
-							width={"75vw"}
-							alignItems={"center"}
+							sx={{ minHeight: "200px", height: "fit-content", width: "75vw", alignItems: "center" }}
 						>
 							{props.media}
 						</Box>
 
-						<Box paddingTop={"20px"}
-							 textAlign={"center"}>
+						<Box sx={{ paddingTop: "20px", textAlign: "center" }}>
 							{externalLink("bottom", projectInfo.url)}
 
 
 							<CardContent sx={{ height: "fit-content" }}>
-								<Typography variant="h5" fontWeight={"bold"}>
+								<Typography variant="h5" sx={{ fontWeight: "bold" }}>
 									{projectInfo.title}
 								</Typography>
 								<Typography variant="body1">

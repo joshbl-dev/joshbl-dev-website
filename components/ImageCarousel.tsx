@@ -35,17 +35,14 @@ export default function ImageCarousel() {
 					onChange={handleStepChange}
 					swipeable={true}
 				>
-					{interests.map((interest, index) => (
+					{interests.map((interest) => (
 						<Box
-							display={"block"} justifyContent={"center"}
+							sx={{ display: "block", justifyContent: "center" }}
 							key={interest.name}
 						>
 							<Typography
 								variant={"h5"}>{interest.name}</Typography>
-							<Box sx={{position: "relative"}}
-								 height={height + "px"}
-								 width={width + "px"}
-								 margin={"auto"}>
+							<Box sx={{ position: "relative", height: `${height}px`, width: `${width}px`, margin: "auto" }}>
 								<Image
 									src={interest.image}
 									alt={interest.name}
@@ -90,18 +87,11 @@ export default function ImageCarousel() {
 	}
 
 	return (
-		<Box margin={"20px"} display={"flex"}
-			 justifyContent={"center"} maxWidth={"100%"}>
-			<Box
-				{...desktop_show("block")}
-				maxWidth={"md"}
-			>
+		<Box sx={{ margin: "20px", display: "flex", justifyContent: "center", maxWidth: "100%" }}>
+			<Box sx={{ ...desktop_show("block"), maxWidth: "md" }}>
 				{carousel(450, 300)}
 			</Box>
-			<Box
-				{...desktop_hide("block")}
-				width={"315px"}
-			>
+			<Box sx={{ ...desktop_hide("block"), width: "315px" }}>
 				{carousel(300, 200)}
 			</Box>
 		</Box>
